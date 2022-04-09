@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestBlock
   m_EditorClassIdentifier: 
   _characterDialoguePairs:
-  - _character: {fileID: 0}
+  - _character: {fileID: 11400000, guid: 944d802eb6aeea94e9d9bf617c7b954e, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: 
+    _text: Hello, world!

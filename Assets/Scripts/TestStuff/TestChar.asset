@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7405594bbae64004483577968ca9d04c, type: 3}
   m_Name: TestChar
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Narrator
   _poses: []
