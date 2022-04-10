@@ -10,10 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6c50685b0d6a524bb47190a3bf951d6, type: 3}
-  m_Name: TestBlock
+  m_Name: ExampleSequence
   m_EditorClassIdentifier: 
-  _characterDialoguePairs:
-  - _character: {fileID: 11400000, guid: 944d802eb6aeea94e9d9bf617c7b954e, type: 2}
-    _hasPoseIndex: 0
-    _poseIndex: 0
-    _text: Hello, world!
+  _nextSequence: {fileID: 0}
+  _characterDialoguePairs: []

@@ -15,13 +15,56 @@ namespace ACHNarrativeDriver.ScriptableObjects
             [SerializeField] private int _poseIndex;
             [SerializeField] private string _text;
 
-            public Character Character => _character;
-            public int? PoseIndex => _hasPoseIndex ?  _poseIndex : null;
-            public string Text => _text;
-        }
+            public Character Character
+            {
+                get => _character;
+                set => _character = value;
+            }
 
+            public int? PoseIndex
+            {
+                get => _hasPoseIndex ? _poseIndex : null;
+                set
+                {
+                    if (value.HasValue)
+                    {
+                        _poseIndex = value.Value;
+                        _hasPoseIndex = true;
+                    }
+                    else
+                    {
+                        _hasPoseIndex = false;
+                    }
+                }
+            }
+
+            public string Text
+            {
+                get => _text;
+                set => _text = value;
+            }
+
+            public override string ToString()
+            {
+                return $"Character: {Character.Name}, HasPoseIndex: {_hasPoseIndex}, {(_hasPoseIndex ? "PoseIndex: " + PoseIndex + ", " : string.Empty)}Text: {Text}";
+            }
+        }
+        
+        [SerializeField] private NarrativeSequence _nextSequence;
         [SerializeField] private List<CharacterDialogueInfo> _characterDialoguePairs;
 
-        public IReadOnlyList<CharacterDialogueInfo> CharacterDialoguePairs => _characterDialoguePairs.AsReadOnly();
+        public NarrativeSequence NextSequence
+        {
+            get => _nextSequence;
+            set => _nextSequence = value;
+        }
+
+        public List<CharacterDialogueInfo> CharacterDialoguePairs
+        {
+            get => _characterDialoguePairs;
+            set => _characterDialoguePairs = value;
+        }
+
+        public string SourceScript { get; set; }
     }
 }
