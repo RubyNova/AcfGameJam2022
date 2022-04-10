@@ -60,7 +60,7 @@ namespace ACHNarrativeDriver.Editor.Api
                 if (character == null)
                 {
                     throw new FileNotFoundException(
-                        $"The character {(string.IsNullOrWhiteSpace(characterName) ? "NO_CHARACTER_NAME" : characterName)} cannot be found in the asset database. Please ensure the character has been created and that the name has been spelt correctly. Invalid line number: {index + 1}");
+                        $"The character {(string.IsNullOrWhiteSpace(characterName) ? "NO_CHARACTER_NAME" : characterName)} cannot be found in the asset database. Please ensure the character has been created and that the name has been spelt correctly. Line number: {index + 1}");
                 }
 
                 var poseIndexString = splitLines.FirstOrDefault(x => x.All(char.IsNumber));
@@ -74,7 +74,7 @@ namespace ACHNarrativeDriver.Editor.Api
                 if (poseIndex.HasValue && poseIndex.Value >= character.Poses.Count)
                 {
                     throw new IndexOutOfRangeException(
-                        $"Character Pose Index was outside the bounds of the Poses collection. Length: {character.Poses.Count}, Index: {poseIndex.Value}");
+                        $"Character Pose Index was outside the bounds of the Poses collection. Length: {character.Poses.Count}, Index: {poseIndex.Value}. Line number: {index + 1}");
                 }
 
                 var text = splitLines.Last();
