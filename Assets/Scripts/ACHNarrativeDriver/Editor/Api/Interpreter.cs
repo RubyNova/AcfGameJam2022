@@ -31,55 +31,62 @@ namespace ACHNarrativeDriver.Editor.Api
                 {
                     newLineChar = "\r\n";
                 }
-                
+
                 sourceScript = sourceScript.Replace(newLineChar, Environment.NewLine);
             }
-            
+
             var sourceSplit = sourceScript.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
-            
+            Character character = null;
+
             for (var index = 0; index < sourceSplit.Length; index++)
             {
                 var line = sourceSplit[index];
                 var splitLines = line.Split(": ", StringSplitOptions.RemoveEmptyEntries);
 
-                if (splitLines.Length <= 1)
+                if (splitLines.Length >= 4)
                 {
-                    throw new FormatException($"Invalid narrative script was provided to the interpreter. Invalid line number: {index + 1}");
+                    throw new FormatException(
+                        $"Invalid narrative script was provided to the interpreter. {splitLines.Length} arguments were provided when the maximum is 3. Invalid line number: {index + 1}");
                 }
-                
-               var characterName = splitLines[0];
-               var character = characterAssets.FirstOrDefault(x => x.Name.Equals(characterName, StringComparison.OrdinalIgnoreCase));
 
-               if (character == null)
-               {
-                   throw new FileNotFoundException(
-                       $"The character {characterName} cannot be found in the asset database. Please ensure the character has been created and that the name has been spelt correctly. Invalid line number: {index + 1}");
-               }
+                var characterName = splitLines[0];
+                if (splitLines.Length > 1 && !string.IsNullOrWhiteSpace(characterName) &&
+                    !characterName.All(char.IsNumber))
+                {
+                    character = characterAssets.FirstOrDefault(x =>
+                        x.Name.Equals(characterName, StringComparison.OrdinalIgnoreCase));
+                }
 
-               var poseIndexString = splitLines.FirstOrDefault(x => x.All(char.IsNumber));
-               int? poseIndex = null;
+                if (character == null)
+                {
+                    throw new FileNotFoundException(
+                        $"The character {(string.IsNullOrWhiteSpace(characterName) ? "NO_CHARACTER_NAME" : characterName)} cannot be found in the asset database. Please ensure the character has been created and that the name has been spelt correctly. Invalid line number: {index + 1}");
+                }
 
-               if (!string.IsNullOrWhiteSpace(poseIndexString))
-               {
-                   poseIndex = int.Parse(poseIndexString);
-               }
+                var poseIndexString = splitLines.FirstOrDefault(x => x.All(char.IsNumber));
+                int? poseIndex = null;
 
-               if (poseIndex.HasValue && poseIndex.Value >= character.Poses.Count)
-               {
-                   throw new IndexOutOfRangeException(
-                       $"Character Pose Index was outside the bounds of the Poses collection. Length: {character.Poses.Count}, Index: {poseIndex.Value}");
-               }
+                if (!string.IsNullOrWhiteSpace(poseIndexString))
+                {
+                    poseIndex = int.Parse(poseIndexString);
+                }
 
-               var text = splitLines.Last();
-               
-               NarrativeSequence.CharacterDialogueInfo info = new()
-               {
-                   Character = character,
-                   PoseIndex = poseIndex,
-                   Text = text
-               };
-               
-               returnList.Add(info);
+                if (poseIndex.HasValue && poseIndex.Value >= character.Poses.Count)
+                {
+                    throw new IndexOutOfRangeException(
+                        $"Character Pose Index was outside the bounds of the Poses collection. Length: {character.Poses.Count}, Index: {poseIndex.Value}");
+                }
+
+                var text = splitLines.Last();
+
+                NarrativeSequence.CharacterDialogueInfo info = new()
+                {
+                    Character = character,
+                    PoseIndex = poseIndex,
+                    Text = text
+                };
+
+                returnList.Add(info);
             }
 
             return returnList;

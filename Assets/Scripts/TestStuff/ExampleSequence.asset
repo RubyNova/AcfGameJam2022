@@ -26,3 +26,7 @@ MonoBehaviour:
     _hasPoseIndex: 0
     _poseIndex: 0
     _text: Third dialogue line
+  - _character: {fileID: 11400000, guid: ba8279d7cf8d7da42bd1a184e4322dbe, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Line without character OOOO
