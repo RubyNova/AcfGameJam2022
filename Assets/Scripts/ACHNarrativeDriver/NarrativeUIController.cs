@@ -28,7 +28,7 @@ namespace ACHNarrativeDriver
 
         private void Update()
         {
-            if (!_isCurrentlyExecuting || (_rollingTextRoutine is not null || !_nextDialogueLineRequested))
+            if (!_isCurrentlyExecuting || (/*_rollingTextRoutine is not null ||*/ !_nextDialogueLineRequested))
             {
                 return;
             }
@@ -41,16 +41,24 @@ namespace ACHNarrativeDriver
                 {
                     _isCurrentlyExecuting = false;
                     _currentNarrativeSequence = null;
+                    return;
                 }
                 else
                 {
                     _currentNarrativeSequence = _currentNarrativeSequence.NextSequence;
                 }
-
-                return;
             }
             
             _nextDialogueLineRequested = false;
+
+            if (_rollingTextRoutine is not null)
+            {
+                ResetRollingTextRoutine();
+                _narrativeTextBox.text =
+                    _currentNarrativeSequence.CharacterDialoguePairs[_currentDialogueIndex - 1].Text;
+                return;
+            }
+            
             _rollingTextRoutine =
                 StartCoroutine(
                     PerformRollingText(_currentNarrativeSequence.CharacterDialoguePairs[_currentDialogueIndex]));
@@ -94,11 +102,6 @@ namespace ACHNarrativeDriver
 
         public void ExecuteNextDialogueLine()
         {
-            if (_rollingTextRoutine is not null)
-            {
-                ResetRollingTextRoutine();
-            }
-
             if (_currentNarrativeSequence is null)
             {
                 return;
