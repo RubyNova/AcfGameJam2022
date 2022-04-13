@@ -31,13 +31,19 @@ MonoBehaviour:
     _poseIndex: 0
     _text: I uh....suppose???
   - _character: {fileID: 11400000, guid: 78bc27ba516600648a24cbf32a902d0c, type: 2}
-    _hasPoseIndex: 0
+    _hasPoseIndex: 1
     _poseIndex: 0
-    _text: So...a multi-line entry, huh? Hmmm....
+    _text: So...a multi-line entry, huh? Hmmm....Oh hey, Matt even specified an explicit
+      sprite number to test this edge case!
   - _character: {fileID: 11400000, guid: 78bc27ba516600648a24cbf32a902d0c, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: What do you want to talk about
+    _text: And now the rest doesn't change the pose index, so it stays the same sprite.
+      Neat!
+  - _character: {fileID: 11400000, guid: 78bc27ba516600648a24cbf32a902d0c, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: So uh...what do you want to talk about?
   - _character: {fileID: 11400000, guid: 2fda81abac89c8e4bab9944aaae9d6b2, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 0
@@ -55,15 +61,21 @@ MonoBehaviour:
     Cute person 1: 0: So...I guess we just talk until Matt
     gets bored of testing?
 
+
     Cute person 2: 0: I uh....suppose???
 
-    So...a
-    multi-line entry, huh? Hmmm....
+    0: So...a
+    multi-line entry, huh? Hmmm....Oh hey, Matt even specified an explicit sprite
+    number to test this edge case!
 
-    What do you want to talk about
+    And now the rest doesn''t change the pose
+    index, so it stays the same sprite. Neat!
+
+    So uh...what do you want to talk
+    about?
+
+
+    Cute person 1: 0: I don''t know I''m not the script writer KEKW
 
     Cute
-    person 1: 0: I don''t know I''m not the script writer KEKW
-
-    Cute person
-    2: 0: Understandable, have a great day!'
+    person 2: 0: Understandable, have a great day!'
