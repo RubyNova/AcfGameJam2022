@@ -15,30 +15,55 @@ MonoBehaviour:
   _nextSequence: {fileID: 0}
   _characterDialoguePairs:
   - _character: {fileID: 11400000, guid: 2fda81abac89c8e4bab9944aaae9d6b2, type: 2}
-    _hasPoseIndex: 0
+    _hasPoseIndex: 1
     _poseIndex: 0
-    _text: Hello there!
+    _text: Hi there! I'm a test character with a sprite!
   - _character: {fileID: 11400000, guid: 78bc27ba516600648a24cbf32a902d0c, type: 2}
-    _hasPoseIndex: 0
+    _hasPoseIndex: 1
     _poseIndex: 0
-    _text: General Kenobi!
-  - _character: {fileID: 11400000, guid: 78bc27ba516600648a24cbf32a902d0c, type: 2}
-    _hasPoseIndex: 0
-    _poseIndex: 0
-    _text: You are a bold one.
-  - _character: {fileID: 11400000, guid: 78bc27ba516600648a24cbf32a902d0c, type: 2}
-    _hasPoseIndex: 0
-    _poseIndex: 0
-    _text: Back away. I will deal with this Jedi slime myself!
+    _text: Hello! I am another test character with a different sprite!
   - _character: {fileID: 11400000, guid: 2fda81abac89c8e4bab9944aaae9d6b2, type: 2}
-    _hasPoseIndex: 0
+    _hasPoseIndex: 1
     _poseIndex: 0
-    _text: Your move.
+    _text: So...I guess we just talk until Matt gets bored of testing?
+  - _character: {fileID: 11400000, guid: 78bc27ba516600648a24cbf32a902d0c, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: I uh....suppose???
   - _character: {fileID: 11400000, guid: 78bc27ba516600648a24cbf32a902d0c, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: You fool! I've been trained in your Jedi arts by Count Dooku!
+    _text: So...a multi-line entry, huh? Hmmm....
   - _character: {fileID: 11400000, guid: 78bc27ba516600648a24cbf32a902d0c, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: '*cough* *cough* Attack, Kenobi!'
+    _text: What do you want to talk about
+  - _character: {fileID: 11400000, guid: 2fda81abac89c8e4bab9944aaae9d6b2, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: I don't know I'm not the script writer KEKW
+  - _character: {fileID: 11400000, guid: 78bc27ba516600648a24cbf32a902d0c, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: Understandable, have a great day!
+  <SourceScript>k__BackingField: 'Cute person 1: 0: Hi there! I''m a test character
+    with a sprite!
+
+    Cute person 2: 0: Hello! I am another test character with
+    a different sprite!
+
+    Cute person 1: 0: So...I guess we just talk until Matt
+    gets bored of testing?
+
+    Cute person 2: 0: I uh....suppose???
+
+    So...a
+    multi-line entry, huh? Hmmm....
+
+    What do you want to talk about
+
+    Cute
+    person 1: 0: I don''t know I''m not the script writer KEKW
+
+    Cute person
+    2: 0: Understandable, have a great day!'

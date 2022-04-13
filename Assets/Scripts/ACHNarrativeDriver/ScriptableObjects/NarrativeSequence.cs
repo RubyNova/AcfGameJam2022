@@ -65,6 +65,7 @@ namespace ACHNarrativeDriver.ScriptableObjects
             set => _characterDialoguePairs = value;
         }
 
+        [field: SerializeField, HideInInspector]
         public string SourceScript { get; set; }
     }
 }

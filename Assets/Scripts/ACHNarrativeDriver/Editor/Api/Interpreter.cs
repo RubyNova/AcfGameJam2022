@@ -14,28 +14,15 @@ namespace ACHNarrativeDriver.Editor.Api
             var characterPaths = AssetDatabase.FindAssets("t:Character").Select(AssetDatabase.GUIDToAssetPath);
             var characterAssets = characterPaths.Select(AssetDatabase.LoadAssetAtPath<Character>);
             List<NarrativeSequence.CharacterDialogueInfo> returnList = new();
+            
+            // remove any invalid new line strings
 
-            if (!sourceScript.Contains(Environment.NewLine))
+            if (sourceScript.Contains("\r"))
             {
-                var newLineChar = Environment.NewLine;
-
-                if (sourceScript.Contains("\n"))
-                {
-                    newLineChar = "\n";
-                }
-                else if (sourceScript.Contains("\r"))
-                {
-                    newLineChar = "\r";
-                }
-                else if (sourceScript.Contains("\r\n"))
-                {
-                    newLineChar = "\r\n";
-                }
-
-                sourceScript = sourceScript.Replace(newLineChar, Environment.NewLine);
+                sourceScript = sourceScript.Replace("\r", "\n");
             }
 
-            var sourceSplit = sourceScript.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
+            var sourceSplit = sourceScript.Split("\n", StringSplitOptions.RemoveEmptyEntries);
             Character character = null;
 
             for (var index = 0; index < sourceSplit.Length; index++)
@@ -50,6 +37,14 @@ namespace ACHNarrativeDriver.Editor.Api
                 }
 
                 var characterName = splitLines[0];
+                
+                if (characterName.Contains("\n"))
+                {
+                    characterName = characterName.Replace("\n", string.Empty);
+                }
+                
+                
+                characterName = characterName.Replace(Environment.NewLine, string.Empty);
                 if (splitLines.Length > 1 && !string.IsNullOrWhiteSpace(characterName) &&
                     !characterName.All(char.IsNumber))
                 {

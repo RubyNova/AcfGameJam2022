@@ -12,6 +12,7 @@ namespace ACHNarrativeDriver
     {
         [SerializeField] private TMP_Text _narrativeTextBox;
         [SerializeField] private TMP_Text _characterNameTextBox;
+        [SerializeField] private SpriteRenderer _characterRenderer;
 
         private Coroutine _rollingTextRoutine;
         private readonly WaitForSeconds _rollingCharacterTime = new(0.04f);
@@ -58,10 +59,17 @@ namespace ACHNarrativeDriver
                     _currentNarrativeSequence.CharacterDialoguePairs[_currentDialogueIndex - 1].Text;
                 return;
             }
+
+            var characterDialogueInfo = _currentNarrativeSequence.CharacterDialoguePairs[_currentDialogueIndex];
+            
+            if (characterDialogueInfo.PoseIndex is { } number)
+            {
+                _characterRenderer.sprite = characterDialogueInfo.Character.Poses[number];
+            }
             
             _rollingTextRoutine =
                 StartCoroutine(
-                    PerformRollingText(_currentNarrativeSequence.CharacterDialoguePairs[_currentDialogueIndex]));
+                    PerformRollingText(characterDialogueInfo));
             _currentDialogueIndex++;
         }
 
