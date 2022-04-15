@@ -49,9 +49,35 @@ namespace ACHNarrativeDriver.ScriptableObjects
                 return $"Character: {Character.Name}, HasPoseIndex: {_hasPoseIndex}, {(_hasPoseIndex ? "PoseIndex: " + PoseIndex + ", " : string.Empty)}Text: {Text}";
             }
         }
+
+        [Serializable]
+        public class ChoiceInfo
+        {
+            [SerializeField] private string _choiceText;
+            [SerializeField] private NarrativeSequence _narrativeResponse;
+
+            public string ChoiceText
+            {
+                get => _choiceText;
+                set => _choiceText = value;
+            }
+
+            public NarrativeSequence NarrativeResponse
+            {
+                get => _narrativeResponse;
+                set => _narrativeResponse = value;
+            }
+        }
         
         [SerializeField] private NarrativeSequence _nextSequence;
         [SerializeField] private List<CharacterDialogueInfo> _characterDialoguePairs;
+        [SerializeField] private List<ChoiceInfo> _choices;
+
+        public List<ChoiceInfo> Choices
+        {
+            get => _choices;
+            set => _choices = value;
+        }
 
         public NarrativeSequence NextSequence
         {
