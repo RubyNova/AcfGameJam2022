@@ -13,6 +13,10 @@ namespace ACHNarrativeDriver
         [SerializeField] private TMP_Text _narrativeTextBox;
         [SerializeField] private TMP_Text _characterNameTextBox;
         [SerializeField] private SpriteRenderer _characterRenderer;
+        [SerializeField] private Transform _choicesButtonView;
+        [SerializeField] private GameObject _buttonPrefab;
+        [SerializeField] private GameObject _nextButton;
+        [SerializeField] private GameObject _dialoguePanel;
 
         private Coroutine _rollingTextRoutine;
         private readonly WaitForSeconds _rollingCharacterTime = new(0.04f);
@@ -29,27 +33,54 @@ namespace ACHNarrativeDriver
 
         private void Update()
         {
-            if (!_isCurrentlyExecuting || (/*_rollingTextRoutine is not null ||*/ !_nextDialogueLineRequested))
+            if (!_isCurrentlyExecuting || !_nextDialogueLineRequested)
             {
                 return;
             }
 
-            if (_currentDialogueIndex >= _currentNarrativeSequence.CharacterDialoguePairs.Count)
+            if (_currentDialogueIndex >= _currentNarrativeSequence.CharacterDialoguePairs.Count && _rollingTextRoutine is null)
             {
                 _currentDialogueIndex = 0;
-                
+
+                if (_currentNarrativeSequence.Choices.Count > 0)
+                {
+                    _choicesButtonView.gameObject.SetActive(true);
+                    foreach (Transform child in _choicesButtonView) //explicit variable type here because U N I T Y (TM)
+                    {
+                        Destroy(child);
+                    }
+
+                    foreach (var choice in _currentNarrativeSequence.Choices)
+                    {
+                        var go = Instantiate(_buttonPrefab, _choicesButtonView);
+                        go.GetComponentInChildren<TMP_Text>().text = choice.ChoiceText;
+                        go.GetComponent<Button>().onClick.AddListener(() =>
+                        {
+                            _currentNarrativeSequence = choice.NarrativeResponse;
+                            _nextDialogueLineRequested = true;
+                            _choicesButtonView.gameObject.SetActive(false);
+                            _dialoguePanel.SetActive(true);
+                            _nextButton.SetActive(true);
+                        });
+                    }
+
+                    _nextDialogueLineRequested = false;
+                    _choicesButtonView.gameObject.SetActive(true);
+                    _dialoguePanel.SetActive(false);
+                    _nextButton.SetActive(false);
+                    return;
+                }
+
                 if (_currentNarrativeSequence.NextSequence is null)
                 {
                     _isCurrentlyExecuting = false;
                     _currentNarrativeSequence = null;
                     return;
                 }
-                else
-                {
-                    _currentNarrativeSequence = _currentNarrativeSequence.NextSequence;
-                }
+
+                _currentNarrativeSequence = _currentNarrativeSequence.NextSequence;
             }
-            
+
             _nextDialogueLineRequested = false;
 
             if (_rollingTextRoutine is not null)
@@ -61,12 +92,12 @@ namespace ACHNarrativeDriver
             }
 
             var characterDialogueInfo = _currentNarrativeSequence.CharacterDialoguePairs[_currentDialogueIndex];
-            
+
             if (characterDialogueInfo.PoseIndex is { } number)
             {
                 _characterRenderer.sprite = characterDialogueInfo.Character.Poses[number];
             }
-            
+
             _rollingTextRoutine =
                 StartCoroutine(
                     PerformRollingText(characterDialogueInfo));

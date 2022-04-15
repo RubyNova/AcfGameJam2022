@@ -53,9 +53,9 @@ MonoBehaviour:
     _poseIndex: 0
     _text: Understandable, have a great day!
   _choices:
-  - _choiceText: A
+  - _choiceText: Test choice one
     _narrativeResponse: {fileID: 11400000, guid: 0cf52640c6c455c4e95263a2ce6bdd59, type: 2}
-  - _choiceText: B
+  - _choiceText: Test choice two
     _narrativeResponse: {fileID: 11400000, guid: b221fad3b22c0d6429b0aa798f4c9d33, type: 2}
   <SourceScript>k__BackingField: 'Cute person 1: 0: Hi there! I''m a test character
     with a sprite!

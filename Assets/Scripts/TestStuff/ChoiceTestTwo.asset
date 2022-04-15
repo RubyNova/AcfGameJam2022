@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: ChoiceTestTwo
   m_EditorClassIdentifier: 
   _nextSequence: {fileID: 0}
-  _characterDialoguePairs: []
+  _characterDialoguePairs:
+  - _character: {fileID: 11400000, guid: 78bc27ba516600648a24cbf32a902d0c, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: Oh hey you tested the second dialogue option, neat!
   _choices: []
-  <SourceScript>k__BackingField: 
+  <SourceScript>k__BackingField: 'Cute person 2: 0: Oh hey you tested the second
+    dialogue option, neat!'
