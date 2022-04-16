@@ -14,8 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabName: 
   prefabCount: 0
+  prompt: Aquatic Life
+  pointsNeeded: 5000
   textList:
-  - test
-  - case
-  - scenario
-  - pogg
+  - word: leaf
+    rarity: 1
+    wasMentioned: 0
+  - word: lilypad
+    rarity: 2
+    wasMentioned: 1
+  - word: sea turtle
+    rarity: 2
+    wasMentioned: 0
+  - word: hyphae
+    rarity: 4
+    wasMentioned: 0

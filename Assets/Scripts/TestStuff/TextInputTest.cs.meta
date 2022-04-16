@@ -3,7 +3,12 @@ guid: dc8ee70a202472d49aafbcbdef93e8fe
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - userInputDisplay: {instanceID: 0}
+  - isFoundDisplay: {instanceID: 0}
+  - scoreTracker: {instanceID: 0}
+  - inputField: {instanceID: 0}
+  - wordListData: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
