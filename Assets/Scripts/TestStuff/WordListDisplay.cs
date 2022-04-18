@@ -17,7 +17,7 @@ public class WordListDisplay : MonoBehaviour
         foreach (var word in wordList.textList)
         {
             text += "\n";
-            text += word;
+            text += word.word;
         }
         listDisplay.text = text;
     }
