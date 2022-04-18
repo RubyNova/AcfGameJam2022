@@ -1,8 +1,6 @@
-using System.Collections.Generic;
 using ACHNarrativeDriver.Editor.Api;
 using ACHNarrativeDriver.ScriptableObjects;
 using UnityEditor;
-using UnityEditorInternal;
 using UnityEngine;
 
 namespace ACHNarrativeDriver.Editor
@@ -10,9 +8,10 @@ namespace ACHNarrativeDriver.Editor
     public class NarrativeSequenceEditor : EditorWindow
     {
         private NarrativeSequence _currentNarrativeSequence;
-        private Interpreter _interpreter = new();
+        private readonly Interpreter _interpreter = new();
         private bool _currentChoicesValue = false;
         private bool _firstRead = true;
+        private PredefinedVariables _predefinedVariables;
 
         private void OnGUI()
         {
@@ -24,6 +23,7 @@ namespace ACHNarrativeDriver.Editor
             {
                 _currentChoicesValue = false;
                 _firstRead = true;
+                _predefinedVariables = null;
                 return;
             }
 
@@ -36,11 +36,14 @@ namespace ACHNarrativeDriver.Editor
                 }
             }
 
+            _predefinedVariables = (PredefinedVariables)EditorGUILayout.ObjectField(
+                "Predefined Variables", _predefinedVariables, typeof(PredefinedVariables),
+                false);
+
             GUILayout.Label("Source Script", EditorStyles.label);
             var previousSourceScript = _currentNarrativeSequence.SourceScript;
             _currentNarrativeSequence.SourceScript = GUILayout.TextArea(_currentNarrativeSequence.SourceScript,
                 GUILayout.ExpandWidth(true), GUILayout.ExpandHeight(true));
-
 
             _currentChoicesValue = GUILayout.Toggle(_currentChoicesValue, "Has Choices");
 
@@ -51,14 +54,14 @@ namespace ACHNarrativeDriver.Editor
                 {
                     var choice = _currentNarrativeSequence.Choices[index];
                     GUILayout.BeginHorizontal();
-                    GUILayout.Label("Choice text");
+                    GUILayout.Label($"Choice text {index}");
                     var previousText = choice.ChoiceText;
                     choice.ChoiceText = GUILayout.TextField(choice.ChoiceText);
                     GUILayout.EndHorizontal();
                     var previousResponse = choice.NarrativeResponse;
                     choice.NarrativeResponse = (NarrativeSequence)EditorGUILayout.ObjectField(
-                                                                   "Narrative Response", choice.NarrativeResponse, typeof(NarrativeSequence),
-                                                                   false);
+                        "Narrative Response", choice.NarrativeResponse, typeof(NarrativeSequence),
+                        false);
                     if (previousText != choice.ChoiceText || previousResponse != choice.NarrativeResponse)
                     {
                         nextNarrativeSequenceModified = true;
@@ -95,11 +98,21 @@ namespace ACHNarrativeDriver.Editor
             if (GUILayout.Button("Save Source Script"))
             {
                 compiledScriptChanged = true;
-                var listOfStuff = _interpreter.Interpret(_currentNarrativeSequence.SourceScript);
+                var listOfStuff = _interpreter.Interpret(_currentNarrativeSequence.SourceScript, _predefinedVariables);
                 _currentNarrativeSequence.CharacterDialoguePairs = listOfStuff;
+
+                if (_currentNarrativeSequence.Choices is not null && _predefinedVariables is not null)
+                {
+                    foreach (var choice in _currentNarrativeSequence.Choices)
+                    {
+                        choice.ChoiceText =
+                            _interpreter.ResolvePredefinedVariables(choice.ChoiceText, _predefinedVariables);
+                    }
+                }
             }
 
-            if (_currentNarrativeSequence.SourceScript != previousSourceScript || nextNarrativeSequenceModified || compiledScriptChanged)
+            if (_currentNarrativeSequence.SourceScript != previousSourceScript || nextNarrativeSequenceModified ||
+                compiledScriptChanged)
             {
                 EditorUtility.SetDirty(_currentNarrativeSequence);
             }

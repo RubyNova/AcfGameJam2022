@@ -52,10 +52,14 @@ MonoBehaviour:
     _hasPoseIndex: 1
     _poseIndex: 0
     _text: Understandable, have a great day!
+  - _character: {fileID: 11400000, guid: 2fda81abac89c8e4bab9944aaae9d6b2, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: I am testing a variable - $foo
   _choices:
-  - _choiceText: Test choice one
+  - _choiceText: Choice one text from variable
     _narrativeResponse: {fileID: 11400000, guid: 0cf52640c6c455c4e95263a2ce6bdd59, type: 2}
-  - _choiceText: Test choice two
+  - _choiceText: Choice two text from variable
     _narrativeResponse: {fileID: 11400000, guid: b221fad3b22c0d6429b0aa798f4c9d33, type: 2}
   <SourceScript>k__BackingField: 'Cute person 1: 0: Hi there! I''m a test character
     with a sprite!
@@ -83,4 +87,7 @@ MonoBehaviour:
     Cute person 1: 0: I don''t know I''m not the script writer KEKW
 
     Cute
-    person 2: 0: Understandable, have a great day!'
+    person 2: 0: Understandable, have a great day!
+
+    Cute person 1: I am testing
+    a variable - $foo'
