@@ -83,6 +83,13 @@ public class TextInputTest : MonoBehaviour
         int wasMentionedInt = userWord.wasMentioned ? 1 : 0;
 
         int temp = (int) Math.Floor(1000 + 100*Math.Sqrt(userWord.rarity)*userWord.word.Length + 200*wasMentionedInt);
+        
+        if ( (temp % 50) >= 25)
+        {
+            temp += 50;
+        }
+        temp -= (temp % 50);
+
         userScore += temp;
         return temp;
     }
