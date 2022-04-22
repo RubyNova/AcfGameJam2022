@@ -13,7 +13,7 @@ namespace ACHNarrativeDriver
     {
         [SerializeField] private TMP_Text _narrativeTextBox;
         [SerializeField] private TMP_Text _characterNameTextBox;
-        [SerializeField] private SpriteRenderer _characterRenderer;
+        [SerializeField] private Image _characterRenderer;
         [SerializeField] private Transform _choicesButtonView;
         [SerializeField] private GameObject _buttonPrefab;
         [SerializeField] private GameObject _nextButton;
@@ -35,7 +35,6 @@ namespace ACHNarrativeDriver
 
         private void Update()
         {
-            //Big bug here kek double u
             if (!_isCurrentlyExecuting || !_nextDialogueLineRequested)
             {
                 return;
@@ -100,6 +99,15 @@ namespace ACHNarrativeDriver
             if (characterDialogueInfo.PoseIndex is { } number)
             {
                 _characterRenderer.sprite = characterDialogueInfo.Character.Poses[number];
+                
+                if (!_characterRenderer.enabled && _characterRenderer.sprite != null)
+                {
+                    _characterRenderer.enabled = true;
+                }
+                else
+                {
+                    _characterRenderer.enabled = false;
+                }
             }
 
             _rollingTextRoutine =
