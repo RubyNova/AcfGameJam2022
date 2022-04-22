@@ -79,7 +79,6 @@ namespace ACHNarrativeDriver
                     listNextEvent.Invoke();
                     _isCurrentlyExecuting = false;
                     _currentNarrativeSequence = null;
-                    _backgroundRenderer.enabled = false;
                     ApplyBackground();
                     return;
                 }
@@ -123,16 +122,10 @@ namespace ACHNarrativeDriver
 
         private void ApplyBackground()
         {
-            if (_currentNarrativeSequence is not null && _currentNarrativeSequence.BackgroundSprite is not null) //Unity. Pls.
-            {
-                _backgroundRenderer.sprite = _currentNarrativeSequence.BackgroundSprite;
-                _backgroundRenderer.enabled = true;
-            }
-            else
-            {
-                _backgroundRenderer.sprite = null;
-                _backgroundRenderer.enabled = false;
-            }
+            if (_currentNarrativeSequence is null || _currentNarrativeSequence.BackgroundSprite is null) return;
+            
+            _backgroundRenderer.sprite = _currentNarrativeSequence.BackgroundSprite;
+            _backgroundRenderer.enabled = true;
         }
 
         private void ResetRollingTextRoutine()
