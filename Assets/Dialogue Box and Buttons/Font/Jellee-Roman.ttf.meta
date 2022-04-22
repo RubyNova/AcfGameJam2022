@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a80fc853d129441468288a8b3187493e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Jellee
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 32664bae6b1a24d4fb225307807ccb3e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

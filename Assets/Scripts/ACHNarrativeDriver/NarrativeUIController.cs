@@ -4,6 +4,7 @@ using System.Text;
 using ACHNarrativeDriver.ScriptableObjects;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace ACHNarrativeDriver
@@ -12,11 +13,13 @@ namespace ACHNarrativeDriver
     {
         [SerializeField] private TMP_Text _narrativeTextBox;
         [SerializeField] private TMP_Text _characterNameTextBox;
-        [SerializeField] private SpriteRenderer _characterRenderer;
+        [SerializeField] private Image _characterRenderer;
+        [SerializeField] private Image _backgroundRenderer;
         [SerializeField] private Transform _choicesButtonView;
         [SerializeField] private GameObject _buttonPrefab;
         [SerializeField] private GameObject _nextButton;
         [SerializeField] private GameObject _dialoguePanel;
+        public UnityEvent listNextEvent;
 
         private Coroutine _rollingTextRoutine;
         private readonly WaitForSeconds _rollingCharacterTime = new(0.04f);
@@ -24,7 +27,7 @@ namespace ACHNarrativeDriver
         private bool _isCurrentlyExecuting;
         private bool _nextDialogueLineRequested;
         private int _currentDialogueIndex;
-
+        
         private void Awake()
         {
             _isCurrentlyExecuting = false;
@@ -73,8 +76,10 @@ namespace ACHNarrativeDriver
 
                 if (_currentNarrativeSequence.NextSequence is null)
                 {
+                    listNextEvent.Invoke();
                     _isCurrentlyExecuting = false;
                     _currentNarrativeSequence = null;
+                    ApplyBackground();
                     return;
                 }
 
@@ -96,12 +101,31 @@ namespace ACHNarrativeDriver
             if (characterDialogueInfo.PoseIndex is { } number)
             {
                 _characterRenderer.sprite = characterDialogueInfo.Character.Poses[number];
+                
+                if (!_characterRenderer.enabled && _characterRenderer.sprite != null)
+                {
+                    _characterRenderer.enabled = true;
+                }
+                else
+                {
+                    _characterRenderer.enabled = false;
+                }
             }
 
             _rollingTextRoutine =
                 StartCoroutine(
                     PerformRollingText(characterDialogueInfo));
             _currentDialogueIndex++;
+            
+            ApplyBackground();
+        }
+
+        private void ApplyBackground()
+        {
+            if (_currentNarrativeSequence is null || _currentNarrativeSequence.BackgroundSprite is null) return;
+            
+            _backgroundRenderer.sprite = _currentNarrativeSequence.BackgroundSprite;
+            _backgroundRenderer.enabled = true;
         }
 
         private void ResetRollingTextRoutine()

@@ -40,10 +40,16 @@ namespace ACHNarrativeDriver.Editor
                 "Predefined Variables", _predefinedVariables, typeof(PredefinedVariables),
                 false);
 
+            var previousSprite = _currentNarrativeSequence.BackgroundSprite;
+            _currentNarrativeSequence.BackgroundSprite = (Sprite)EditorGUILayout.ObjectField("Background Image",
+                _currentNarrativeSequence.BackgroundSprite, typeof(Sprite), false);
+            var backgroundSpriteChanged = _currentNarrativeSequence.BackgroundSprite != previousSprite;
+
             GUILayout.Label("Source Script", EditorStyles.label);
             var previousSourceScript = _currentNarrativeSequence.SourceScript;
             _currentNarrativeSequence.SourceScript = GUILayout.TextArea(_currentNarrativeSequence.SourceScript,
                 GUILayout.ExpandWidth(true), GUILayout.ExpandHeight(true));
+            var sourceScriptChanged = _currentNarrativeSequence.SourceScript != previousSourceScript;
 
             _currentChoicesValue = GUILayout.Toggle(_currentChoicesValue, "Has Choices");
 
@@ -111,8 +117,8 @@ namespace ACHNarrativeDriver.Editor
                 }
             }
 
-            if (_currentNarrativeSequence.SourceScript != previousSourceScript || nextNarrativeSequenceModified ||
-                compiledScriptChanged)
+            if (sourceScriptChanged || nextNarrativeSequenceModified ||
+                compiledScriptChanged || backgroundSpriteChanged)
             {
                 EditorUtility.SetDirty(_currentNarrativeSequence);
             }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ACHNarrativeDriver.ScriptableObjects
 {
@@ -69,6 +70,7 @@ namespace ACHNarrativeDriver.ScriptableObjects
             }
         }
         
+        [SerializeField] private Sprite _backgroundSprite;
         [SerializeField] private NarrativeSequence _nextSequence;
         [SerializeField] private List<CharacterDialogueInfo> _characterDialoguePairs;
         [SerializeField] private List<ChoiceInfo> _choices;
@@ -89,6 +91,12 @@ namespace ACHNarrativeDriver.ScriptableObjects
         {
             get => _characterDialoguePairs;
             set => _characterDialoguePairs = value;
+        }
+
+        public Sprite BackgroundSprite
+        {
+            get => _backgroundSprite;
+            set => _backgroundSprite = value;
         }
 
         [field: SerializeField, HideInInspector]
