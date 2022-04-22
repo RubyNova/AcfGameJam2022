@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432ea7e311e77dd4e9f6fbe5b4f9e2e2, type: 3}
   m_Name: MySequence
   m_EditorClassIdentifier: 
-  _nextSequence: {fileID: 11400000, guid: a3e04c86792153245aa6104e9a3df54b, type: 2}
+  _backgroundSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  _nextSequence: {fileID: 0}
   _characterDialoguePairs:
   - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
     _hasPoseIndex: 1

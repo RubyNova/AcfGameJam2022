@@ -14,6 +14,7 @@ namespace ACHNarrativeDriver
         [SerializeField] private TMP_Text _narrativeTextBox;
         [SerializeField] private TMP_Text _characterNameTextBox;
         [SerializeField] private Image _characterRenderer;
+        [SerializeField] private Image _backgroundRenderer;
         [SerializeField] private Transform _choicesButtonView;
         [SerializeField] private GameObject _buttonPrefab;
         [SerializeField] private GameObject _nextButton;
@@ -78,6 +79,8 @@ namespace ACHNarrativeDriver
                     listNextEvent.Invoke();
                     _isCurrentlyExecuting = false;
                     _currentNarrativeSequence = null;
+                    _backgroundRenderer.enabled = false;
+                    ApplyBackground();
                     return;
                 }
 
@@ -114,6 +117,22 @@ namespace ACHNarrativeDriver
                 StartCoroutine(
                     PerformRollingText(characterDialogueInfo));
             _currentDialogueIndex++;
+            
+            ApplyBackground();
+        }
+
+        private void ApplyBackground()
+        {
+            if (_currentNarrativeSequence is not null && _currentNarrativeSequence.BackgroundSprite is not null) //Unity. Pls.
+            {
+                _backgroundRenderer.sprite = _currentNarrativeSequence.BackgroundSprite;
+                _backgroundRenderer.enabled = true;
+            }
+            else
+            {
+                _backgroundRenderer.sprite = null;
+                _backgroundRenderer.enabled = false;
+            }
         }
 
         private void ResetRollingTextRoutine()
