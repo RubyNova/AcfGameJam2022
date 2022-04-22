@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 2106159421}
-  _sequence: {fileID: 11400000, guid: b94d106db34043147a5cbe375cf375db, type: 2}
+  _sequence: {fileID: 11400000, guid: 4a3b3a907bf22ec40b22fa0dbe1d1f2b, type: 2}
 --- !u!1 &1926819479
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,6 +588,10 @@ PrefabInstance:
     - target: {fileID: 7585457525741362627, guid: 050340eaf26c0f844873ebaa4752facc, type: 3}
       propertyPath: m_Name
       value: NarrativeSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585457526757155362, guid: 050340eaf26c0f844873ebaa4752facc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -34
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050340eaf26c0f844873ebaa4752facc, type: 3}

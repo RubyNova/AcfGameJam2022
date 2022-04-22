@@ -55,12 +55,8 @@ MonoBehaviour:
   - _character: {fileID: 11400000, guid: 2fda81abac89c8e4bab9944aaae9d6b2, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: I am testing a variable - this text is from a variable!
-  _choices:
-  - _choiceText: Choice one text from variable
-    _narrativeResponse: {fileID: 11400000, guid: 0cf52640c6c455c4e95263a2ce6bdd59, type: 2}
-  - _choiceText: Choice two text from variable
-    _narrativeResponse: {fileID: 11400000, guid: b221fad3b22c0d6429b0aa798f4c9d33, type: 2}
+    _text: I am testing a variable - $foo
+  _choices: []
   <SourceScript>k__BackingField: 'Cute person 1: 0: Hi there! I''m a test character
     with a sprite!
 
