@@ -4,6 +4,7 @@ using System.Text;
 using ACHNarrativeDriver.ScriptableObjects;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace ACHNarrativeDriver
@@ -17,6 +18,7 @@ namespace ACHNarrativeDriver
         [SerializeField] private GameObject _buttonPrefab;
         [SerializeField] private GameObject _nextButton;
         [SerializeField] private GameObject _dialoguePanel;
+        public UnityEvent listNextEvent;
 
         private Coroutine _rollingTextRoutine;
         private readonly WaitForSeconds _rollingCharacterTime = new(0.04f);
@@ -24,7 +26,7 @@ namespace ACHNarrativeDriver
         private bool _isCurrentlyExecuting;
         private bool _nextDialogueLineRequested;
         private int _currentDialogueIndex;
-
+        
         private void Awake()
         {
             _isCurrentlyExecuting = false;
@@ -33,6 +35,7 @@ namespace ACHNarrativeDriver
 
         private void Update()
         {
+            //Big bug here kek double u
             if (!_isCurrentlyExecuting || !_nextDialogueLineRequested)
             {
                 return;
@@ -73,6 +76,7 @@ namespace ACHNarrativeDriver
 
                 if (_currentNarrativeSequence.NextSequence is null)
                 {
+                    listNextEvent.Invoke();
                     _isCurrentlyExecuting = false;
                     _currentNarrativeSequence = null;
                     return;

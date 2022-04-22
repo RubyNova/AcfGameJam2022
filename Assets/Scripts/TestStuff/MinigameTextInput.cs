@@ -2,70 +2,53 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 
-public class TextInputTest : MonoBehaviour
+public class MinigameTextInput : MonoBehaviour
 {
-    public TextMeshProUGUI userInputDisplay;
-    public TextMeshProUGUI isFoundDisplay;
-    public TextMeshProUGUI scoreTrackerDisplay;
-    public TextMeshProUGUI promptDisplay;
     public TMP_InputField inputField;
     public TextList wordListData;
+    //public ACHNarrativeDriver.ScriptableObjects.Character convoPartner;
     private List<TextList.Word> usedWords;
     private int userScore;
+    public UnityEvent listNextEvent;
 
     //Initialization
-
     void Start()
     {
-        promptDisplay.text = wordListData.prompt;
-        isFoundDisplay.text = "";
         userScore = 0;
         usedWords = new List<TextList.Word>();
     }
 
     //Updates every frame
-
     void Update()
     {
-        scoreTrackerDisplay.text = "User Score: " + userScore + "\nNeeded Score: " + wordListData.pointsNeeded;
         if(userScore >= wordListData.pointsNeeded)
         {
-            scoreTrackerDisplay.text = "Success!!!";
-            //scoreMet();
+            listNextEvent.Invoke();
         }
     }
 
-    //Gets the user's input from the textbox
-
-    public void setUserInput()
-    {
-        userInputDisplay.text = "User Input: " + inputField.text.ToLower();
-    }
-
-    //Checks if the user's word was used before and if it's on the list
+    //Gets the user's input from the textbox then checks if the user's word was used before and if it's on the list
     //If it's on the list and wasn't used before, the score is calculated
-
     public void compareInput()
     {
         bool wasFound = false;
-        isFoundDisplay.text = "Word is NOT found";
         foreach (var userWord in wordListData.textList)
         {
             foreach (var oldWord in usedWords)
             {
-                if(inputField.text.Equals(oldWord.word, StringComparison.InvariantCultureIgnoreCase) )
+                if(inputField.text.Equals(oldWord.word, StringComparison.InvariantCultureIgnoreCase) )  //Word was already used
                 {
-                    isFoundDisplay.text = "Word was already used";
                     wasFound = true;
                     break;
                 }
             }
-            if (!wasFound && inputField.text.Equals(userWord.word, StringComparison.InvariantCultureIgnoreCase) )
+            if (!wasFound && inputField.text.Equals(userWord.word, StringComparison.InvariantCultureIgnoreCase) ) //Word found and unused
             {
-                isFoundDisplay.text = "Word IS found\nWord value is " + calcScore(userWord);
+                calcScore(userWord);
                 usedWords.Add(userWord);
                 break;
             }
@@ -73,7 +56,7 @@ public class TextInputTest : MonoBehaviour
     }
 
     //Calculate the value of the word input and add it to the current userScore
-    public int calcScore(TextList.Word userWord)
+    public void calcScore(TextList.Word userWord)
     {
         if (userWord.rarity > 4)
             userWord.rarity = 4;
@@ -91,7 +74,12 @@ public class TextInputTest : MonoBehaviour
         temp -= (temp % 50);
 
         userScore += temp;
-        return temp;
+    }
+
+    //userScore Getter
+    public int getUserScore()
+    {
+        return userScore;
     }
 
     /*public void scoreMet()
