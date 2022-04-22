@@ -10,28 +10,43 @@ public class EventController : MonoBehaviour
     public class EventData
     {
         [SerializeField] public ACHNarrativeDriver.ScriptableObjects.NarrativeSequence narrativeSeq;
-        [SerializeField] public MinigameTextInput minigameSeq;
-        public bool pointToMini;
+        [SerializeField] public MinigameSequence minigameSeq;
     }
 
     public List<EventData> eventDataList;
     public ACHNarrativeDriver.ScriptableObjects.NarrativeSequence finalNarrativeSeq;
-
+    public ACHNarrativeDriver.NarrativeUIController narrativeController;
+    public MinigameController minigameController;
+    
+    private bool pointToMini;
     private int listPosition;
 
     void Start()
     {
         listPosition = 0;
+        pointToMini = false;
+        narrativeController.ExecuteSequence(eventDataList[0].narrativeSeq);
     }
 
     public void listNext()
     {
         //if the event was pointing to a minigame, it goes to the next one on the list
-        if ( eventDataList[listPosition].pointToMini )
+        if (pointToMini)
         {
             listPosition++;
         }
         //Swap between minigame and narrative
-        eventDataList[listPosition].pointToMini = !eventDataList[listPosition].pointToMini;
+        pointToMini = !pointToMini;
+
+        if (pointToMini)
+        {
+            minigameController.executeSequence(eventDataList[listPosition].minigameSeq);
+            return;
+        }
+        else
+        {
+            narrativeController.ExecuteSequence(eventDataList[listPosition].narrativeSeq);
+            return;
+        }
     }
 }

@@ -6,26 +6,36 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 
-public class MinigameTextInput : MonoBehaviour
+public class MinigameController : MonoBehaviour
 {
-    public TMP_InputField inputField;
-    public TextList wordListData;
-    //public ACHNarrativeDriver.ScriptableObjects.Character convoPartner;
-    private List<TextList.Word> usedWords;
-    private int userScore;
-    public UnityEvent listNextEvent;
+    [SerializeField] private UnityEvent listNextEvent;
+    [SerializeField] private MinigameSequence currentGameSequence;
+
+    private bool isCurrentlyExecuting;
 
     //Initialization
     void Start()
     {
-        userScore = 0;
-        usedWords = new List<TextList.Word>();
+        currentGameSequence.userScore = 0;
+        currentGameSequence.usedWords = new List<TextList.Word>();
+        isCurrentlyExecuting = false;
     }
 
     //Updates every frame
     void Update()
     {
-        if(userScore >= wordListData.pointsNeeded)
+        if (!isCurrentlyExecuting)
+        {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log("enter was pressed");
+            compareInput();
+        }
+
+        if (currentGameSequence.userScore >= currentGameSequence.wordListData.pointsNeeded)
         {
             listNextEvent.Invoke();
         }
@@ -36,20 +46,20 @@ public class MinigameTextInput : MonoBehaviour
     public void compareInput()
     {
         bool wasFound = false;
-        foreach (var userWord in wordListData.textList)
+        foreach (var userWord in currentGameSequence.wordListData.textList)
         {
-            foreach (var oldWord in usedWords)
+            foreach (var oldWord in currentGameSequence.usedWords)
             {
-                if(inputField.text.Equals(oldWord.word, StringComparison.InvariantCultureIgnoreCase) )  //Word was already used
+                if(currentGameSequence.inputField.text.Equals(oldWord.word, StringComparison.InvariantCultureIgnoreCase) )  //Word was already used
                 {
                     wasFound = true;
                     break;
                 }
             }
-            if (!wasFound && inputField.text.Equals(userWord.word, StringComparison.InvariantCultureIgnoreCase) ) //Word found and unused
+            if (!wasFound && currentGameSequence.inputField.text.Equals(userWord.word, StringComparison.InvariantCultureIgnoreCase) ) //Word found and unused
             {
                 calcScore(userWord);
-                usedWords.Add(userWord);
+                currentGameSequence.usedWords.Add(userWord);
                 break;
             }
         }
@@ -73,18 +83,11 @@ public class MinigameTextInput : MonoBehaviour
         }
         temp -= (temp % 50);
 
-        userScore += temp;
+        currentGameSequence.userScore += temp;
     }
 
-    //userScore Getter
-    public int getUserScore()
+    public void executeSequence(MinigameSequence minigame)
     {
-        return userScore;
-    }
 
-    /*public void scoreMet()
-    {
-        
     }
-    */
 }
