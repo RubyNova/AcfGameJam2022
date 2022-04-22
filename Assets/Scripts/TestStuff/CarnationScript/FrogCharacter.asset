@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b419b456b21f5774585dd98fc09600b7, type: 3}
-  m_Name: MyCharacter
+  m_Name: FrogCharacter
   m_EditorClassIdentifier: 
-  _name: Flora
+  _name: Enphibian
   _poses:
-  - {fileID: 21300000, guid: 49ec64c3a5d1b9f43987bbfe574c3e47, type: 3}
+  - {fileID: 21300000, guid: 5bd6b54ecb7dea04fb97d4f32d1a00ef, type: 3}

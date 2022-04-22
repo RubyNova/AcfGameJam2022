@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432ea7e311e77dd4e9f6fbe5b4f9e2e2, type: 3}
+  m_Name: IntroPT3
+  m_EditorClassIdentifier: 
+  _backgroundSprite: {fileID: 21300000, guid: 81e25619d877acb47891bc1d3a1fd26d, type: 3}
+  _nextSequence: {fileID: 11400000, guid: 80ee5ae505a7a0442942c6fe7b24d57c, type: 2}
+  _characterDialoguePairs:
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "\u2013out!"
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: ...
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "Without looking where you\u2019re going, you stumble away from the bustling,
+      overcrowded corridors into the first available room to the side, tripping ungracefully
+      into open air while the door automatically clicks shut behind you."
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: At once, the noise is drowned out to a faint buzzing, somewhere in the
+      distance, and the only thing you can hear is the thud of your own heartbeat
+      in your ears as sunlight falls upon your skin.
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "You\u2019re not in Kansas anymore."
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Dazedly, you gaze around your new surroundings.
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: It takes you a moment to realise someone is gazing back.
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 3
+    _text: "\u2026!"
+  - _character: {fileID: 11400000, guid: df180cb15ef5b4a4e8f572a47055729d, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: "\u2026!"
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "\u2026!"
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "Oh. Oh man. You must\u2019ve hit your head on the downfall because that
+      is a very large frog."
+  - _character: {fileID: 11400000, guid: df180cb15ef5b4a4e8f572a47055729d, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: "Woah, buddy, are you\u2013"
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 7
+    _text: "\u2026okay?"
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: "Oh, wait, it\u2019s a person. Two people, in fact."
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "Two people who just witnessed you perform history\u2019s least elegant
+      getaway pirouette."
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "You stare back in stunned silence for a moment, before the gentle, growing
+      concern on their faces makes you realise that you\u2019re still on the floor,
+      and that they are probably expecting some kind of\u2026 verbal response. Or
+      acknowledgement. In any way."
+  _choices:
+  - _choiceText: Tell them  you're all coolio, broolio
+    _narrativeResponse: {fileID: 11400000, guid: 80ee5ae505a7a0442942c6fe7b24d57c, type: 2}
+  - _choiceText: Nod affirmatively
+    _narrativeResponse: {fileID: 11400000, guid: 80ee5ae505a7a0442942c6fe7b24d57c, type: 2}
+  <SourceScript>k__BackingField: "Narration: \u2013out!\r\n\n...\r\n\r\nWithout looking
+    where you\u2019re going, you stumble away from the bustling, overcrowded corridors
+    into the first available room to the side, tripping ungracefully into open air
+    while the door automatically clicks shut behind you.\r\n\r\nAt once, the noise
+    is drowned out to a faint buzzing, somewhere in the distance, and the only thing
+    you can hear is the thud of your own heartbeat in your ears as sunlight falls
+    upon your skin.\r\n\r\nYou\u2019re not in Kansas anymore.\r\n\r\nDazedly, you
+    gaze around your new surroundings.\r\n\r\nIt takes you a moment to realise someone
+    is gazing back.\r\n\r\nFlora: 3: \u2026!\r\n\r\nEnphibian: 0: \u2026!\r\n\r\nYou:
+    \u2026!\r\n\r\nNarration: Oh. Oh man. You must\u2019ve hit your head on the downfall
+    because that is a very large frog.\r\n\r\nEnphibian: 0: Woah, buddy, are you\u2013\r\n\r\nFlora:
+    7: \u2026okay?\r\n\r\nNarration: 0: Oh, wait, it\u2019s a person. Two people,
+    in fact.\r\n\r\nTwo people who just witnessed you perform history\u2019s least
+    elegant getaway pirouette.\r\n\r\nYou stare back in stunned silence for a moment,
+    before the gentle, growing concern on their faces makes you realise that you\u2019re
+    still on the floor, and that they are probably expecting some kind of\u2026 verbal
+    response. Or acknowledgement. In any way.\r\n"

@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432ea7e311e77dd4e9f6fbe5b4f9e2e2, type: 3}
+  m_Name: IntroPT4
+  m_EditorClassIdentifier: 
+  _backgroundSprite: {fileID: 21300000, guid: 81e25619d877acb47891bc1d3a1fd26d, type: 3}
+  _nextSequence: {fileID: 11400000, guid: 1890357abb9b2114d83aaebaf0ac5803, type: 2}
+  _characterDialoguePairs:
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "You can still feel your pulse pushing a bit faster than it should be,
+      but the world has stopped spinning, and - despite the tumble - you don\u2019t
+      seem to be any physically worse for wear."
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: ' '
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "You indicate as much to the two of them, and some of the tension seems
+      to wash off with relief\u2013"
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "Then - spell of confusion and concern broken - all three of you immediately
+      catch yourselves staring and trail your eyes elsewhere. Wow, that\u2019s a
+      really nice and extremely interesting floor."
+  - _character: {fileID: 11400000, guid: df180cb15ef5b4a4e8f572a47055729d, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: Oh, thank frog.
+  - _character: {fileID: 11400000, guid: df180cb15ef5b4a4e8f572a47055729d, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: We don't really have any first aid stuff in here yet, soooo...
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 6
+    _text: ... Are you lost?
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: You look around the room filled with way too much overgrowth to be any
+      kind of study hall and conclude yes, almost definitely.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: You ask them if either of them know the way to orientation.
+  - _character: {fileID: 11400000, guid: df180cb15ef5b4a4e8f572a47055729d, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: Freshman orientation?
+  - _character: {fileID: 11400000, guid: df180cb15ef5b4a4e8f572a47055729d, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: Isn't that tomorrow?
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Oh.
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: There's an awkward pause where neither of you seem quite sure what to
+      do with yourselves.
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: I'm sorry. I hope you didn't travel too far.
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: You're, um... free to hang around here for a bit, if you'd like.
+  - _character: {fileID: 11400000, guid: df180cb15ef5b4a4e8f572a47055729d, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: Oh hey yeah!
+  _choices:
+  - _choiceText: test
+    _narrativeResponse: {fileID: 11400000, guid: 1890357abb9b2114d83aaebaf0ac5803, type: 2}
+  - _choiceText: test
+    _narrativeResponse: {fileID: 11400000, guid: 1890357abb9b2114d83aaebaf0ac5803, type: 2}
+  <SourceScript>k__BackingField: "Narration: You can still feel your pulse pushing
+    a bit faster than it should be, but the world has stopped spinning, and - despite
+    the tumble - you don\u2019t seem to be any physically worse for wear.\r \n\nYou
+    indicate as much to the two of them, and some of the tension seems to wash off
+    with relief\u2013\r\n\r\nThen - spell of confusion and concern broken - all three
+    of you immediately catch yourselves staring and trail your eyes elsewhere. Wow,
+    that\u2019s a really nice and extremely interesting floor.\r\n\r\nEnphibian:
+    0: Oh, thank frog.\r\nEnphibian: 0: We don't really have any first aid stuff
+    in here yet, soooo...\n\nFlora: 6: ... Are you lost?\n\nNarration: You look around
+    the room filled with way too much overgrowth to be any kind of study hall and
+    conclude yes, almost definitely.\n\nYou: You ask them if either of them know
+    the way to orientation.\n\nEnphibian: 0: Freshman orientation?\nEnphibian: 0:
+    Isn't that tomorrow?\n\nYou: Oh.\n\nNarration: There's an awkward pause where
+    neither of you seem quite sure what to do with yourselves.\n\nFlora: 8: I'm sorry.
+    I hope you didn't travel too far.\r\nFlora: 8: You're, um... free to hang around
+    here for a bit, if you'd like.\r\n\nEnphibian: 0: Oh hey yeah!"
