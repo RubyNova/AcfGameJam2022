@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432ea7e311e77dd4e9f6fbe5b4f9e2e2, type: 3}
+  m_Name: IntroEND
+  m_EditorClassIdentifier: 
+  _nextSequence: {fileID: 11400000, guid: 821daa3b8151cb043bccf803be955c2b, type: 2}
+  _characterDialoguePairs:
+  - _character: {fileID: 11400000, guid: 5b3eb870e8049c64d814d3b5aab98fd1, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: You look back at the door you came through.
+  _choices:
+  - _choiceText: Go touch grass
+    _narrativeResponse: {fileID: 0}
+  <SourceScript>k__BackingField: 'Narration: You look back at the door you came through.
+
+
+'
