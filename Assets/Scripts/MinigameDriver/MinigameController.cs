@@ -86,8 +86,8 @@ public class MinigameController : MonoBehaviour
         currentGameSequence.userScore += temp;
     }
 
-    public void executeSequence(MinigameSequence minigame)
+    public void executeSequence(MinigameSequence targetMinigame)
     {
-
+        currentGameSequence = targetMinigame;
     }
 }
