@@ -50,7 +50,7 @@ namespace ACHNarrativeDriver
                     _choicesButtonView.gameObject.SetActive(true);
                     foreach (Transform child in _choicesButtonView) //explicit variable type here because U N I T Y (TM)
                     {
-                        Destroy(child);
+                        Destroy(child.gameObject);
                     }
 
                     foreach (var choice in _currentNarrativeSequence.Choices)
