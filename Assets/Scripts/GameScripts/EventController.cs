@@ -19,7 +19,7 @@ public class EventController : MonoBehaviour
     public MinigameController minigameController;
     public GameObject minigameSystem;
     public GameObject narrativeSystem;
-    
+
     private bool pointToMini;
     private int listPosition;
     private bool pointinToEnd;

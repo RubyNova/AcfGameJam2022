@@ -10,7 +10,10 @@ public class MinigameController : MonoBehaviour
 {
     [SerializeField] private UnityEvent listNextEvent;
     [SerializeField] private MinigameSequence currentGameSequence;
-
+    [SerializeField] private TMP_InputField inputField;
+    //[SerializeField] private ACHNarrativeDriver.ScriptableObjects.Character _convoPartner;
+    //[SerializeField] private Sprite _backgroundSprite;
+    
     private bool isCurrentlyExecuting;
 
     //Initialization
@@ -45,22 +48,22 @@ public class MinigameController : MonoBehaviour
         {
             foreach (var oldWord in currentGameSequence.usedWords)
             {
-                if(currentGameSequence.inputField.text.Equals(oldWord.word, StringComparison.InvariantCultureIgnoreCase) )  //Word was already used
+                if(inputField.text.Equals(oldWord.word, StringComparison.InvariantCultureIgnoreCase) )  //Word was already used
                 {
-                    Debug.Log(currentGameSequence.inputField.text + " was already used");
+                    Debug.Log(inputField.text + " was already used");
                     wasUsed = true;
                     return;
                 }
             }
-            if (!wasUsed && currentGameSequence.inputField.text.Equals(listWord.word, StringComparison.InvariantCultureIgnoreCase) ) //Word found and unused
+            if (!wasUsed && inputField.text.Equals(listWord.word, StringComparison.InvariantCultureIgnoreCase) ) //Word found and unused
             {
-                Debug.Log(currentGameSequence.inputField.text + " was FOUND");
+                Debug.Log(inputField.text + " was FOUND");
                 calcScore(listWord);
                 currentGameSequence.usedWords.Add(listWord);
                 return;
             }
         }
-        Debug.Log(currentGameSequence.inputField.text + " was NOT found"); //Word isn't on the list of acceptable words
+        Debug.Log(inputField.text + " was NOT found"); //Word isn't on the list of acceptable words
     }
 
     //Calculate the value of the word input and add it to the current userScore

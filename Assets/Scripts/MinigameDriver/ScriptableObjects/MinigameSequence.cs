@@ -6,33 +6,16 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 
-public class MinigameSequence : MonoBehaviour
+[CreateAssetMenu(fileName = "MinigameSequence", menuName = "ScriptableObjects/MinigameSequence", order = 1)]
+public class MinigameSequence : ScriptableObject
 {
-    [SerializeField] private TMP_InputField _inputField;
     [SerializeField] private TextList _wordListData;
-    //[SerializeField] private ACHNarrativeDriver.ScriptableObjects.Character _convoPartner;
-    //[SerializeField] private Sprite _backgroundSprite;
-
-    public TMP_InputField inputField
-    {
-        get => _inputField;
-        set => _inputField = value;
-    }
+    
     public TextList wordListData
     {
         get => _wordListData;
         set => _wordListData = value;
     }
-    /*public ACHNarrativeDriver.ScriptableObjects.Character convoPartner
-    {
-        get => _convoPartner;
-        set => _convoPartner = value;
-    }
-    public Sprite BackgroundSprite
-    {
-        get => _backgroundSprite;
-        set => _backgroundSprite = value;
-    }*/
 
     private List<TextList.Word> _usedWords;
     private int _userScore;
