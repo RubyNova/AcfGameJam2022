@@ -29,15 +29,10 @@ public class MinigameController : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("enter was pressed");
             compareInput();
-        }
-
-        if (currentGameSequence.userScore >= currentGameSequence.wordListData.pointsNeeded)
-        {
-            listNextEvent.Invoke();
         }
     }
 
@@ -45,24 +40,27 @@ public class MinigameController : MonoBehaviour
     //If it's on the list and wasn't used before, the score is calculated
     public void compareInput()
     {
-        bool wasFound = false;
-        foreach (var userWord in currentGameSequence.wordListData.textList)
+        bool wasUsed = false;
+        foreach (var listWord in currentGameSequence.wordListData.textList)
         {
             foreach (var oldWord in currentGameSequence.usedWords)
             {
                 if(currentGameSequence.inputField.text.Equals(oldWord.word, StringComparison.InvariantCultureIgnoreCase) )  //Word was already used
                 {
-                    wasFound = true;
-                    break;
+                    Debug.Log(currentGameSequence.inputField.text + " was already used");
+                    wasUsed = true;
+                    return;
                 }
             }
-            if (!wasFound && currentGameSequence.inputField.text.Equals(userWord.word, StringComparison.InvariantCultureIgnoreCase) ) //Word found and unused
+            if (!wasUsed && currentGameSequence.inputField.text.Equals(listWord.word, StringComparison.InvariantCultureIgnoreCase) ) //Word found and unused
             {
-                calcScore(userWord);
-                currentGameSequence.usedWords.Add(userWord);
-                break;
+                Debug.Log(currentGameSequence.inputField.text + " was FOUND");
+                calcScore(listWord);
+                currentGameSequence.usedWords.Add(listWord);
+                return;
             }
         }
+        Debug.Log(currentGameSequence.inputField.text + " was NOT found"); //Word isn't on the list of acceptable words
     }
 
     //Calculate the value of the word input and add it to the current userScore
@@ -84,6 +82,13 @@ public class MinigameController : MonoBehaviour
         temp -= (temp % 50);
 
         currentGameSequence.userScore += temp;
+        Debug.Log("Current Score: " + currentGameSequence.userScore + "/" + currentGameSequence.wordListData.pointsNeeded);
+        if (currentGameSequence.userScore >= currentGameSequence.wordListData.pointsNeeded)
+        {
+            currentGameSequence.userScore = currentGameSequence.wordListData.pointsNeeded;
+            Debug.Log("Score met!!!");
+            listNextEvent.Invoke();
+        }
     }
 
     public void executeSequence(MinigameSequence targetMinigame)

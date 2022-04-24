@@ -10,8 +10,8 @@ public class MinigameSequence : MonoBehaviour
 {
     [SerializeField] private TMP_InputField _inputField;
     [SerializeField] private TextList _wordListData;
-    [SerializeField] private ACHNarrativeDriver.ScriptableObjects.Character _convoPartner;
-    [SerializeField] private Sprite _backgroundSprite;
+    //[SerializeField] private ACHNarrativeDriver.ScriptableObjects.Character _convoPartner;
+    //[SerializeField] private Sprite _backgroundSprite;
 
     public TMP_InputField inputField
     {
@@ -23,7 +23,7 @@ public class MinigameSequence : MonoBehaviour
         get => _wordListData;
         set => _wordListData = value;
     }
-    public ACHNarrativeDriver.ScriptableObjects.Character convoPartner
+    /*public ACHNarrativeDriver.ScriptableObjects.Character convoPartner
     {
         get => _convoPartner;
         set => _convoPartner = value;
@@ -32,7 +32,7 @@ public class MinigameSequence : MonoBehaviour
     {
         get => _backgroundSprite;
         set => _backgroundSprite = value;
-    }
+    }*/
 
     private List<TextList.Word> _usedWords;
     private int _userScore;
