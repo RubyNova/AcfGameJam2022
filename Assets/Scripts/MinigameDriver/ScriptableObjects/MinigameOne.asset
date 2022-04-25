@@ -12,4 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79baedf291e35a847b596ab6c3e83c4c, type: 3}
   m_Name: MinigameOne
   m_EditorClassIdentifier: 
-  _wordListData: {fileID: 0}
+  _wordListData:
+    prompt: Aquatic Life
+    pointsNeeded: 5000
+    textList:
+    - word: algae
+      rarity: 3
+      wasMentioned: 0
+    - word: lilypad
+      rarity: 1
+      wasMentioned: 0
+    - word: frog
+      rarity: 1
+      wasMentioned: 1
+    - word: sea turtle
+      rarity: 2
+      wasMentioned: 1
+    - word: hyphae
+      rarity: 4
+      wasMentioned: 0
+  _character: {fileID: 0}
+  _hasPoseIndex: 0
+  _poseIndex: 0

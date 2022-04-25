@@ -11,8 +11,8 @@ public class MinigameController : MonoBehaviour
     [SerializeField] private UnityEvent listNextEvent;
     [SerializeField] private MinigameSequence currentGameSequence;
     [SerializeField] private TMP_InputField inputField;
-    //[SerializeField] private ACHNarrativeDriver.ScriptableObjects.Character _convoPartner;
-    //[SerializeField] private Sprite _backgroundSprite;
+    [SerializeField] private Image characterRenderer;
+    [SerializeField] private Image backgroundRenderer;
     
     private bool isCurrentlyExecuting;
 
@@ -20,7 +20,7 @@ public class MinigameController : MonoBehaviour
     void Start()
     {
         currentGameSequence.userScore = 0;
-        currentGameSequence.usedWords = new List<TextList.Word>();
+        currentGameSequence.usedWords = new List<MinigameSequence.TextList.Word>();
         isCurrentlyExecuting = false;
     }
 
@@ -67,7 +67,7 @@ public class MinigameController : MonoBehaviour
     }
 
     //Calculate the value of the word input and add it to the current userScore
-    public void calcScore(TextList.Word userWord)
+    public void calcScore(MinigameSequence.TextList.Word userWord)
     {
         if (userWord.rarity > 4)
             userWord.rarity = 4;
