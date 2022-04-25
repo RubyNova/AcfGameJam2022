@@ -31,6 +31,7 @@ MonoBehaviour:
     - word: hyphae
       rarity: 4
       wasMentioned: 0
-  _character: {fileID: 0}
-  _hasPoseIndex: 0
-  _poseIndex: 0
+  _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+  _basePoseIndex: 0
+  _wordSuccessPoseIndex: 2
+  _backgroundSprite: {fileID: 21300000, guid: 81e25619d877acb47891bc1d3a1fd26d, type: 3}

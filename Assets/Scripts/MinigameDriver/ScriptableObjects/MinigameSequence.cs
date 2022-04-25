@@ -26,42 +26,43 @@ public class MinigameSequence : ScriptableObject
     }
 
     [SerializeField] private TextList _wordListData;
-
     [SerializeField] private ACHNarrativeDriver.ScriptableObjects.Character _character;
-    [SerializeField] private bool _hasPoseIndex;
-    [SerializeField] private int _poseIndex;
-    
+    [SerializeField] private int _basePoseIndex;
+    [SerializeField] private int _wordSuccessPoseIndex;
+    [SerializeField] private Sprite _backgroundSprite;
+
+    private List<TextList.Word> _usedWords;
+    private int _userScore;
+
     public TextList wordListData
     {
         get => _wordListData;
         set => _wordListData = value;
     }
 
-    public ACHNarrativeDriver.ScriptableObjects.Character Character
+    public ACHNarrativeDriver.ScriptableObjects.Character character
     {
         get => _character;
         set => _character = value;
     }
 
-    public int? PoseIndex
+    public int basePoseIndex
     {
-        get => _hasPoseIndex ? _poseIndex : null;
-        set
-        {
-            if (value.HasValue)
-            {
-                _poseIndex = value.Value;
-                _hasPoseIndex = true;
-            }
-            else
-            {
-                _hasPoseIndex = false;
-            }
-        }
+        get => _basePoseIndex;
+        set => _basePoseIndex = value;
     }
 
-    private List<TextList.Word> _usedWords;
-    private int _userScore;
+    public int wordSuccessPoseIndex
+    {
+        get => _wordSuccessPoseIndex;
+        set => _wordSuccessPoseIndex = value;
+    }
+
+    public Sprite backgroundSprite
+    {
+        get => _backgroundSprite;
+        set => _backgroundSprite = value;
+    }
 
     public List<TextList.Word> usedWords
     {

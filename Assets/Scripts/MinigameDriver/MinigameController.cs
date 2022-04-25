@@ -9,19 +9,30 @@ using TMPro;
 public class MinigameController : MonoBehaviour
 {
     [SerializeField] private UnityEvent listNextEvent;
-    [SerializeField] private MinigameSequence currentGameSequence;
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private Image characterRenderer;
     [SerializeField] private Image backgroundRenderer;
     
     private bool isCurrentlyExecuting;
+    private MinigameSequence currentGameSequence;
+    private bool wasFound;
+    private float correctTimer;
+    private bool wasWrong;
+    private float wrongTimer;
 
     //Initialization
     void Start()
     {
         currentGameSequence.userScore = 0;
         currentGameSequence.usedWords = new List<MinigameSequence.TextList.Word>();
+    }
+
+    void Awake()
+    {
         isCurrentlyExecuting = false;
+        wasFound = false;
+        correctTimer = 0.0f;
+        wrongTimer = 0.0f;
     }
 
     //Updates every frame
@@ -29,41 +40,80 @@ public class MinigameController : MonoBehaviour
     {
         if (!isCurrentlyExecuting)
         {
+            Debug.Log("isCurrentlyExecuting: " + isCurrentlyExecuting);
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (wasFound)
+        {
+            if (correctTimer < 1.5f)
+            {
+                characterRenderer.GetComponent<Image>().color = new Color((correctTimer%0.5f) * 2.0f, 1.0f, (correctTimer%0.5f) * 2.0f, 1.0f);
+                correctTimer += Time.deltaTime;
+            }
+            else
+            {
+                correctTimer = 0.0f;
+                wasFound = false;
+                characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.basePoseIndex];
+                characterRenderer.GetComponent<Image>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            }
+        }
+
+        if (wasWrong)
+        {
+            if (wrongTimer < 1.0f)
+            {
+                characterRenderer.GetComponent<Image>().color = new Color((0.75f + wrongTimer*0.25f), wrongTimer, wrongTimer, 1.0f);
+                wrongTimer += Time.deltaTime;
+            }
+            else
+            {
+                wrongTimer = 0.0f;
+                wasWrong = false;
+                characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.basePoseIndex];
+                characterRenderer.GetComponent<Image>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            }
+        }
+
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("enter was pressed");
             compareInput();
-        }
+        }*/
     }
 
     //Gets the user's input from the textbox then checks if the user's word was used before and if it's on the list
     //If it's on the list and wasn't used before, the score is calculated
     public void compareInput()
     {
-        bool wasUsed = false;
-        foreach (var listWord in currentGameSequence.wordListData.textList)
+        if (!inputField.text.Equals(""))
         {
-            foreach (var oldWord in currentGameSequence.usedWords)
+            foreach (var listWord in currentGameSequence.wordListData.textList)
             {
-                if(inputField.text.Equals(oldWord.word, StringComparison.InvariantCultureIgnoreCase) )  //Word was already used
+                foreach (var oldWord in currentGameSequence.usedWords)
                 {
-                    Debug.Log(inputField.text + " was already used");
-                    wasUsed = true;
+                    if(inputField.text.Equals(oldWord.word, StringComparison.InvariantCultureIgnoreCase) )  //Word was already used
+                    {
+                        Debug.Log(inputField.text + " was already used");
+                        wasWrong = true;
+                        return;
+                    }
+                }
+                if (inputField.text.Equals(listWord.word, StringComparison.InvariantCultureIgnoreCase) ) //Word found and unused
+                {
+                    Debug.Log(inputField.text + " was FOUND");
+                    wasFound = true;
+                    correctTimer = 0;
+                    characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.wordSuccessPoseIndex];
+                    currentGameSequence.usedWords.Add(listWord);
+                    calcScore(listWord);
                     return;
                 }
             }
-            if (!wasUsed && inputField.text.Equals(listWord.word, StringComparison.InvariantCultureIgnoreCase) ) //Word found and unused
-            {
-                Debug.Log(inputField.text + " was FOUND");
-                calcScore(listWord);
-                currentGameSequence.usedWords.Add(listWord);
-                return;
-            }
+            Debug.Log(inputField.text + " was NOT found"); //Word isn't on the list of acceptable words
+            wasWrong = true;
         }
-        Debug.Log(inputField.text + " was NOT found"); //Word isn't on the list of acceptable words
     }
 
     //Calculate the value of the word input and add it to the current userScore
@@ -90,6 +140,7 @@ public class MinigameController : MonoBehaviour
         {
             currentGameSequence.userScore = currentGameSequence.wordListData.pointsNeeded;
             Debug.Log("Score met!!!");
+            //Do success animations here
             listNextEvent.Invoke();
         }
     }
@@ -97,5 +148,11 @@ public class MinigameController : MonoBehaviour
     public void executeSequence(MinigameSequence targetMinigame)
     {
         currentGameSequence = targetMinigame;
+        backgroundRenderer.sprite = targetMinigame.backgroundSprite;
+        characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.basePoseIndex];
+        backgroundRenderer.enabled = true;
+        characterRenderer.enabled = true;
+        isCurrentlyExecuting = true;
+        Debug.Log("isCurrentlyExecuting: " + isCurrentlyExecuting);
     }
 }
