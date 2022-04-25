@@ -97,6 +97,7 @@ public class MinigameController : MonoBehaviour
                     {
                         Debug.Log(inputField.text + " was already used");
                         wasWrong = true;
+                        characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.wordFailPoseIndex];
                         return;
                     }
                 }
@@ -113,6 +114,7 @@ public class MinigameController : MonoBehaviour
             }
             Debug.Log(inputField.text + " was NOT found"); //Word isn't on the list of acceptable words
             wasWrong = true;
+            characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.wordFailPoseIndex];
         }
     }
 

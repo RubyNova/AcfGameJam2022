@@ -29,6 +29,7 @@ public class MinigameSequence : ScriptableObject
     [SerializeField] private ACHNarrativeDriver.ScriptableObjects.Character _character;
     [SerializeField] private int _basePoseIndex;
     [SerializeField] private int _wordSuccessPoseIndex;
+    [SerializeField] private int _wordFailPoseIndex;
     [SerializeField] private Sprite _backgroundSprite;
 
     private List<TextList.Word> _usedWords;
@@ -56,6 +57,12 @@ public class MinigameSequence : ScriptableObject
     {
         get => _wordSuccessPoseIndex;
         set => _wordSuccessPoseIndex = value;
+    }
+
+    public int wordFailPoseIndex
+    {
+        get => _wordFailPoseIndex;
+        set => _wordFailPoseIndex = value;
     }
 
     public Sprite backgroundSprite
