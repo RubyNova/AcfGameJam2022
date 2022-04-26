@@ -107,10 +107,6 @@ namespace ACHNarrativeDriver
                 {
                     _characterRenderer.enabled = true;
                 }
-                else
-                {
-                    _characterRenderer.enabled = false;
-                }
             }
 
             _rollingTextRoutine =
