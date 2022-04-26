@@ -580,6 +580,7 @@ MonoBehaviour:
   _characterNameTextBox: {fileID: 5461773937555214313}
   _characterRenderer: {fileID: 8882327317134277410}
   _backgroundRenderer: {fileID: 6538272170156341163}
+  _nameplateRenderer: {fileID: 6998941090844334186}
   _choicesButtonView: {fileID: 7585457527150889964}
   _buttonPrefab: {fileID: 5576479457325047320, guid: 1db2c86afa691a447ad07a22a3f4f9e8, type: 3}
   _nextButton: {fileID: 7585457526757155363}

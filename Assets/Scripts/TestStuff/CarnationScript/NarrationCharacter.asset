@@ -15,3 +15,4 @@ MonoBehaviour:
   _name: Narration
   _poses:
   - {fileID: 0}
+  _nameplateSprite: {fileID: 407408929, guid: 1b4a81e5449b44f4f881723144b61eb8, type: 3}

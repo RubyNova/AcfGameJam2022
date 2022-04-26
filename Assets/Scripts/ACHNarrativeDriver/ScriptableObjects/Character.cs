@@ -8,8 +8,10 @@ namespace ACHNarrativeDriver.ScriptableObjects
     {
         [SerializeField] private string _name;
         [SerializeField] private List<Sprite> _poses;
+        [SerializeField] private Sprite _nameplateSprite;
 
         public string Name => _name;
         public IReadOnlyList<Sprite> Poses => _poses.AsReadOnly();
+        public Sprite NameplateSprite => _nameplateSprite;
     }
 }

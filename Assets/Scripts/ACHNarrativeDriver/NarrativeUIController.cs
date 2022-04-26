@@ -15,6 +15,7 @@ namespace ACHNarrativeDriver
         [SerializeField] private TMP_Text _characterNameTextBox;
         [SerializeField] private Image _characterRenderer;
         [SerializeField] private Image _backgroundRenderer;
+        [SerializeField] private Image _nameplateRenderer;
         [SerializeField] private Transform _choicesButtonView;
         [SerializeField] private GameObject _buttonPrefab;
         [SerializeField] private GameObject _nextButton;
@@ -138,6 +139,7 @@ namespace ACHNarrativeDriver
         {
             StringBuilder sb = new();
             _characterNameTextBox.text = targetDialogueInfo.Character.Name;
+            _nameplateRenderer.sprite = targetDialogueInfo.Character.NameplateSprite;
 
             foreach (var character in targetDialogueInfo.Text)
             {
