@@ -306,17 +306,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 6177412710669955247}
   _sequence: {fileID: 11400000, guid: b94d106db34043147a5cbe375cf375db, type: 2}
---- !u!114 &1632669470 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6998941090844334186, guid: 050340eaf26c0f844873ebaa4752facc, type: 3}
-  m_PrefabInstance: {fileID: 6177412710669955245}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1926819479
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,10 +481,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7585457525741362626, guid: 050340eaf26c0f844873ebaa4752facc, type: 3}
-      propertyPath: _nameplateRenderer
-      value: 
-      objectReference: {fileID: 1632669470}
     - target: {fileID: 7585457525741362627, guid: 050340eaf26c0f844873ebaa4752facc, type: 3}
       propertyPath: m_Name
       value: NarrativeSystem
