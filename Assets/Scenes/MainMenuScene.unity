@@ -344,7 +344,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 591340562}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: exitGame
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1758,7 +1758,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 591340562}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: startGame
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
