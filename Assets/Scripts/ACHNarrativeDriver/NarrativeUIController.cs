@@ -119,10 +119,11 @@ namespace ACHNarrativeDriver
 
         private void ApplyBackground()
         {
-            if (_currentNarrativeSequence is null || _currentNarrativeSequence.BackgroundSprite is null) return;
+            if (_currentNarrativeSequence is null || _currentNarrativeSequence.BackgroundSprite is null || _backgroundRenderer.sprite == _currentNarrativeSequence.BackgroundSprite) return;
             
             _backgroundRenderer.sprite = _currentNarrativeSequence.BackgroundSprite;
             _backgroundRenderer.enabled = true;
+            _characterRenderer.enabled = false;
         }
 
         private void ResetRollingTextRoutine()
