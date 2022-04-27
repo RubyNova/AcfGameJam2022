@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: You Name Tag_0
+      name: You Name Tag_Actual
       rect:
         serializedVersion: 2
         x: 1109
@@ -147,7 +147,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      You Name Tag_0: 621712694
+      You Name Tag_Actual: 621712694
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

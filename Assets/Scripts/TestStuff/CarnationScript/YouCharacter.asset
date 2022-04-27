@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: You
   _poses: []
-  _nameplateSprite: {fileID: 407408929, guid: 1b4a81e5449b44f4f881723144b61eb8, type: 3}
+  _nameplateSprite: {fileID: 621712694, guid: 68708018e5ada364980022c7f75c4b53, type: 3}
