@@ -222,6 +222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NarrativeSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 7585457527150889964, guid: 050340eaf26c0f844873ebaa4752facc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.7687988
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050340eaf26c0f844873ebaa4752facc, type: 3}
 --- !u!224 &37600840 stripped
@@ -656,10 +660,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1111145631043644198, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111145631043644198, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3771988172855843284, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
       propertyPath: listNextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2029860259}
+    - target: {fileID: 4118263381266975314, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118263381266975314, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118263381330065429, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 236.95789
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118263381330065429, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 39.97072
+      objectReference: {fileID: 0}
     - target: {fileID: 4118263381583381800, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -684,9 +712,25 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 205
       objectReference: {fileID: 0}
+    - target: {fileID: 4628470913058668055, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628470913058668055, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628470913058668055, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6401843943067094420, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
       propertyPath: m_Name
       value: MinigameSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028085526987768180, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: m_Value
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}

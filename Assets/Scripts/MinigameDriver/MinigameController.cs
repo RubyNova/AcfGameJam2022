@@ -12,6 +12,8 @@ public class MinigameController : MonoBehaviour
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private Image characterRenderer;
     [SerializeField] private Image backgroundRenderer;
+    [SerializeField] private TextMeshProUGUI scoreDisplay;
+    [SerializeField] private Slider slider;
     
     private bool isCurrentlyExecuting;
     private MinigameSequence currentGameSequence;
@@ -25,6 +27,9 @@ public class MinigameController : MonoBehaviour
     {
         currentGameSequence.userScore = 0;
         currentGameSequence.usedWords = new List<MinigameSequence.TextList.Word>();
+        scoreDisplay.text = "0/" + currentGameSequence.wordListData.pointsNeeded.ToString();
+        slider.value = 0;
+        slider.maxValue = currentGameSequence.wordListData.pointsNeeded;
     }
 
     void Awake()
@@ -138,6 +143,7 @@ public class MinigameController : MonoBehaviour
 
         currentGameSequence.userScore += temp;
         Debug.Log("Current Score: " + currentGameSequence.userScore + "/" + currentGameSequence.wordListData.pointsNeeded);
+        SliderValueChange();
         if (currentGameSequence.userScore >= currentGameSequence.wordListData.pointsNeeded)
         {
             currentGameSequence.userScore = currentGameSequence.wordListData.pointsNeeded;
@@ -157,4 +163,12 @@ public class MinigameController : MonoBehaviour
         isCurrentlyExecuting = true;
         Debug.Log("isCurrentlyExecuting: " + isCurrentlyExecuting);
     }
+    
+    public void SliderValueChange()
+    {
+        scoreDisplay.text = currentGameSequence.userScore.ToString() + "/" + currentGameSequence.wordListData.pointsNeeded.ToString();
+        slider.value = currentGameSequence.userScore;
+        Debug.Log("slider.value: " + slider.value);
+    }
+
 }
