@@ -33,6 +33,7 @@ public class WordRenderer : MonoBehaviour
         {
             int value = (int) word[i];
             images[i].sprite = sprites[ dictionary[value] ];
+            images[i].enabled = true;
         }
 
     }
