@@ -14,6 +14,12 @@ public class MinigameController : MonoBehaviour
     [SerializeField] private Image backgroundRenderer;
     [SerializeField] private TextMeshProUGUI scoreDisplay;
     [SerializeField] private Slider slider;
+    [SerializeField] private Image promptDisplayBG;
+    [SerializeField] private TextMeshProUGUI promptDisplay;
+    [SerializeField] private Transform usedWordsView;
+    [SerializeField] private GameObject usedWordsPrefab;
+    [SerializeField] private Sprite floraBG;
+    [SerializeField] private Sprite emBG;
     
     private bool isCurrentlyExecuting;
     private MinigameSequence currentGameSequence;
@@ -94,30 +100,33 @@ public class MinigameController : MonoBehaviour
     {
         if (!inputField.text.Equals(""))
         {
+            string temp = inputField.text;
+            inputField.text = "";
             foreach (var listWord in currentGameSequence.wordListData.textList)
             {
                 foreach (var oldWord in currentGameSequence.usedWords)
                 {
-                    if(inputField.text.Equals(oldWord.word, StringComparison.InvariantCultureIgnoreCase) )  //Word was already used
+                    if(temp.Equals(oldWord.word, StringComparison.InvariantCultureIgnoreCase) )  //Word was already used
                     {
-                        Debug.Log(inputField.text + " was already used");
+                        Debug.Log(temp + " was already used");
                         wasWrong = true;
                         characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.wordFailPoseIndex];
                         return;
                     }
                 }
-                if (inputField.text.Equals(listWord.word, StringComparison.InvariantCultureIgnoreCase) ) //Word found and unused
+                if (temp.Equals(listWord.word, StringComparison.InvariantCultureIgnoreCase) ) //Word found and unused
                 {
-                    Debug.Log(inputField.text + " was FOUND");
+                    Debug.Log(temp + " was FOUND");
                     wasFound = true;
                     correctTimer = 0;
                     characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.wordSuccessPoseIndex];
                     currentGameSequence.usedWords.Add(listWord);
+                    SpawnPrefab(listWord);
                     calcScore(listWord);
                     return;
                 }
             }
-            Debug.Log(inputField.text + " was NOT found"); //Word isn't on the list of acceptable words
+            Debug.Log(temp + " was NOT found"); //Word isn't on the list of acceptable words
             wasWrong = true;
             characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.wordFailPoseIndex];
         }
@@ -155,13 +164,30 @@ public class MinigameController : MonoBehaviour
 
     public void executeSequence(MinigameSequence targetMinigame)
     {
+        Awake();
         currentGameSequence = targetMinigame;
         backgroundRenderer.sprite = targetMinigame.backgroundSprite;
         characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.basePoseIndex];
         backgroundRenderer.enabled = true;
         characterRenderer.enabled = true;
         isCurrentlyExecuting = true;
+        promptDisplay.text = targetMinigame.wordListData.prompt;
+        if (currentGameSequence.character.Name.Equals("Flora", StringComparison.InvariantCultureIgnoreCase))
+        {
+            promptDisplayBG.sprite = floraBG;
+            promptDisplay.color = new Color(0.05681734f, 0.5283019f, 0.4487417f, 1.0f);
+        }
+        else
+        {
+            promptDisplayBG.sprite = emBG;
+            promptDisplay.color = new Color(0.7169812f, 0.1281938f, 0.06358131f, 1.0f);
+        }
         Debug.Log("isCurrentlyExecuting: " + isCurrentlyExecuting);
+        currentGameSequence.userScore = 0;
+        currentGameSequence.usedWords = new List<MinigameSequence.TextList.Word>();
+        scoreDisplay.text = "0/" + currentGameSequence.wordListData.pointsNeeded.ToString(); //Mackie bimbo moment #28
+        slider.value = 0;
+        slider.maxValue = currentGameSequence.wordListData.pointsNeeded;
     }
     
     public void SliderValueChange()
@@ -169,6 +195,12 @@ public class MinigameController : MonoBehaviour
         scoreDisplay.text = currentGameSequence.userScore.ToString() + "/" + currentGameSequence.wordListData.pointsNeeded.ToString();
         slider.value = currentGameSequence.userScore;
         Debug.Log("slider.value: " + slider.value);
+    }
+
+    public void SpawnPrefab(MinigameSequence.TextList.Word oldWord)
+    {
+        var yes = Instantiate(usedWordsPrefab, usedWordsView);
+        yes.GetComponent<WordRenderer>().RenderWord(oldWord.word);
     }
 
 }
