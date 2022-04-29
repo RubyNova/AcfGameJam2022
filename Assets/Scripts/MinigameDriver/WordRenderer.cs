@@ -31,6 +31,10 @@ public class WordRenderer : MonoBehaviour
 
         for (int i = 0; i < word.Length; i++)
         {
+            if (word[i] == ' ')
+            {
+                continue;
+            }
             int value = (int) word[i];
             images[i].sprite = sprites[ dictionary[value] ];
             images[i].enabled = true;

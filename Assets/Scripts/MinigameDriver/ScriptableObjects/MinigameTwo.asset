@@ -20,7 +20,7 @@ MonoBehaviour:
       rarity: 1
       wasMentioned: 0
     - word: course
-      rarity: 1
+      rarity: 2
       wasMentioned: 0
     - word: major
       rarity: 1
@@ -50,6 +50,12 @@ MonoBehaviour:
       rarity: 2
       wasMentioned: 0
     - word: professor
+      rarity: 2
+      wasMentioned: 1
+    - word: dorm
+      rarity: 1
+      wasMentioned: 1
+    - word: library
       rarity: 2
       wasMentioned: 1
   _character: {fileID: 11400000, guid: df180cb15ef5b4a4e8f572a47055729d, type: 2}

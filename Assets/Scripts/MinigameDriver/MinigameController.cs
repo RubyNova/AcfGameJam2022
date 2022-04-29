@@ -158,6 +158,7 @@ public class MinigameController : MonoBehaviour
             currentGameSequence.userScore = currentGameSequence.wordListData.pointsNeeded;
             Debug.Log("Score met!!!");
             //Do success animations here
+            DeletePrefabs();
             listNextEvent.Invoke();
         }
     }
@@ -199,8 +200,20 @@ public class MinigameController : MonoBehaviour
 
     public void SpawnPrefab(MinigameSequence.TextList.Word oldWord)
     {
+        while (usedWordsView.childCount > 9)
+        {
+            //Destroy(usedWordsView.GetChild(0).gameObject);
+        }
         var yes = Instantiate(usedWordsPrefab, usedWordsView);
         yes.GetComponent<WordRenderer>().RenderWord(oldWord.word);
+    }
+
+    public void DeletePrefabs()
+    {
+        foreach (Transform child in usedWordsView)
+        {
+            Destroy(child.gameObject);
+        }
     }
 
 }
