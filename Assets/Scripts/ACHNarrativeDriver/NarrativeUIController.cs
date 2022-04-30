@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Text;
+using ACHNarrativeDriver.Api;
 using ACHNarrativeDriver.ScriptableObjects;
 using TMPro;
 using UnityEngine;
@@ -28,11 +30,15 @@ namespace ACHNarrativeDriver
         private bool _isCurrentlyExecuting;
         private bool _nextDialogueLineRequested;
         private int _currentDialogueIndex;
+        private Interpreter _narrativeInterpreter;
+        private RuntimeVariables _narrativeRuntimeVariables;
         
         private void Awake()
         {
             _isCurrentlyExecuting = false;
             _currentDialogueIndex = 0;
+            _narrativeInterpreter = new();
+            _narrativeRuntimeVariables = FindObjectOfType<RuntimeVariables>();
         }
 
         private void Update()
@@ -135,10 +141,12 @@ namespace ACHNarrativeDriver
         private IEnumerator PerformRollingText(NarrativeSequence.CharacterDialogueInfo targetDialogueInfo)
         {
             StringBuilder sb = new();
-            _characterNameTextBox.text = targetDialogueInfo.Character.Name;
+            _characterNameTextBox.text = _narrativeInterpreter.ResolveRuntimeVariables(targetDialogueInfo.Character.Name, _narrativeRuntimeVariables.ReadOnlyVariableView);
             _nameplateRenderer.sprite = targetDialogueInfo.Character.NameplateSprite;
 
-            foreach (var character in targetDialogueInfo.Text)
+            var resolvedText = _narrativeInterpreter.ResolveRuntimeVariables(targetDialogueInfo.Text, _narrativeRuntimeVariables.ReadOnlyVariableView);
+
+            foreach (var character in resolvedText)
             {
                 sb.Append(character);
                 _narrativeTextBox.text = sb.ToString();

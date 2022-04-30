@@ -5,7 +5,7 @@ using System.Linq;
 using ACHNarrativeDriver.ScriptableObjects;
 using UnityEditor;
 
-namespace ACHNarrativeDriver.Editor.Api
+namespace ACHNarrativeDriver.Api
 {
     public class Interpreter
     {
@@ -104,6 +104,29 @@ namespace ACHNarrativeDriver.Editor.Api
                 }
 
                 targetString = targetString.Replace($"${variable}", variableValue.Value);
+            }
+
+            return targetString;
+        }
+
+        public string ResolveRuntimeVariables(string targetString, IReadOnlyDictionary<string, string> variables)
+        {
+            if (variables is null)
+            {
+                return targetString;
+            }
+            
+            var unresolvedVariables = targetString.Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Where(x => x[0] == '$').Select(x => x.Replace("$", string.Empty));
+
+            foreach (var variable in unresolvedVariables)
+            {
+                if (!variables.TryGetValue(variable, out var outValue))
+                {
+                    continue;
+                }
+
+                targetString = targetString.Replace($"${variable}", outValue);
             }
 
             return targetString;
