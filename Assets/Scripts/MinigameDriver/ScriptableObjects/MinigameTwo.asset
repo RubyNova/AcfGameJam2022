@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wordListData:
     prompt: University
-    pointsNeeded: 20000
+    pointsNeeded: 25000
     textList:
     - word: book
       rarity: 1

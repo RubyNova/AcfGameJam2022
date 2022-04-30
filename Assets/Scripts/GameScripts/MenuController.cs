@@ -13,13 +13,14 @@ public class MenuController : MonoBehaviour
     [SerializeField] private Image currentBG;
     [SerializeField] private Sprite mainMenuBG;
     [SerializeField] private Sprite optionsMenuBG;
+    [SerializeField] private Slider volumeSlider;
 
     private int volume;
 
     void Start()
     {
-        currentBG.sprite = mainMenuBG;
         currentBG.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        currentBG.sprite = mainMenuBG;
         volume = 5;
         optionsMenuObject.SetActive(false);
         mainMenuObject.SetActive(true);
@@ -27,6 +28,7 @@ public class MenuController : MonoBehaviour
 
     void Update()
     {
+        volume = (int) volumeSlider.value;
         volumeDisplay.text = volume.ToString();
     }
 
@@ -37,24 +39,15 @@ public class MenuController : MonoBehaviour
 
     public void OptionsMenu()
     {
+        currentBG.color = new Color(0.2399788f, 0.1243681f, 0.4811321f, 1.0f);
         currentBG.sprite = optionsMenuBG;
         optionsMenuObject.SetActive(true);
         mainMenuObject.SetActive(false);
     }
 
-    public void RaiseVolume()
-    {
-        if (volume < 10)
-            volume++;
-    }
-    public void LowerVolume()
-    {
-        if (volume > 0)
-            volume--;
-    }
-
     public void BackToMainMenu()
     {
+        currentBG.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         currentBG.sprite = mainMenuBG;
         optionsMenuObject.SetActive(false);
         mainMenuObject.SetActive(true);
