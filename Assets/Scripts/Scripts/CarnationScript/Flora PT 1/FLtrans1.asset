@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432ea7e311e77dd4e9f6fbe5b4f9e2e2, type: 3}
+  m_Name: FLtrans1
+  m_EditorClassIdentifier: 
+  _backgroundSprite: {fileID: 21300000, guid: 81e25619d877acb47891bc1d3a1fd26d, type: 3}
+  _nextSequence: {fileID: 11400000, guid: 7c15cddf6722f6949a263e92d461a58e, type: 2}
+  _characterDialoguePairs:
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: I'm not really sure how long we spend on our knees in the dirt, Flora
+      patiently guiding me through the process of planting and listing the properties
+      of each flower as we gently place the sprouts into the earth.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: It's nice, though, having something to keep my hands busy and mind off
+      the way the morning had started.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: The anxieties of tomorrow.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: I probably could've kept going for hours if we didn't eventually run out
+      of seeds to seed, and, focus broken, I'm suddenly hit with the realisation
+      that I haven't been doing my duty as an alive person to keep hydrated during
+      the whole however long we've been out here.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Luckily, Flora comes to the rescue, directing me back to the greenhouse
+      to look for a cooler where they apparently keep an emergency supply of Capri
+      Sun.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: It's juice time, babey.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: As I sit on the floor, sipping away, I consider the day so far, and take
+      a moment to decide what to do next.
+  _choices:
+  - _choiceText: Go see if Flora needs any more help
+    _narrativeResponse: {fileID: 11400000, guid: 143256260e68f2642b383eaa98ceaa08, type: 2}
+  - _choiceText: Go on a frog hunting expedition
+    _narrativeResponse: {fileID: 11400000, guid: 7c15cddf6722f6949a263e92d461a58e, type: 2}
+  <SourceScript>k__BackingField: 'You: I''m not really sure how long we spend on
+    our knees in the dirt, Flora patiently guiding me through the process of planting
+    and listing the properties of each flower as we gently place the sprouts into
+    the earth.
+
+
+    It''s nice, though, having something to keep my hands busy and
+    mind off the way the morning had started.
+
+
+    The anxieties of tomorrow.
+
+
+    I
+    probably could''ve kept going for hours if we didn''t eventually run out of seeds
+    to seed, and, focus broken, I''m suddenly hit with the realisation that I haven''t
+    been doing my duty as an alive person to keep hydrated during the whole however
+    long we''ve been out here.
+
+
+    Luckily, Flora comes to the rescue, directing
+    me back to the greenhouse to look for a cooler where they apparently keep an
+    emergency supply of Capri Sun.
+
+
+    It''s juice time, babey.
+
+
+    As I sit
+    on the floor, sipping away, I consider the day so far, and take a moment to decide
+    what to do next.
+
+
+'

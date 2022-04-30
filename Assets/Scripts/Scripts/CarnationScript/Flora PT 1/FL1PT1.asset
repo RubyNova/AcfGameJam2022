@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432ea7e311e77dd4e9f6fbe5b4f9e2e2, type: 3}
+  m_Name: FL1PT1
+  m_EditorClassIdentifier: 
+  _backgroundSprite: {fileID: 21300000, guid: 8fc0bb9632c4da94d9beccf82bc76098, type: 3}
+  _nextSequence: {fileID: 11400000, guid: 80ee5ae505a7a0442942c6fe7b24d57c, type: 2}
+  _characterDialoguePairs:
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "Enthralled by the little insect\u2019s full disregard for all laws of
+      aviation, I follow it towards a wide array of colourful flower beds, watching
+      it descend very not gracefully upon a petal of its own choosing."
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "Its bumpy movement strikes me as ill suited to the crucial ecological
+      task it\u2019s trying to accomplish, "
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: but I admire its valiant efforts nonetheless.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "It\u2019s doing its best, and that\u2019s what counts."
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: I'm still idly watching it do its humble bumble dance when one of the
+      (presumably fellow students?) from a little bit ago suddenly pops up from a
+      crouch behind the hydrangeas, startling us both.
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 3
+    _text: EEP!
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: I make a noise - one I would later convince myself sounded totally dignified
+      in the moment - and stumble backwards, scrambling instinctively for an escape
+      but succeeding only in tripping over myself and knocking over a pot on my way
+      down into the flowerbed.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Aw Shi Shi Gashira Camellia, here we go again.
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 3
+    _text: Oh my god, are you okay?
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: 'Though a face full of leaves definitely isn''t an ideal situation, I
+      can tell by the lack of instant, agonising pain that nothing''s been broken
+      by my second fall in half an hour, other than possibly my pride. '
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: The shrubbery is, thankfully, a lot softer to land on than the floor.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: 'I give a thumbs up through the twigs to indicate my relative okayness,
+      and after breathing an audible sigh of relief, they hurry over to offer me
+      a hand.  '
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Through the power of teamwork, I am restored to an upwards position.
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 3
+    _text: I am so sorry!
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: I... didn't realise you were there.
+  _choices:
+  - _choiceText: Apologise for showing up out of the blue uninvited
+    _narrativeResponse: {fileID: 11400000, guid: 37c963c0e970f3f41b1512ef9f925908, type: 2}
+  - _choiceText: Ask about the mysterious singing voice
+    _narrativeResponse: {fileID: 11400000, guid: 83879614421d74e41b2b461ce9cfd09d, type: 2}
+  <SourceScript>k__BackingField: "You: Enthralled by the little insect\u2019s full
+    disregard for all laws of aviation, I follow it towards a wide array of colourful
+    flower beds, watching it descend very not gracefully upon a petal of its own
+    choosing.\r\n\r\nIts bumpy movement strikes me as ill suited to the crucial ecological
+    task it\u2019s trying to accomplish, \rbut I admire its valiant efforts nonetheless.\r\n\r\nIt\u2019s
+    doing its best, and that\u2019s what counts.\r\n\r\nI'm still idly watching it
+    do its humble bumble dance when one of the (presumably fellow students?) from
+    a little bit ago suddenly pops up from a crouch behind the hydrangeas, startling
+    us both.\r\n\n???: 3: EEP!\r\n\r\nYou: I make a noise - one I would later convince
+    myself sounded totally dignified in the moment - and stumble backwards, scrambling
+    instinctively for an escape but succeeding only in tripping over myself and knocking
+    over a pot on my way down into the flowerbed.\r\n\r\nAw Shi Shi Gashira Camellia,
+    here we go again.\r\n\r\n???: 3: Oh my god, are you okay?\r\n\r\nYou: 0: Though
+    a face full of leaves definitely isn't an ideal situation, I can tell by the
+    lack of instant, agonising pain that nothing's been broken by my second fall
+    in half an hour, other than possibly my pride. \n\nThe shrubbery is, thankfully,
+    a lot softer to land on than the floor.\r\n\nI give a thumbs up through the twigs
+    to indicate my relative okayness, and after breathing an audible sigh of relief,
+    they hurry over to offer me a hand.  \n\nThrough the power of teamwork, I am
+    restored to an upwards position.\n\n???: 3: I am so sorry!\n???: 8: I... didn't
+    realise you were there.\n"

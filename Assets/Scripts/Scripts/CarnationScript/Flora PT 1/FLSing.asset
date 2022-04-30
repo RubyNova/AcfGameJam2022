@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432ea7e311e77dd4e9f6fbe5b4f9e2e2, type: 3}
+  m_Name: FLSing
+  m_EditorClassIdentifier: 
+  _backgroundSprite: {fileID: 21300000, guid: 8fc0bb9632c4da94d9beccf82bc76098, type: 3}
+  _nextSequence: {fileID: 11400000, guid: 3f9c813c3d14c7c43bbeed9c1636b9b0, type: 2}
+  _characterDialoguePairs:
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 3
+    _text: Oh!
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: You heard that?
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Almost immediately, their face flushes, and they begin to fidget slightly
+      with their gloves as though embarrassed.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Hard to imagine why, though. It's not like they were the mysterious flowerbed
+      siren.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: UNLESS.
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: Yeah, that was-- That was me.
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: I like to thistle while I work.
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: It helps keep me focused, and usually there isn't anyone else here to
+      be bothered by it, so...
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: 'Oh, I tell them I wasn''t bothered by it at all! '
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: 'It was actually pretty nice! '
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Did they come up with that one themselves?
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: 'Their cheeks turn another shade darker. '
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 2
+    _text: Oh, no, no!
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: It's just something from a game I watched En play.
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: You see, it has these little bugs, and--
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 3
+    _text: ...
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: Um, n-- nevermind.
+  _choices: []
+  <SourceScript>k__BackingField: "???: 3: Oh!\n???: 8: You heard that?\n\nYou: Almost
+    immediately, their face flushes, and they begin to fidget slightly with their
+    gloves as though embarrassed.\n\nHard to imagine why, though. It's not like they
+    were the mysterious flowerbed siren.\n\nUNLESS.\n\n???: 8: Yeah, that was-- That
+    was me.\n???: I like to thistle while I work.\n???: It helps keep me focused,
+    and usually there isn't anyone else here to be bothered by it, so...\n\nYou:
+    Oh, I tell them I wasn't bothered by it at all! \n\nIt was actually pretty nice!
+    \n\nDid they come up with that one themselves?\n\nTheir cheeks turn another shade
+    darker. \n\n???: 2: Oh, no, no!\n???: It's just something from a game I watched
+    En play.\n???: You see, it has these little bugs, and--\n???: 3: ...\n???: 8:
+    Um, n-- nevermind.\n\n\n\n\n\n"

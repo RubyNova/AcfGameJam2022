@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b419b456b21f5774585dd98fc09600b7, type: 3}
+  m_Name: FrogUnintro
+  m_EditorClassIdentifier: 
+  _name: ????
+  _poses:
+  - {fileID: 21300000, guid: 4248c21fb6b020948b5999fbc8cbd6c7, type: 3}
+  - {fileID: 21300000, guid: 0424abeb8218db546ab0585ab08c09a3, type: 3}
+  - {fileID: 21300000, guid: 1a2a6c6f86d23f544b3ef717c554e528, type: 3}
+  - {fileID: 21300000, guid: 3579c9bb82a40d54ea2bdce9e80a8377, type: 3}
+  - {fileID: 21300000, guid: 3c10277539ad4e947b92af1f5ca9572b, type: 3}
+  - {fileID: 21300000, guid: 5b2308baa17773c4da697f1e82ce8867, type: 3}
+  - {fileID: 21300000, guid: fe7b447dc2baac847a1ba11f0c88a68c, type: 3}
+  - {fileID: 21300000, guid: 2b3116c3209e9504da8378c105234fd8, type: 3}
+  - {fileID: 21300000, guid: 631ae9b255d19ed48b689c7f10037a99, type: 3}
+  - {fileID: 21300000, guid: aff6281915d1a274cab36aa09ca5b7e8, type: 3}
+  - {fileID: 21300000, guid: 57d8033860f1f3943a53596000910e17, type: 3}
+  - {fileID: 21300000, guid: 0b428f8c937a94d4982a51b81ac11054, type: 3}
+  _nameplateSprite: {fileID: -2066968526, guid: e705dfb193cce2f438b642525def1713, type: 3}

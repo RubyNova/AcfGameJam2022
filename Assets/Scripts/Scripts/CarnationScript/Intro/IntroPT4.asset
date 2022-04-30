@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432ea7e311e77dd4e9f6fbe5b4f9e2e2, type: 3}
+  m_Name: IntroPT4
+  m_EditorClassIdentifier: 
+  _backgroundSprite: {fileID: 21300000, guid: 81e25619d877acb47891bc1d3a1fd26d, type: 3}
+  _nextSequence: {fileID: 11400000, guid: 1890357abb9b2114d83aaebaf0ac5803, type: 2}
+  _characterDialoguePairs:
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: "Then - spell of confusion and concern broken - all three of us immediately
+      catch ourselves staring and trail our eyes elsewhere. Wow, that\u2019s a really
+      nice and extremely interesting floor."
+  - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 4
+    _text: Oh, thank frog.
+  - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 3
+    _text: We don't really have any first aid stuff in here yet, soooo...
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 6
+    _text: ... Are you lost?
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: I look at a bag marked as "fertilizer" in the corner and conclude yeah,
+      almost definitely.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: I ask if either of them knows the way to orientation.
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 6
+    _text: Freshers?
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 7
+    _text: "Isn\u2019t that tomorrow?"
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Oh.
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: I mean--! I could be wrong, though. I'm not really sure.
+  - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 4
+    _text: No, you're right. I remember 'cause they said there'd be a sandwich wagon.
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 6
+    _text: Oh!
+  - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 6
+    _text: Yeah!
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: Oh...
+  - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 5
+    _text: Yeeeaaaaahhh.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: They turn back to me, a bit apologetically.
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 7
+    _text: "I\u2019m sorry. "
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "I hope you didn\u2019t travel too far."
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: 'There''s an awkward pause where none of us are quite sure what to do
+      with ourselves, and I quietly weigh my chances of being able to sneak back
+      out the way I came and leave without anyone noticing. '
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Unfortunately, the odds are not in my favour, and the thought of throwing
+      myself back into the mash pit is...
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: ...
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Perhaps sensing the hesitation, the two of them share a glance.
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: We should probably get back to it, but--
+  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: You're, um... free to stay here for a bit, if you'd like.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Here?
+  - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 6
+    _text: At the Botany Club!
+  - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 1
+    _text: Coolest cribbit this side of campus.
+  - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 2
+    _text: You already came all this way, you might as well take the tour! Or you
+      could just, you know, hang out!
+  - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: ' Chill!'
+  - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Vibe!
+  - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: ' ...'
+  - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: The grass in the garden is really soft.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: "I  look between the two of them as they regard me with\u2026 curiosity?
+      Expectation? It\u2019s hard to tell, but\u2026"
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "It\u2019s been a pretty long week for a Monday morning."
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "And all things considered, I don\u2019t really feel like making the arduous
+      track back home yet."
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: So.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Yeah.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: You know what.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "That\u2019s a good idea."
+  _choices:
+  - _choiceText: Go touch grass
+    _narrativeResponse: {fileID: 11400000, guid: 1890357abb9b2114d83aaebaf0ac5803, type: 2}
+  <SourceScript>k__BackingField: "You: 0: Then - spell of confusion and concern broken
+    - all three of us immediately catch ourselves staring and trail our eyes elsewhere.
+    Wow, that\u2019s a really nice and extremely interesting floor.\r\n\r\n????:
+    4: Oh, thank frog.\r\n????: 3: We don't really have any first aid stuff in here
+    yet, soooo...\n???: 6: ... Are you lost?\n\nYou: I look at a bag marked as \"fertilizer\"
+    in the corner and conclude yeah, almost definitely.\r\n\rI ask if either of them
+    knows the way to orientation.\r\n\r\n???: 6: Freshers?\r\n???: 7: Isn\u2019t
+    that tomorrow?\r\n\rYou: Oh.\r\n???: 8: I mean--! I could be wrong, though. I'm
+    not really sure.\n????: 4: No, you're right. I remember 'cause they said there'd
+    be a sandwich wagon.\n???: 6: Oh!\n????: 6: Yeah!\n???: 8: Oh...\n????: 5: Yeeeaaaaahhh.\n\nYou:
+    They turn back to me, a bit apologetically.\n\n\r???: 7: I\u2019m sorry. \r\n???:
+    I hope you didn\u2019t travel too far.\r\n\r\nYou: 0: There's an awkward pause
+    where none of us are quite sure what to do with ourselves, and I quietly weigh
+    my chances of being able to sneak back out the way I came and leave without anyone
+    noticing. \r\n\rUnfortunately, the odds are not in my favour, and the thought
+    of throwing myself back into the mash pit is...\n...\nPerhaps sensing the hesitation,
+    the two of them share a glance.\n\r\n???: 8: We should probably get back to it,
+    but--\n???: 8: You're, um... free to stay here for a bit, if you'd like.\r\n\rYou:
+    Here?\r\n\r????: 6: At the Botany Club!\n????: 1: Coolest cribbit this side of
+    campus.\n????: 2: You already came all this way, you might as well take the tour!
+    Or you could just, you know, hang out!\r\n????:  Chill!\r\n????: Vibe!\r\n????: 
+    ...\r\n????: 0: The grass in the garden is really soft.\r\n\r\nYou: 0: I  look
+    between the two of them as they regard me with\u2026 curiosity? Expectation?
+    It\u2019s hard to tell, but\u2026\r\n\rIt\u2019s been a pretty long week for
+    a Monday morning.\r\n\rAnd all things considered, I don\u2019t really feel like
+    making the arduous track back home yet.\r\n\rSo.\r\n\rYeah.\r\n\rYou know what.\r\n\rThat\u2019s
+    a good idea.\r\n"
