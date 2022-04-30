@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
+using AudioManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -14,22 +16,20 @@ public class MenuController : MonoBehaviour
     [SerializeField] private Sprite mainMenuBG;
     [SerializeField] private Sprite optionsMenuBG;
     [SerializeField] private Slider volumeSlider;
-
-    private int volume;
-
+    [SerializeField] private AudioController audioController; // I'd normally use underscore prefix but this is not my file
+    
     void Start()
     {
         currentBG.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         currentBG.sprite = mainMenuBG;
-        volume = 5;
         optionsMenuObject.SetActive(false);
         mainMenuObject.SetActive(true);
+        volumeSlider.value = audioController.Volume;
+        OnVolumeSliderValueChanged(); // This is needed because UNITY UBER S U C C C C C C C
     }
-
+    
     void Update()
     {
-        volume = (int) volumeSlider.value;
-        volumeDisplay.text = volume.ToString();
     }
 
     public void StartGame()
@@ -58,8 +58,8 @@ public class MenuController : MonoBehaviour
         Application.Quit();
     }
 
-    public int GetVolume()
+    public void OnVolumeSliderValueChanged()
     {
-        return volume;
+        volumeDisplay.text = ((int)(volumeSlider.value * 100)).ToString(CultureInfo.InvariantCulture);
     }
 }

@@ -718,6 +718,7 @@ MonoBehaviour:
   mainMenuBG: {fileID: 21300000, guid: 9e0ac71285e9bd34ab2909f1212f40d4, type: 3}
   optionsMenuBG: {fileID: 21300000, guid: 83c0321b4d082af40bfa6a5105fd43f8, type: 3}
   volumeSlider: {fileID: 1847822653}
+  audioController: {fileID: 1775321316}
 --- !u!1 &639284737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,6 +1319,63 @@ RectTransform:
   m_AnchoredPosition: {x: -4.9999847, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1428988806
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2102626760300977351, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
+      propertyPath: m_Name
+      value: AudioController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102626760300977370, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102626760300977370, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 413.78143
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102626760300977370, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 399.47678
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102626760300977370, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.06117
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102626760300977370, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102626760300977370, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102626760300977370, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102626760300977370, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102626760300977370, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102626760300977370, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102626760300977370, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
 --- !u!1 &1525065063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,6 +1797,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 800, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1775321316 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2102626760300977349, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
+  m_PrefabInstance: {fileID: 1428988806}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a13db4ca810e44ea1c252c0f947f59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1824972601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,12 +1969,36 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1824972602}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 50
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775321316}
+        m_TargetAssemblyTypeName: AudioManagement.AudioController, Assembly-CSharp
+        m_MethodName: set_Volume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 591340562}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: OnVolumeSliderValueChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1901433114
 GameObject:
   m_ObjectHideFlags: 0
