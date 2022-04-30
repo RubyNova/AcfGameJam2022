@@ -31,6 +31,7 @@ public class MinigameController : MonoBehaviour
     //Initialization
     void Start()
     {
+        inputField.ActivateInputField();
         currentGameSequence.userScore = 0;
         currentGameSequence.usedWords = new List<MinigameSequence.TextList.Word>();
         scoreDisplay.text = "0/" + currentGameSequence.wordListData.pointsNeeded.ToString();
@@ -55,6 +56,11 @@ public class MinigameController : MonoBehaviour
             return;
         }
 
+        if(currentGameSequence.userScore >= currentGameSequence.wordListData.pointsNeeded)
+        {
+            inputField.DeactivateInputField();
+        }
+
         if (wasFound)
         {
             if (correctTimer < 1.5f)
@@ -64,6 +70,10 @@ public class MinigameController : MonoBehaviour
             }
             else
             {
+                if (currentGameSequence.userScore >= currentGameSequence.wordListData.pointsNeeded)
+                {
+                    RunSuccess();
+                }
                 correctTimer = 0.0f;
                 wasFound = false;
                 characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.basePoseIndex];
@@ -152,15 +162,11 @@ public class MinigameController : MonoBehaviour
 
         currentGameSequence.userScore += temp;
         Debug.Log("Current Score: " + currentGameSequence.userScore + "/" + currentGameSequence.wordListData.pointsNeeded);
-        SliderValueChange();
         if (currentGameSequence.userScore >= currentGameSequence.wordListData.pointsNeeded)
         {
             currentGameSequence.userScore = currentGameSequence.wordListData.pointsNeeded;
-            Debug.Log("Score met!!!");
-            //Do success animations here
-            DeletePrefabs();
-            listNextEvent.Invoke();
         }
+        SliderValueChange();
     }
 
     public void executeSequence(MinigameSequence targetMinigame)
@@ -215,6 +221,14 @@ public class MinigameController : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+    }
+
+    public void RunSuccess()
+    {
+        Debug.Log("Score met!!!");
+        //Do success animations here
+        DeletePrefabs();
+        listNextEvent.Invoke();
     }
 
 }
