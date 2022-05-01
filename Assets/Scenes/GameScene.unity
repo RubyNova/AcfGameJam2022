@@ -568,11 +568,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventDataList:
-  - narrativeSeq: {fileID: 11400000, guid: b94d106db34043147a5cbe375cf375db, type: 2}
+  - narrativeSeq: {fileID: 11400000, guid: cd7a72516ecb7aa4b8f3931799195846, type: 2}
     minigameSeq: {fileID: 11400000, guid: 3d55d8b0ef58c594bb0352fd2bad82ec, type: 2}
-  - narrativeSeq: {fileID: 11400000, guid: 1c2e5590318950943970bcb64de4f1ba, type: 2}
+  - narrativeSeq: {fileID: 11400000, guid: 44686edf3c8cfcb4cbacd9507f59cb64, type: 2}
     minigameSeq: {fileID: 11400000, guid: 2145f3dd55941a34fb3f6409a6480a8d, type: 2}
-  finalNarrativeSeq: {fileID: 11400000, guid: b94d106db34043147a5cbe375cf375db, type: 2}
+  finalNarrativeSeq: {fileID: 11400000, guid: 0648894d802630a41ae54fd91349375c, type: 2}
   narrativeController: {fileID: 1636475016}
   minigameController: {fileID: 972718127406536963}
   minigameSystem: {fileID: 7057397473398639939}
@@ -974,6 +974,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3771988172855843284, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: rightSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e9e94dc1eb167214183279213ae0e04d, type: 3}
+    - target: {fileID: 3771988172855843284, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: wrongSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: fb6e197eac76be34f893fdd9f5261715, type: 3}
+    - target: {fileID: 3771988172855843284, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: audioController
+      value: 
+      objectReference: {fileID: 2102626760300977349, guid: fea823afe78cbf642b67eb904f5eb063, type: 3}
     - target: {fileID: 3771988172855843284, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
       propertyPath: listNextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

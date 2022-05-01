@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
+using AudioManagement;
 
 public class MinigameController : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class MinigameController : MonoBehaviour
     [SerializeField] private GameObject usedWordsPrefab;
     [SerializeField] private Sprite floraBG;
     [SerializeField] private Sprite emBG;
+    //[SerializeField] private AudioClip minigameMusic;
+    [SerializeField] private AudioClip rightSFX;
+    [SerializeField] private AudioClip wrongSFX;
+    [SerializeField] private AudioController audioController;
     
     private bool isCurrentlyExecuting;
     private MinigameSequence currentGameSequence;
@@ -31,6 +36,7 @@ public class MinigameController : MonoBehaviour
     //Initialization
     void Start()
     {
+        //audioController.PlayMusic(minigameMusic);
         inputField.ActivateInputField();
         currentGameSequence.userScore = 0;
         currentGameSequence.usedWords = new List<MinigameSequence.TextList.Word>();
@@ -118,6 +124,7 @@ public class MinigameController : MonoBehaviour
                 {
                     if(temp.Equals(oldWord.word, StringComparison.InvariantCultureIgnoreCase) )  //Word was already used
                     {
+                        audioController.PlayEffect(wrongSFX);
                         Debug.Log(temp + " was already used");
                         wasWrong = true;
                         characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.wordFailPoseIndex];
@@ -127,6 +134,7 @@ public class MinigameController : MonoBehaviour
                 if (temp.Equals(listWord.word, StringComparison.InvariantCultureIgnoreCase) ) //Word found and unused
                 {
                     Debug.Log(temp + " was FOUND");
+                    audioController.PlayEffect(rightSFX);
                     wasFound = true;
                     correctTimer = 0;
                     characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.wordSuccessPoseIndex];
@@ -136,6 +144,7 @@ public class MinigameController : MonoBehaviour
                     return;
                 }
             }
+            audioController.PlayEffect(wrongSFX);
             Debug.Log(temp + " was NOT found"); //Word isn't on the list of acceptable words
             wasWrong = true;
             characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.wordFailPoseIndex];
