@@ -29,7 +29,7 @@ public class MenuController : MonoBehaviour
         optionsMenuObject.SetActive(false);
         namingMenuObject.SetActive(false);
         mainMenuObject.SetActive(true);
-        volumeSlider.value = audioController.Volume;
+        volumeSlider.value = audioController.MusicVolume;
         OnVolumeSliderValueChanged(); // This is needed because UNITY UBER S U C C C C C C C
     }
 

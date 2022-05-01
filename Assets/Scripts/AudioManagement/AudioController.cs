@@ -1,27 +1,43 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace AudioManagement
 {
     public class AudioController : MonoBehaviour
     {
         [SerializeField] private AudioSource _musicTrack;
-        [SerializeField] private float _volume;
+        [FormerlySerializedAs("_volume"), SerializeField, Range(0, 1)] private float _musicVolume;
+        [SerializeField, Range(0, 1)] private float _soundEffectVolume;
 
         private void Awake() => DontDestroyOnLoad(gameObject);
 
-        public float Volume
+        public float MusicVolume
         {
-            get => _volume;
+            get => _musicVolume;
             set
             {
-                _volume = _volume switch
+                _musicVolume = _musicVolume switch
                 {
                     < 0 => 0,
                     > 1 => 1,
                     _ => value
                 };
 
-                _musicTrack.volume = _volume;
+                _musicTrack.volume = _musicVolume;
+            }
+        }
+        
+        public float SoundEffectVolume
+        {
+            get => _soundEffectVolume;
+            set
+            {
+                _soundEffectVolume = _soundEffectVolume switch
+                {
+                    < 0 => 0,
+                    > 1 => 1,
+                    _ => value
+                };
             }
         }
 
@@ -37,6 +53,6 @@ namespace AudioManagement
             _musicTrack.Play();
         }
 
-        public void PlayEffect(AudioClip effect) => AudioSource.PlayClipAtPoint(effect, Vector3.zero, Volume);
+        public void PlayEffect(AudioClip effect) => AudioSource.PlayClipAtPoint(effect, Vector3.zero, SoundEffectVolume);
     }
 }

@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _musicTrack: {fileID: 2102626760300977348}
-  _volume: 1
+  _musicVolume: 1
+  _soundEffectVolume: 1
 --- !u!82 &2102626760300977348
 AudioSource:
   m_ObjectHideFlags: 0
