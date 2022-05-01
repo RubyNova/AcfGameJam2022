@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventDataList:
-  - narrativeSeq: {fileID: 11400000, guid: cd7a72516ecb7aa4b8f3931799195846, type: 2}
+  - narrativeSeq: {fileID: 11400000, guid: b94d106db34043147a5cbe375cf375db, type: 2}
     minigameSeq: {fileID: 11400000, guid: 3d55d8b0ef58c594bb0352fd2bad82ec, type: 2}
   - narrativeSeq: {fileID: 11400000, guid: 44686edf3c8cfcb4cbacd9507f59cb64, type: 2}
     minigameSeq: {fileID: 11400000, guid: 2145f3dd55941a34fb3f6409a6480a8d, type: 2}
