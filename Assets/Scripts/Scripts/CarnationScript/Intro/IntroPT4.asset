@@ -16,7 +16,7 @@ MonoBehaviour:
   _nextSequence: {fileID: 11400000, guid: 1890357abb9b2114d83aaebaf0ac5803, type: 2}
   _characterDialoguePairs:
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
-    _hasPoseIndex: 1
+    _hasPoseIndex: 0
     _poseIndex: 0
     _text: "Then - spell of confusion and concern broken - all three of us immediately
       catch ourselves staring and trail our eyes elsewhere. Wow, that\u2019s a really
@@ -91,7 +91,7 @@ MonoBehaviour:
     _poseIndex: 0
     _text: "I hope you didn\u2019t travel too far."
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
-    _hasPoseIndex: 1
+    _hasPoseIndex: 0
     _poseIndex: 0
     _text: 'There''s an awkward pause where none of us are quite sure what to do
       with ourselves, and I quietly weigh my chances of being able to sneak back
@@ -151,7 +151,7 @@ MonoBehaviour:
     _poseIndex: 0
     _text: The grass in the garden is really soft.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
-    _hasPoseIndex: 1
+    _hasPoseIndex: 0
     _poseIndex: 0
     _text: "I  look between the two of them as they regard me with\u2026 curiosity?
       Expectation? It\u2019s hard to tell, but\u2026"
@@ -183,7 +183,7 @@ MonoBehaviour:
   _choices:
   - _choiceText: Go touch grass
     _narrativeResponse: {fileID: 11400000, guid: 1890357abb9b2114d83aaebaf0ac5803, type: 2}
-  <SourceScript>k__BackingField: "You: 0: Then - spell of confusion and concern broken
+  <SourceScript>k__BackingField: "You: Then - spell of confusion and concern broken
     - all three of us immediately catch ourselves staring and trail our eyes elsewhere.
     Wow, that\u2019s a really nice and extremely interesting floor.\r\n\r\n????:
     4: Oh, thank frog.\r\n????: 3: We don't really have any first aid stuff in here
@@ -194,19 +194,19 @@ MonoBehaviour:
     not really sure.\n????: 4: No, you're right. I remember 'cause they said there'd
     be a sandwich wagon.\n???: 6: Oh!\n????: 6: Yeah!\n???: 8: Oh...\n????: 5: Yeeeaaaaahhh.\n\nYou:
     They turn back to me, a bit apologetically.\n\n\r???: 7: I\u2019m sorry. \r\n???:
-    I hope you didn\u2019t travel too far.\r\n\r\nYou: 0: There's an awkward pause
-    where none of us are quite sure what to do with ourselves, and I quietly weigh
-    my chances of being able to sneak back out the way I came and leave without anyone
-    noticing. \r\n\rUnfortunately, the odds are not in my favour, and the thought
-    of throwing myself back into the mash pit is...\n...\nPerhaps sensing the hesitation,
-    the two of them share a glance.\n\r\n???: 8: We should probably get back to it,
-    but--\n???: 8: You're, um... free to stay here for a bit, if you'd like.\r\n\rYou:
-    Here?\r\n\r????: 6: At the Botany Club!\n????: 1: Coolest cribbit this side of
-    campus.\n????: 2: You already came all this way, you might as well take the tour!
-    Or you could just, you know, hang out!\r\n????:  Chill!\r\n????: Vibe!\r\n????: 
-    ...\r\n????: 0: The grass in the garden is really soft.\r\n\r\nYou: 0: I  look
-    between the two of them as they regard me with\u2026 curiosity? Expectation?
-    It\u2019s hard to tell, but\u2026\r\n\rIt\u2019s been a pretty long week for
-    a Monday morning.\r\n\rAnd all things considered, I don\u2019t really feel like
-    making the arduous track back home yet.\r\n\rSo.\r\n\rYeah.\r\n\rYou know what.\r\n\rThat\u2019s
-    a good idea.\r\n"
+    I hope you didn\u2019t travel too far.\r\n\r\nYou: There's an awkward pause where
+    none of us are quite sure what to do with ourselves, and I quietly weigh my chances
+    of being able to sneak back out the way I came and leave without anyone noticing.
+    \r\n\rUnfortunately, the odds are not in my favour, and the thought of throwing
+    myself back into the mash pit is...\n...\nPerhaps sensing the hesitation, the
+    two of them share a glance.\n\r\n???: 8: We should probably get back to it, but--\n???:
+    8: You're, um... free to stay here for a bit, if you'd like.\r\n\rYou: Here?\r\n\r????:
+    6: At the Botany Club!\n????: 1: Coolest cribbit this side of campus.\n????:
+    2: You already came all this way, you might as well take the tour! Or you could
+    just, you know, hang out!\r\n????:  Chill!\r\n????: Vibe!\r\n????:  ...\r\n????:
+    0: The grass in the garden is really soft.\r\n\r\nYou: I  look between the two
+    of them as they regard me with\u2026 curiosity? Expectation? It\u2019s hard to
+    tell, but\u2026\r\n\rIt\u2019s been a pretty long week for a Monday morning.\r\n\rAnd
+    all things considered, I don\u2019t really feel like making the arduous track
+    back home yet.\r\n\rSo.\r\n\rYeah.\r\n\rYou know what.\r\n\rThat\u2019s a good
+    idea.\r\n"

@@ -12,16 +12,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432ea7e311e77dd4e9f6fbe5b4f9e2e2, type: 3}
   m_Name: FL2PT2
   m_EditorClassIdentifier: 
-  _backgroundSprite: {fileID: 21300000, guid: 0a3a3730e20225445a03872f1a6247f3, type: 3}
-  _nextSequence: {fileID: 11400000, guid: 80ee5ae505a7a0442942c6fe7b24d57c, type: 2}
+  _backgroundSprite: {fileID: 21300000, guid: 8fc0bb9632c4da94d9beccf82bc76098, type: 3}
+  _nextSequence: {fileID: 11400000, guid: 5f5d82a8fb2490a4489e96c38f65effd, type: 2}
   _characterDialoguePairs:
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: W-well...
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: '[ Fwog path being edited ribbit ]'
-  _choices:
-  - _choiceText: '[ go to flower path]'
-    _narrativeResponse: {fileID: 11400000, guid: 54482ca68ce0ce84293001b9615869f1, type: 2}
-  <SourceScript>k__BackingField: 'You: [ Fwog path being edited ribbit ]
-
-'
+    _text: There's a slight drop in Flora's smile as they glance away, fidgeting.
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: It's true that we are a club, but...
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 9
+    _text: There's... only really two members so far.
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: En made some posters to try and get people interested, but
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: I guess botany isn't very... exciting.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: I gasp in semi-serious affront. Are they kidding? I wouldn't want to be
+      anywhere else, I say, gesturing definitively if somewhat narratively ambiguously.
+      Botany's plenty exciting!
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: 'Tulips! '
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: 'Coniferous flora! '
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Algae!
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Huge botany fan over here, I love photosynthesising!
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: There's a sudden snort of laughter, and when I look back to Flora they've
+      brought their glove up to cover a quiet snicker.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: '[Insert minigame 2 here]'
+  _choices: []
+  <SourceScript>k__BackingField: "Flora: 8: W-well...\n\nYou: There's a slight drop
+    in Flora's smile as they glance away, fidgeting.\n\nFlora: It's true that we
+    are a club, but...\nFlora: 9: There's... only really two members so far.\nFlora:
+    8: En made some posters to try and get people interested, but\nFlora: I guess
+    botany isn't very... exciting.\r\n\r\nYou: I gasp in semi-serious affront. Are
+    they kidding? I wouldn't want to be anywhere else, I say, gesturing definitively
+    if somewhat narratively ambiguously. Botany's plenty exciting!\r\n\r\nTulips!
+    \n\nConiferous flora! \n\nAlgae!\r\n\r\nHuge botany fan over here, I love photosynthesising!\n\nYou:
+    There's a sudden snort of laughter, and when I look back to Flora they've brought
+    their glove up to cover a quiet snicker.\n\n[Insert minigame 2 here]\n"

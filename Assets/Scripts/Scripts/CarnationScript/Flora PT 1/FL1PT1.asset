@@ -60,7 +60,7 @@ MonoBehaviour:
     _poseIndex: 3
     _text: Oh my god, are you okay?
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
-    _hasPoseIndex: 1
+    _hasPoseIndex: 0
     _poseIndex: 0
     _text: 'Though a face full of leaves definitely isn''t an ideal situation, I
       can tell by the lack of instant, agonising pain that nothing''s been broken
@@ -104,7 +104,7 @@ MonoBehaviour:
     myself sounded totally dignified in the moment - and stumble backwards, scrambling
     instinctively for an escape but succeeding only in tripping over myself and knocking
     over a pot on my way down into the flowerbed.\r\n\r\nAw Shi Shi Gashira Camellia,
-    here we go again.\r\n\r\n???: 3: Oh my god, are you okay?\r\n\r\nYou: 0: Though
+    here we go again.\r\n\r\n???: 3: Oh my god, are you okay?\r\n\r\nYou: Though
     a face full of leaves definitely isn't an ideal situation, I can tell by the
     lack of instant, agonising pain that nothing's been broken by my second fall
     in half an hour, other than possibly my pride. \n\nThe shrubbery is, thankfully,
