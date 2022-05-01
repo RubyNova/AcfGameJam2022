@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using ACHNarrativeDriver.Api;
 using ACHNarrativeDriver.ScriptableObjects;
 using UnityEditor;
@@ -44,6 +45,64 @@ namespace ACHNarrativeDriver.Editor
             _currentNarrativeSequence.BackgroundSprite = (Sprite)EditorGUILayout.ObjectField("Background Image",
                 _currentNarrativeSequence.BackgroundSprite, typeof(Sprite), false);
             var backgroundSpriteChanged = _currentNarrativeSequence.BackgroundSprite != previousSprite;
+            
+            GUILayout.Label("Music files", EditorStyles.label);
+
+            bool musicCollectionModified = false;
+
+            for (int index = 0; index < _currentNarrativeSequence.MusicFiles.Count; index++)
+            {
+                var previousClip = _currentNarrativeSequence.MusicFiles[index];
+                _currentNarrativeSequence.MusicFiles[index] =
+                    (AudioClip)EditorGUILayout.ObjectField($"Music {index}",
+                        _currentNarrativeSequence.MusicFiles[index], typeof(AudioClip), false);
+
+                if (previousClip != _currentNarrativeSequence.MusicFiles[index])
+                {
+                    musicCollectionModified = true;
+                }
+            }
+            
+            if (GUILayout.Button("Add new"))
+            {
+                _currentNarrativeSequence.MusicFiles.Add(null);
+                musicCollectionModified = true;
+            }
+
+            if (GUILayout.Button("Remove last") && _currentNarrativeSequence.MusicFiles.Count > 0)
+            {
+                _currentNarrativeSequence.MusicFiles.RemoveAt(_currentNarrativeSequence.MusicFiles.Count - 1);
+                musicCollectionModified = true;
+            }
+            
+            GUILayout.Label("Music files", EditorStyles.label);
+
+            bool soundEffectCollectionModified = false;
+
+            for (int index = 0; index < _currentNarrativeSequence.SoundEffectFiles.Count; index++)
+            {
+                var previousClip = _currentNarrativeSequence.SoundEffectFiles[index];
+                _currentNarrativeSequence.SoundEffectFiles[index] =
+                    (AudioClip)EditorGUILayout.ObjectField($"Sound Effect {index}",
+                        _currentNarrativeSequence.SoundEffectFiles[index], typeof(AudioClip), false);
+
+                if (previousClip != _currentNarrativeSequence.SoundEffectFiles[index])
+                {
+                    soundEffectCollectionModified = true;
+                }
+            }
+            
+            if (GUILayout.Button("Add new"))
+            {
+                _currentNarrativeSequence.SoundEffectFiles.Add(null);
+                soundEffectCollectionModified = true;
+            }
+
+            if (GUILayout.Button("Remove last") && _currentNarrativeSequence.SoundEffectFiles.Count > 0)
+            {
+                _currentNarrativeSequence.SoundEffectFiles.RemoveAt(_currentNarrativeSequence.SoundEffectFiles.Count - 1);
+                soundEffectCollectionModified = true;
+            }
 
             GUILayout.Label("Source Script", EditorStyles.label);
             var previousSourceScript = _currentNarrativeSequence.SourceScript;
@@ -80,7 +139,7 @@ namespace ACHNarrativeDriver.Editor
                     nextNarrativeSequenceModified = true;
                 }
 
-                if (GUILayout.Button("Remove last"))
+                if (GUILayout.Button("Remove last") && _currentNarrativeSequence.Choices.Count > 0)
                 {
                     _currentNarrativeSequence.Choices.RemoveAt(_currentNarrativeSequence.Choices.Count - 1);
                     nextNarrativeSequenceModified = true;
@@ -104,7 +163,7 @@ namespace ACHNarrativeDriver.Editor
             if (GUILayout.Button("Save Source Script"))
             {
                 compiledScriptChanged = true;
-                var listOfStuff = _interpreter.Interpret(_currentNarrativeSequence.SourceScript, _predefinedVariables);
+                var listOfStuff = _interpreter.Interpret(_currentNarrativeSequence.SourceScript, _predefinedVariables, _currentNarrativeSequence.MusicFiles.Count, _currentNarrativeSequence.SoundEffectFiles.Count);
                 _currentNarrativeSequence.CharacterDialoguePairs = listOfStuff;
 
                 if (_currentNarrativeSequence.Choices is not null && _predefinedVariables is not null)
@@ -117,7 +176,7 @@ namespace ACHNarrativeDriver.Editor
                 }
             }
 
-            if (sourceScriptChanged || nextNarrativeSequenceModified ||
+            if (sourceScriptChanged || musicCollectionModified || soundEffectCollectionModified || nextNarrativeSequenceModified ||
                 compiledScriptChanged || backgroundSpriteChanged)
             {
                 EditorUtility.SetDirty(_currentNarrativeSequence);

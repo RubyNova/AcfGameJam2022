@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using ACHNarrativeDriver.Api;
 using ACHNarrativeDriver.ScriptableObjects;
+using AudioManagement;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -22,6 +23,8 @@ namespace ACHNarrativeDriver
         [SerializeField] private GameObject _buttonPrefab;
         [SerializeField] private GameObject _nextButton;
         [SerializeField] private GameObject _dialoguePanel;
+        
+        private AudioController _audioController; // this is such a hack reeeeeeee
         public UnityEvent listNextEvent;
 
         private Coroutine _rollingTextRoutine;
@@ -39,6 +42,7 @@ namespace ACHNarrativeDriver
             _currentDialogueIndex = 0;
             _narrativeInterpreter = new();
             _narrativeRuntimeVariables = FindObjectOfType<RuntimeVariables>();
+            _audioController = FindObjectOfType<AudioController>(); // let the hax continue
         }
 
         private void Update()
@@ -105,16 +109,28 @@ namespace ACHNarrativeDriver
 
             var characterDialogueInfo = _currentNarrativeSequence.CharacterDialoguePairs[_currentDialogueIndex];
 
-            if (characterDialogueInfo.PoseIndex is { } number)
+            if (characterDialogueInfo.PoseIndex is { } poseIndex)
             {
-                _characterRenderer.sprite = characterDialogueInfo.Character.Poses[number];
+                _characterRenderer.sprite = characterDialogueInfo.Character.Poses[poseIndex];
                 
                 if (!_characterRenderer.enabled && _characterRenderer.sprite != null)
                 {
                     _characterRenderer.enabled = true;
                 }
             }
+            
+            _nameplateRenderer.sprite = characterDialogueInfo.Character.NameplateSprite;
 
+            if (characterDialogueInfo.PlayMusicIndex is { } playMusicIndex)
+            {
+                _audioController.PlayMusic(_currentNarrativeSequence.MusicFiles[playMusicIndex]);
+            }
+
+            if (characterDialogueInfo.PlaySoundEffectIndex is {} soundEffectIndex)
+            {
+                _audioController.PlayEffect(_currentNarrativeSequence.SoundEffectFiles[soundEffectIndex]);
+            }
+            
             _rollingTextRoutine =
                 StartCoroutine(
                     PerformRollingText(characterDialogueInfo));
@@ -142,7 +158,6 @@ namespace ACHNarrativeDriver
         {
             StringBuilder sb = new();
             _characterNameTextBox.text = _narrativeInterpreter.ResolveRuntimeVariables(targetDialogueInfo.Character.Name, _narrativeRuntimeVariables.ReadOnlyVariableView);
-            _nameplateRenderer.sprite = targetDialogueInfo.Character.NameplateSprite;
 
             var resolvedText = _narrativeInterpreter.ResolveRuntimeVariables(targetDialogueInfo.Text, _narrativeRuntimeVariables.ReadOnlyVariableView);
 

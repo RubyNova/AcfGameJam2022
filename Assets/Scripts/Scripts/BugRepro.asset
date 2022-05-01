@@ -14,10 +14,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _backgroundSprite: {fileID: 21300000, guid: 81e25619d877acb47891bc1d3a1fd26d, type: 3}
   _nextSequence: {fileID: 0}
+  _musicFiles:
+  - {fileID: 8300000, guid: 04deb67f76101984fbb60420def4579c, type: 3}
+  _soundEffectFiles:
+  - {fileID: 8300000, guid: fb6e197eac76be34f893fdd9f5261715, type: 3}
   _characterDialoguePairs:
   - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Hello! This is a single line!
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 1
+    _playSoundEffectIndex: 0
+    _text: This line plays a sound effect!
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _hasPlayMusicIndex: 1
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
+    _text: And this line plays a song!
   _choices: []
-  <SourceScript>k__BackingField: 'Flora: 0: Hello! This is a single line!'
+  <SourceScript>k__BackingField: 'Flora: 0: Hello! This is a single line!
+
+    Flora:
+    0: #0: This line plays a sound effect!
+
+    Flora: 0: >>0: And this line plays
+    a song!'

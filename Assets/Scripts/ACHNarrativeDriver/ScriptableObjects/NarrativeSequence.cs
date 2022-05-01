@@ -14,6 +14,10 @@ namespace ACHNarrativeDriver.ScriptableObjects
             [SerializeField] private Character _character;
             [SerializeField] private bool _hasPoseIndex;
             [SerializeField] private int _poseIndex;
+            [SerializeField] private bool _hasPlayMusicIndex;
+            [SerializeField] private int _playMusicIndex;
+            [SerializeField] private bool _hasPlaySoundEffectIndex;
+            [SerializeField] private int _playSoundEffectIndex;
             [SerializeField] private string _text;
 
             public Character Character
@@ -35,6 +39,40 @@ namespace ACHNarrativeDriver.ScriptableObjects
                     else
                     {
                         _hasPoseIndex = false;
+                    }
+                }
+            }
+            
+            public int? PlayMusicIndex
+            {
+                get => _hasPlayMusicIndex ? _playMusicIndex : null;
+                set
+                {
+                    if (value.HasValue)
+                    {
+                        _playMusicIndex = value.Value;
+                        _hasPlayMusicIndex = true;
+                    }
+                    else
+                    {
+                        _hasPlayMusicIndex = false;
+                    }
+                }
+            }
+            
+            public int? PlaySoundEffectIndex
+            {
+                get => _hasPlaySoundEffectIndex ? _playSoundEffectIndex : null;
+                set
+                {
+                    if (value.HasValue)
+                    {
+                        _playSoundEffectIndex = value.Value;
+                        _hasPlaySoundEffectIndex = true;
+                    }
+                    else
+                    {
+                        _hasPlaySoundEffectIndex = false;
                     }
                 }
             }
@@ -72,6 +110,8 @@ namespace ACHNarrativeDriver.ScriptableObjects
         
         [SerializeField] private Sprite _backgroundSprite;
         [SerializeField] private NarrativeSequence _nextSequence;
+        [SerializeField] private List<AudioClip> _musicFiles;
+        [SerializeField] private List<AudioClip> _soundEffectFiles;
         [SerializeField] private List<CharacterDialogueInfo> _characterDialoguePairs;
         [SerializeField] private List<ChoiceInfo> _choices;
 
@@ -85,6 +125,18 @@ namespace ACHNarrativeDriver.ScriptableObjects
         {
             get => _nextSequence;
             set => _nextSequence = value;
+        }
+
+        public List<AudioClip> MusicFiles
+        {
+            get => _musicFiles;
+            set => _musicFiles = value;
+        }
+        
+        public List<AudioClip> SoundEffectFiles
+        {
+            get => _soundEffectFiles;
+            set => _soundEffectFiles = value;
         }
 
         public List<CharacterDialogueInfo> CharacterDialoguePairs

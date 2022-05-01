@@ -4,13 +4,14 @@ using System.IO;
 using System.Linq;
 using ACHNarrativeDriver.ScriptableObjects;
 using UnityEditor;
+using UnityEngine;
 
 namespace ACHNarrativeDriver.Api
 {
     public class Interpreter
     {
         public List<NarrativeSequence.CharacterDialogueInfo> Interpret(string sourceScript,
-            PredefinedVariables predefinedVariables)
+            PredefinedVariables predefinedVariables, int musicFilesCount, int soundEffectsCount)
         {
             var characterPaths = AssetDatabase.FindAssets("t:Character").Select(AssetDatabase.GUIDToAssetPath);
             var characterAssets = characterPaths.Select(AssetDatabase.LoadAssetAtPath<Character>);
@@ -31,10 +32,10 @@ namespace ACHNarrativeDriver.Api
                 var line = sourceSplit[index];
                 var splitLines = line.Split(": ", StringSplitOptions.RemoveEmptyEntries);
 
-                if (splitLines.Length >= 4)
+                if (splitLines.Length >= 5)
                 {
                     throw new FormatException(
-                        $"Invalid narrative script was provided to the interpreter. {splitLines.Length} arguments were provided when the maximum is 3. Invalid line number: {index + 1}");
+                        $"Invalid narrative script was provided to the interpreter. {splitLines.Length} arguments were provided when the maximum is 4. Invalid line number: {index + 1}");
                 }
 
                 var characterName = splitLines[0];
@@ -61,11 +62,41 @@ namespace ACHNarrativeDriver.Api
                     poseIndexString = ResolvePredefinedVariables(poseIndexString, predefinedVariables);
                     poseIndex = int.Parse(poseIndexString);
                 }
-
-                if (poseIndex.HasValue && poseIndex.Value >= character.Poses.Count)
+                
+                if (poseIndex >= character.Poses.Count)
                 {
                     throw new IndexOutOfRangeException(
-                        $"Character Pose Index was outside the bounds of the Poses collection. Length: {character.Poses.Count}, Index: {poseIndex.Value}. Line number: {index + 1}");
+                        $"Character Pose Index was outside the bounds of the Poses collection. Length: {character.Poses.Count}, Index: {poseIndex}. Line number: {index + 1}");
+                }
+                
+                var playMusicIndexString = splitLines.FirstOrDefault(x => x.Contains(">>"));
+                int? playMusicIndex = null;
+                
+                if (!string.IsNullOrWhiteSpace(playMusicIndexString))
+                {
+                    playMusicIndexString = ResolvePredefinedVariables(playMusicIndexString, predefinedVariables);
+                    playMusicIndex = int.Parse(playMusicIndexString.Replace(">>", string.Empty));
+                }
+
+                if (playMusicIndex >= musicFilesCount)
+                {
+                    throw new IndexOutOfRangeException(
+                        $"Music index was outside the bounds of the music collection. Length: {musicFilesCount}, Index: {playMusicIndex}. Line number: {index + 1}");
+                }
+                
+                var playSoundEffectIndexString = splitLines.FirstOrDefault(x => x.Contains("#"));
+                int? playSoundEffectIndex = null;
+                
+                if (!string.IsNullOrWhiteSpace(playSoundEffectIndexString))
+                {
+                    playSoundEffectIndexString = ResolvePredefinedVariables(playSoundEffectIndexString, predefinedVariables);
+                    playSoundEffectIndex = int.Parse(playSoundEffectIndexString.Replace("#", string.Empty));
+                }
+
+                if (playSoundEffectIndex >= soundEffectsCount)
+                {
+                    throw new IndexOutOfRangeException(
+                        $"Sound effect index was outside the bounds of the sound effects collection. Length: {soundEffectsCount}, Index: {playSoundEffectIndex}. Line number: {index + 1}");
                 }
 
                 var text = splitLines.Last();
@@ -75,6 +106,8 @@ namespace ACHNarrativeDriver.Api
                 {
                     Character = character,
                     PoseIndex = poseIndex,
+                    PlayMusicIndex = playMusicIndex,
+                    PlaySoundEffectIndex = playSoundEffectIndex,
                     Text = text
                 };
 
