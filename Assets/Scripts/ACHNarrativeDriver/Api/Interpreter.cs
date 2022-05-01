@@ -32,10 +32,10 @@ namespace ACHNarrativeDriver.Api
                 var line = sourceSplit[index];
                 var splitLines = line.Split(": ", StringSplitOptions.RemoveEmptyEntries);
 
-                if (splitLines.Length >= 5)
+                if (splitLines.Length >= 6)
                 {
                     throw new FormatException(
-                        $"Invalid narrative script was provided to the interpreter. {splitLines.Length} arguments were provided when the maximum is 4. Invalid line number: {index + 1}");
+                        $"Invalid narrative script was provided to the interpreter. {splitLines.Length} arguments were provided when the maximum is 5. Invalid line number: {index + 1}");
                 }
 
                 var characterName = splitLines[0];
