@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79baedf291e35a847b596ab6c3e83c4c, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  _wordListData:
+    prompt: Help out in the garden!
+    pointsNeeded: 25000
+    textList:
+    - word: Wheelbarrow
+      rarity: 3
+      wasMentioned: 0
+    - word: Wheelbarrows
+      rarity: 3
+      wasMentioned: 0
+    - word: Watering Can
+      rarity: 3
+      wasMentioned: 0
+    - word: Shears
+      rarity: 4
+      wasMentioned: 0
+    - word: Scythe
+      rarity: 4
+      wasMentioned: 0
+    - word: Scythes
+      rarity: 4
+      wasMentioned: 0
+    - word: Rake
+      rarity: 2
+      wasMentioned: 0
+    - word: Rakes
+      rarity: 2
+      wasMentioned: 0
+    - word: Fertilizer
+      rarity: 1
+      wasMentioned: 0
+    - word: Gloves
+      rarity: 1
+      wasMentioned: 0
+    - word: Bucket
+      rarity: 1
+      wasMentioned: 0
+    - word: Buckets
+      rarity: 1
+      wasMentioned: 0
+    - word: Spade
+      rarity: 2
+      wasMentioned: 0
+    - word: Spades
+      rarity: 2
+      wasMentioned: 0
+    - word: Shovel
+      rarity: 2
+      wasMentioned: 0
+    - word: Shovels
+      rarity: 2
+      wasMentioned: 0
+    - word: Relaxing
+      rarity: 4
+      wasMentioned: 0
+    - word: Fresh Air
+      rarity: 4
+      wasMentioned: 0
+    - word: Water
+      rarity: 2
+      wasMentioned: 0
+    - word: Brush
+      rarity: 2
+      wasMentioned: 0
+    - word: Brushes
+      rarity: 2
+      wasMentioned: 0
+    - word: Apron
+      rarity: 3
+      wasMentioned: 0
+    - word: Aprons
+      rarity: 3
+      wasMentioned: 0
+    - word: Boots
+      rarity: 3
+      wasMentioned: 0
+    - word: Suncream
+      rarity: 4
+      wasMentioned: 0
+    - word: Fun
+      rarity: 4
+      wasMentioned: 0
+    - word: Friendship
+      rarity: 2
+      wasMentioned: 0
+    - word: Bin
+      rarity: 2
+      wasMentioned: 0
+    - word: Rubbish
+      rarity: 2
+      wasMentioned: 0
+    - word: Growing
+      rarity: 2
+      wasMentioned: 0
+    - word: Growth
+      rarity: 2
+      wasMentioned: 0
+    - word: Friends
+      rarity: 1
+      wasMentioned: 0
+    - word: Together
+      rarity: 2
+      wasMentioned: 0
+  _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+  _basePoseIndex: 6
+  _wordSuccessPoseIndex: 0
+  _wordFailPoseIndex: 5
+  _backgroundSprite: {fileID: 0}

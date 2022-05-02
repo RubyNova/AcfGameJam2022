@@ -1,0 +1,257 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79baedf291e35a847b596ab6c3e83c4c, type: 3}
+  m_Name: 3
+  m_EditorClassIdentifier: 
+  _wordListData:
+    prompt: Solidify the friendship!
+    pointsNeeded: 35
+    textList:
+    - word: Friendship
+      rarity: 1
+      wasMentioned: 0
+    - word: friendly
+      rarity: 2
+      wasMentioned: 0
+    - word: friends
+      rarity: 1
+      wasMentioned: 0
+    - word: honesty
+      rarity: 3
+      wasMentioned: 0
+    - word: honest
+      rarity: 3
+      wasMentioned: 0
+    - word: caring
+      rarity: 3
+      wasMentioned: 0
+    - word: care
+      rarity: 3
+      wasMentioned: 1
+    - word: cared
+      rarity: 3
+      wasMentioned: 0
+    - word: cares
+      rarity: 3
+      wasMentioned: 0
+    - word: love
+      rarity: 3
+      wasMentioned: 1
+    - word: loves
+      rarity: 3
+      wasMentioned: 0
+    - word: loving
+      rarity: 3
+      wasMentioned: 0
+    - word: loved
+      rarity: 3
+      wasMentioned: 0
+    - word: Comrade
+      rarity: 4
+      wasMentioned: 0
+    - word: Besties
+      rarity: 4
+      wasMentioned: 0
+    - word: talk
+      rarity: 1
+      wasMentioned: 0
+    - word: talked
+      rarity: 1
+      wasMentioned: 0
+    - word: talking
+      rarity: 2
+      wasMentioned: 0
+    - word: talks
+      rarity: 2
+      wasMentioned: 0
+    - word: together
+      rarity: 2
+      wasMentioned: 1
+    - word: help
+      rarity: 1
+      wasMentioned: 1
+    - word: helping
+      rarity: 1
+      wasMentioned: 0
+    - word: helps
+      rarity: 1
+      wasMentioned: 1
+    - word: helped
+      rarity: 1
+      wasMentioned: 0
+    - word: helper
+      rarity: 1
+      wasMentioned: 0
+    - word: camaraderie
+      rarity: 4
+      wasMentioned: 0
+    - word: trust
+      rarity: 2
+      wasMentioned: 0
+    - word: trusting
+      rarity: 2
+      wasMentioned: 0
+    - word: trusts
+      rarity: 2
+      wasMentioned: 0
+    - word: buddy
+      rarity: 2
+      wasMentioned: 1
+    - word: buds
+      rarity: 2
+      wasMentioned: 0
+    - word: bud
+      rarity: 2
+      wasMentioned: 1
+    - word: bros
+      rarity: 2
+      wasMentioned: 0
+    - word: bro
+      rarity: 2
+      wasMentioned: 0
+    - word: mate
+      rarity: 4
+      wasMentioned: 0
+    - word: mates
+      rarity: 4
+      wasMentioned: 0
+    - word: pal
+      rarity: 2
+      wasMentioned: 0
+    - word: pals
+      rarity: 2
+      wasMentioned: 0
+    - word: bff
+      rarity: 4
+      wasMentioned: 0
+    - word: best friend
+      rarity: 2
+      wasMentioned: 0
+    - word: garden
+      rarity: 2
+      wasMentioned: 1
+    - word: gardening
+      rarity: 2
+      wasMentioned: 1
+    - word: gardens
+      rarity: 2
+      wasMentioned: 0
+    - word: gardened
+      rarity: 2
+      wasMentioned: 0
+    - word: plant
+      rarity: 2
+      wasMentioned: 1
+    - word: planting
+      rarity: 2
+      wasMentioned: 1
+    - word: planted
+      rarity: 2
+      wasMentioned: 0
+    - word: botanist
+      rarity: 4
+      wasMentioned: 0
+    - word: botany
+      rarity: 4
+      wasMentioned: 1
+    - word: flora
+      rarity: 2
+      wasMentioned: 1
+    - word: fauna
+      rarity: 3
+      wasMentioned: 1
+    - word: photosynthesis
+      rarity: 4
+      wasMentioned: 1
+    - word: blossom
+      rarity: 3
+      wasMentioned: 1
+    - word: blossoms
+      rarity: 3
+      wasMentioned: 1
+    - word: herb
+      rarity: 3
+      wasMentioned: 1
+    - word: touch grass
+      rarity: 4
+      wasMentioned: 1
+    - word: crossroads
+      rarity: 4
+      wasMentioned: 1
+    - word: bee
+      rarity: 2
+      wasMentioned: 1
+    - word: bumblebee
+      rarity: 3
+      wasMentioned: 1
+    - word: bumblebees
+      rarity: 4
+      wasMentioned: 1
+    - word: flower
+      rarity: 1
+      wasMentioned: 1
+    - word: siren
+      rarity: 3
+      wasMentioned: 1
+    - word: caretaker
+      rarity: 3
+      wasMentioned: 1
+    - word: heba
+      rarity: 4
+      wasMentioned: 1
+    - word: club
+      rarity: 2
+      wasMentioned: 1
+    - word: thanks
+      rarity: 2
+      wasMentioned: 0
+    - word: thank you
+      rarity: 3
+      wasMentioned: 0
+    - word: thank
+      rarity: 2
+      wasMentioned: 0
+    - word: smile
+      rarity: 2
+      wasMentioned: 1
+    - word: smiling
+      rarity: 2
+      wasMentioned: 0
+    - word: laughing
+      rarity: 3
+      wasMentioned: 1
+    - word: chattering
+      rarity: 4
+      wasMentioned: 1
+    - word: laugh
+      rarity: 2
+      wasMentioned: 1
+    - word: play
+      rarity: 1
+      wasMentioned: 1
+    - word: playful
+      rarity: 3
+      wasMentioned: 1
+    - word: company
+      rarity: 3
+      wasMentioned: 1
+    - word: peony
+      rarity: 3
+      wasMentioned: 1
+    - word: green
+      rarity: 2
+      wasMentioned: 1
+  _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+  _basePoseIndex: 6
+  _wordSuccessPoseIndex: 0
+  _wordFailPoseIndex: 5
+  _backgroundSprite: {fileID: 0}

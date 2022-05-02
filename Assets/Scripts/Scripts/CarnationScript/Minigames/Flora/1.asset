@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79baedf291e35a847b596ab6c3e83c4c, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  _wordListData:
+    prompt: Plant some flowers!
+    pointsNeeded: 15000
+    textList:
+    - word: Seed
+      rarity: 1
+      wasMentioned: 0
+    - word: Seeds
+      rarity: 1
+      wasMentioned: 0
+    - word: Flower
+      rarity: 1
+      wasMentioned: 1
+    - word: Flowers
+      rarity: 1
+      wasMentioned: 1
+    - word: Dirt
+      rarity: 1
+      wasMentioned: 1
+    - word: Soil
+      rarity: 1
+      wasMentioned: 1
+    - word: Grass
+      rarity: 1
+      wasMentioned: 1
+    - word: Gloves
+      rarity: 2
+      wasMentioned: 1
+    - word: Garden
+      rarity: 2
+      wasMentioned: 1
+    - word: Gardens
+      rarity: 2
+      wasMentioned: 1
+    - word: Hose
+      rarity: 2
+      wasMentioned: 0
+    - word: Hoses
+      rarity: 2
+      wasMentioned: 0
+    - word: Water
+      rarity: 2
+      wasMentioned: 0
+    - word: Fertilizer
+      rarity: 2
+      wasMentioned: 0
+    - word: Fertilizers
+      rarity: 2
+      wasMentioned: 0
+    - word: Light
+      rarity: 3
+      wasMentioned: 1
+    - word: Lights
+      rarity: 3
+      wasMentioned: 0
+    - word: Love
+      rarity: 4
+      wasMentioned: 0
+    - word: Care
+      rarity: 4
+      wasMentioned: 1
+    - word: Friends
+      rarity: 4
+      wasMentioned: 0
+    - word: Friendship
+      rarity: 4
+      wasMentioned: 0
+    - word: Daisy
+      rarity: 2
+      wasMentioned: 0
+    - word: Tulip
+      rarity: 2
+      wasMentioned: 0
+    - word: Lily
+      rarity: 2
+      wasMentioned: 0
+    - word: Rose
+      rarity: 2
+      wasMentioned: 0
+    - word: Sunflower
+      rarity: 2
+      wasMentioned: 0
+    - word: Carnation
+      rarity: 4
+      wasMentioned: 1
+    - word: Bluebell
+      rarity: 2
+      wasMentioned: 0
+    - word: Chrysanthemum
+      rarity: 2
+      wasMentioned: 0
+    - word: Dandelion
+      rarity: 2
+      wasMentioned: 0
+    - word: Buttercup
+      rarity: 2
+      wasMentioned: 0
+    - word: Honeysuckle
+      rarity: 2
+      wasMentioned: 0
+    - word: Bumblebee
+      rarity: 4
+      wasMentioned: 1
+    - word: Bee
+      rarity: 4
+      wasMentioned: 1
+    - word: Bees
+      rarity: 4
+      wasMentioned: 0
+    - word: Leaf
+      rarity: 2
+      wasMentioned: 0
+    - word: Leaves
+      rarity: 2
+      wasMentioned: 1
+    - word: Earth
+      rarity: 4
+      wasMentioned: 0
+    - word: Sunlight
+      rarity: 3
+      wasMentioned: 1
+    - word: Sun
+      rarity: 2
+      wasMentioned: 1
+    - word: Compost
+      rarity: 3
+      wasMentioned: 0
+    - word: Worm
+      rarity: 4
+      wasMentioned: 0
+    - word: Worms
+      rarity: 4
+      wasMentioned: 0
+    - word: Rock
+      rarity: 1
+      wasMentioned: 0
+    - word: Rocks
+      rarity: 1
+      wasMentioned: 0
+    - word: Stone
+      rarity: 1
+      wasMentioned: 1
+    - word: Stones
+      rarity: 1
+      wasMentioned: 0
+    - word: Pond
+      rarity: 1
+      wasMentioned: 0
+    - word: Ponds
+      rarity: 1
+      wasMentioned: 0
+    - word: Bench
+      rarity: 1
+      wasMentioned: 0
+    - word: Benches
+      rarity: 1
+      wasMentioned: 0
+    - word: Wood
+      rarity: 1
+      wasMentioned: 0
+    - word: Paving
+      rarity: 3
+      wasMentioned: 0
+    - word: Crokus
+      rarity: 4
+      wasMentioned: 1
+  _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+  _basePoseIndex: 6
+  _wordSuccessPoseIndex: 0
+  _wordFailPoseIndex: 5
+  _backgroundSprite: {fileID: 0}
