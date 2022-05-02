@@ -14,7 +14,7 @@ public class MinigameController : MonoBehaviour
     [SerializeField] private Image characterRenderer;
     [SerializeField] private Image backgroundRenderer;
     [SerializeField] private Image SuccessOverlayRenderer;
-    [SerializeField] private Image SuccessTextRenderer;
+    [SerializeField] private Image[] SuccessImagesRenderer;
     [SerializeField] private TextMeshProUGUI scoreDisplay;
     [SerializeField] private Slider slider;
     [SerializeField] private Image promptDisplayBG;
@@ -38,6 +38,7 @@ public class MinigameController : MonoBehaviour
     private float initY;
     private float successTimer;
     private bool wasSuccessful;
+    float opacityTimer;
 
     //Initialization
     void Start()
@@ -52,7 +53,10 @@ public class MinigameController : MonoBehaviour
         slider.value = 0;
         slider.maxValue = currentGameSequence.wordListData.pointsNeeded;
         SuccessOverlayRenderer.color = new Color(0.05671971f, 0.0f, 0.4150943f, 0.0f);
-        SuccessTextRenderer.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+        foreach(Image successImage in SuccessImagesRenderer)
+        {
+            successImage.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+        }
     }
 
     void Awake()
@@ -62,6 +66,7 @@ public class MinigameController : MonoBehaviour
         correctTimer = 0.0f;
         wrongTimer = 0.0f;
         successTimer = 0.0f;
+        opacityTimer = 0.0f;
         wasSuccessful = false;
         SuccessOverlayRenderer.gameObject.SetActive(false);
     }
@@ -85,23 +90,31 @@ public class MinigameController : MonoBehaviour
         if (wasSuccessful)
         {
             SuccessOverlayRenderer.gameObject.SetActive(true);
-            float opacityTimer = 0.0f;
-            if(successTimer < 5.0f)
+            if(successTimer < 4.0f)
             {
                 opacityTimer += Time.deltaTime;
                 if (opacityTimer < 0.5f)
                 {
                     SuccessOverlayRenderer.color = new Color(0.05671971f, 0.0f, 0.4150943f, opacityTimer);
-                    SuccessTextRenderer.color = new Color(1.0f, 1.0f, 1.0f, 2.0f * opacityTimer);
+                    foreach(Image successImage in SuccessImagesRenderer)
+                    {
+                        successImage.color = new Color(1.0f, 1.0f, 1.0f, 2.0f * opacityTimer);
+                    }
                 }
                 else
                 {
                     SuccessOverlayRenderer.color = new Color(0.05671971f, 0.0f, 0.4150943f, 0.5f);
-                    SuccessTextRenderer.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                    foreach(Image successImage in SuccessImagesRenderer)
+                    {
+                        successImage.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                    }
                 }
             }
             else
             {
+                opacityTimer = 0.0f;
+                wasSuccessful = false;
+                successTimer = 0.0f;
                 RunSuccess();
             }
             successTimer += Time.deltaTime;
@@ -112,7 +125,7 @@ public class MinigameController : MonoBehaviour
             if (correctTimer < 1.5f)
             {
                 characterRenderer.GetComponent<Image>().color = new Color((correctTimer%0.5f) * 2.0f, 1.0f, (correctTimer%0.5f) * 2.0f, 1.0f);
-                float currX = (float) (initX - 50*Math.Abs( Math.Sin(2*Math.PI*correctTimer)));
+                float currX = (float) (initX - 40*Math.Abs( Math.Sin(2*Math.PI*correctTimer)));
                 characterRenderer.GetComponent<RectTransform>().anchoredPosition = new Vector2(currX, initY);
                 correctTimer += Time.deltaTime;
             }
@@ -264,7 +277,7 @@ public class MinigameController : MonoBehaviour
         var yes = Instantiate(usedWordsPrefab, usedWordsView);
         yes.GetComponent<WordRenderer>().RenderWord(oldWord.word);
         
-        if (usedWordsView.childCount > 9)
+        if (usedWordsView.childCount > 10)
         {
             Destroy(usedWordsView.GetChild(0).gameObject);
         }
