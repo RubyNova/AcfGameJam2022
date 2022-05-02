@@ -58,6 +58,9 @@ MonoBehaviour:
     - word: library
       rarity: 2
       wasMentioned: 1
+    - word: XXXXXXXXXXXXXXX
+      rarity: 1
+      wasMentioned: 0
   _character: {fileID: 11400000, guid: df180cb15ef5b4a4e8f572a47055729d, type: 2}
   _basePoseIndex: 8
   _wordSuccessPoseIndex: 6
