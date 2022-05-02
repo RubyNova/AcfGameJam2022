@@ -13,6 +13,8 @@ public class MinigameController : MonoBehaviour
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private Image characterRenderer;
     [SerializeField] private Image backgroundRenderer;
+    [SerializeField] private Image SuccessOverlayRenderer;
+    [SerializeField] private Image SuccessTextRenderer;
     [SerializeField] private TextMeshProUGUI scoreDisplay;
     [SerializeField] private Slider slider;
     [SerializeField] private Image promptDisplayBG;
@@ -32,17 +34,25 @@ public class MinigameController : MonoBehaviour
     private float correctTimer;
     private bool wasWrong;
     private float wrongTimer;
+    private float initX;
+    private float initY;
+    private float successTimer;
+    private bool wasSuccessful;
 
     //Initialization
     void Start()
     {
         //audioController.PlayMusic(minigameMusic);
+        initY = characterRenderer.GetComponent<RectTransform>().anchoredPosition.y;
+        initX = characterRenderer.GetComponent<RectTransform>().anchoredPosition.x;
         inputField.ActivateInputField();
         currentGameSequence.userScore = 0;
         currentGameSequence.usedWords = new List<MinigameSequence.TextList.Word>();
         scoreDisplay.text = "0/" + currentGameSequence.wordListData.pointsNeeded.ToString();
         slider.value = 0;
         slider.maxValue = currentGameSequence.wordListData.pointsNeeded;
+        SuccessOverlayRenderer.color = new Color(0.05671971f, 0.0f, 0.4150943f, 0.0f);
+        SuccessTextRenderer.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
     }
 
     void Awake()
@@ -51,6 +61,7 @@ public class MinigameController : MonoBehaviour
         wasFound = false;
         correctTimer = 0.0f;
         wrongTimer = 0.0f;
+        successTimer = 0.0f;
     }
 
     //Updates every frame
@@ -67,19 +78,46 @@ public class MinigameController : MonoBehaviour
             inputField.DeactivateInputField();
         }
 
+        if (wasSuccessful)
+        {
+            float opacityTimer = 0.0f;
+            if(successTimer < 5.0f)
+            {
+                opacityTimer += Time.deltaTime;
+                if (opacityTimer < 0.5f)
+                {
+                    SuccessOverlayRenderer.color = new Color(0.05671971f, 0.0f, 0.4150943f, opacityTimer);
+                    SuccessTextRenderer.color = new Color(1.0f, 1.0f, 1.0f, 2.0f * opacityTimer);
+                }
+                else
+                {
+                    SuccessOverlayRenderer.color = new Color(0.05671971f, 0.0f, 0.4150943f, 0.5f);
+                    SuccessTextRenderer.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                }
+            }
+            else
+            {
+                RunSuccess();
+            }
+            successTimer += Time.deltaTime;
+        }
+
         if (wasFound)
         {
             if (correctTimer < 1.5f)
             {
                 characterRenderer.GetComponent<Image>().color = new Color((correctTimer%0.5f) * 2.0f, 1.0f, (correctTimer%0.5f) * 2.0f, 1.0f);
+                float currX = (float) (initX - 50*Math.Abs( Math.Sin(2*Math.PI*correctTimer)));
+                characterRenderer.GetComponent<RectTransform>().anchoredPosition = new Vector2(currX, initY);
                 correctTimer += Time.deltaTime;
             }
             else
             {
                 if (currentGameSequence.userScore >= currentGameSequence.wordListData.pointsNeeded)
                 {
-                    RunSuccess();
+                    wasSuccessful = true;
                 }
+                characterRenderer.GetComponent<RectTransform>().anchoredPosition = new Vector2(initX, initY);
                 correctTimer = 0.0f;
                 wasFound = false;
                 characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.basePoseIndex];
@@ -91,11 +129,14 @@ public class MinigameController : MonoBehaviour
         {
             if (wrongTimer < 1.0f)
             {
+                float currentX = (float) (initX - ( (40*Math.Pow(wrongTimer + 1, -1)*Math.Sin(8*Math.PI*wrongTimer)) / ( Math.Pow(wrongTimer + 1, 2) ) ));
+                characterRenderer.GetComponent<RectTransform>().anchoredPosition = new Vector2(currentX, initY);
                 characterRenderer.GetComponent<Image>().color = new Color((0.75f + wrongTimer*0.25f), wrongTimer, wrongTimer, 1.0f);
                 wrongTimer += Time.deltaTime;
             }
             else
             {
+                characterRenderer.GetComponent<RectTransform>().anchoredPosition = new Vector2(initX, initY);
                 wrongTimer = 0.0f;
                 wasWrong = false;
                 characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.basePoseIndex];

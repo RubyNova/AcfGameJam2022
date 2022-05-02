@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventDataList:
-  - narrativeSeq: {fileID: 11400000, guid: b94d106db34043147a5cbe375cf375db, type: 2}
+  - narrativeSeq: {fileID: 11400000, guid: cd7a72516ecb7aa4b8f3931799195846, type: 2}
     minigameSeq: {fileID: 11400000, guid: 3d55d8b0ef58c594bb0352fd2bad82ec, type: 2}
   - narrativeSeq: {fileID: 11400000, guid: 44686edf3c8cfcb4cbacd9507f59cb64, type: 2}
     minigameSeq: {fileID: 11400000, guid: 2145f3dd55941a34fb3f6409a6480a8d, type: 2}
@@ -977,7 +977,7 @@ PrefabInstance:
     - target: {fileID: 3771988172855843284, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
       propertyPath: rightSFX
       value: 
-      objectReference: {fileID: 8300000, guid: e9e94dc1eb167214183279213ae0e04d, type: 3}
+      objectReference: {fileID: 8300000, guid: b9c9b5644e1b5f948aab2bc40051f6b9, type: 3}
     - target: {fileID: 3771988172855843284, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
       propertyPath: wrongSFX
       value: 
@@ -1449,6 +1449,14 @@ PrefabInstance:
     - target: {fileID: 8572853181045338508, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8643880770107992741, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 187.54993
+      objectReference: {fileID: 0}
+    - target: {fileID: 8643880770107992741, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18.405823
       objectReference: {fileID: 0}
     - target: {fileID: 8764238355717914473, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
       propertyPath: m_AnchorMax.y
