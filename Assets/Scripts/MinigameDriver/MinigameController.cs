@@ -62,7 +62,11 @@ public class MinigameController : MonoBehaviour
         correctTimer = 0.0f;
         wrongTimer = 0.0f;
         successTimer = 0.0f;
+        wasSuccessful = false;
+        SuccessOverlayRenderer.gameObject.SetActive(false);
     }
+
+    private void OnDisable() => SuccessOverlayRenderer.gameObject.SetActive(false);
 
     //Updates every frame
     void Update()
@@ -80,6 +84,7 @@ public class MinigameController : MonoBehaviour
 
         if (wasSuccessful)
         {
+            SuccessOverlayRenderer.gameObject.SetActive(true);
             float opacityTimer = 0.0f;
             if(successTimer < 5.0f)
             {
@@ -221,7 +226,7 @@ public class MinigameController : MonoBehaviour
 
     public void executeSequence(MinigameSequence targetMinigame)
     {
-        Awake();
+        Awake(); // This took me a hot minute to understand what on earth was going on. In regular Unity code you wouldn't do this but its nearly 10 PM BST and I don't have time to fix it. - Matt
         currentGameSequence = targetMinigame;
         backgroundRenderer.sprite = targetMinigame.backgroundSprite;
         characterRenderer.sprite = currentGameSequence.character.Poses[currentGameSequence.basePoseIndex];
