@@ -36,6 +36,8 @@ namespace ACHNarrativeDriver
         private Interpreter _narrativeInterpreter;
         private RuntimeVariables _narrativeRuntimeVariables;
         
+        public NarrativeSequence LastPlayedSequence { get; private set; }
+        
         private void Awake()
         {
             _isCurrentlyExecuting = false;
@@ -87,6 +89,7 @@ namespace ACHNarrativeDriver
 
                 if (_currentNarrativeSequence.NextSequence is null)
                 {
+                    LastPlayedSequence = _currentNarrativeSequence;
                     listNextEvent.Invoke();
                     _isCurrentlyExecuting = false;
                     _currentNarrativeSequence = null;
@@ -138,7 +141,7 @@ namespace ACHNarrativeDriver
             
             ApplyBackground();
         }
-
+        
         private void ApplyBackground()
         {
             if (_currentNarrativeSequence is null || _currentNarrativeSequence.BackgroundSprite is null || _backgroundRenderer.sprite == _currentNarrativeSequence.BackgroundSprite) return;

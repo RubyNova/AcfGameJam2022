@@ -60,24 +60,23 @@ public class EventController : MonoBehaviour
         //if the function was previously loading the final narrative sequence, unload the sequence stuff and load the ending scene stuff
         if (pointingToEnd)
         {
-            minigameSystem.SetActive(false);
-            narrativeSystem.SetActive(false);
-            _audioController.StopMusic();
-            SceneManager.LoadScene(2); // credits index
-            return;
         }
 
         if (pointToMini)
         {
             if (!_narrativeDictionary.TryGetValue(_currentMinigame, out _currentNarrativeSequence))
             {
-                
+                GoToCredits();
+                return;
             }
-
+        }
+        else
+        {
+            _currentNarrativeSequence = narrativeController.LastPlayedSequence;
             if (!_minigameDictionary.TryGetValue(_currentNarrativeSequence, out _currentMinigame))
             {
-                pointingToEnd = true;
-                _currentMinigame = null;
+                GoToCredits();
+                return;
             }
         }
         
@@ -102,6 +101,14 @@ public class EventController : MonoBehaviour
             narrativeSystem.SetActive(true);
             narrativeController.ExecuteSequence(_currentNarrativeSequence);
             return;
+        }
+
+        void GoToCredits()
+        {
+            minigameSystem.SetActive(false);
+            narrativeSystem.SetActive(false);
+            _audioController.StopMusic();
+            SceneManager.LoadScene(2); // credits index
         }
     }
 }
