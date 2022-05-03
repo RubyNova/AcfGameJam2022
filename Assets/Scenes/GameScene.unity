@@ -567,12 +567,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f9c9b40dc1e0346bbb6e20b81d9c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventDataList:
+  narrativeMinigameLookupData:
   - narrativeSeq: {fileID: 11400000, guid: cd7a72516ecb7aa4b8f3931799195846, type: 2}
     minigameSeq: {fileID: 11400000, guid: 3d55d8b0ef58c594bb0352fd2bad82ec, type: 2}
+    next: {fileID: 11400000, guid: 44686edf3c8cfcb4cbacd9507f59cb64, type: 2}
   - narrativeSeq: {fileID: 11400000, guid: 44686edf3c8cfcb4cbacd9507f59cb64, type: 2}
     minigameSeq: {fileID: 11400000, guid: 2145f3dd55941a34fb3f6409a6480a8d, type: 2}
-  finalNarrativeSeq: {fileID: 11400000, guid: 0648894d802630a41ae54fd91349375c, type: 2}
+    next: {fileID: 11400000, guid: 0648894d802630a41ae54fd91349375c, type: 2}
   narrativeController: {fileID: 1636475016}
   minigameController: {fileID: 972718127406536963}
   minigameSystem: {fileID: 7057397473398639939}
@@ -796,11 +797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1111145631043644198, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1111145631043644198, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1322354087002293069, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1281,6 +1282,10 @@ PrefabInstance:
     - target: {fileID: 6401843943067094420, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
       propertyPath: m_Name
       value: MinigameSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401843943067094420, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6419888704171696281, guid: 17152a88ebd27ef469b86d38dc25cedf, type: 3}
       propertyPath: m_AnchorMax.y

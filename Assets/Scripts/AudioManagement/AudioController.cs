@@ -54,5 +54,7 @@ namespace AudioManagement
         }
 
         public void PlayEffect(AudioClip effect) => AudioSource.PlayClipAtPoint(effect, Vector3.zero, SoundEffectVolume);
+
+        public void StopMusic() => _musicTrack.Stop();
     }
 }

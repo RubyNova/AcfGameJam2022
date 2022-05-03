@@ -1,81 +1,106 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using ACHNarrativeDriver;
+using ACHNarrativeDriver.ScriptableObjects;
+using AudioManagement;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class EventController : MonoBehaviour
 {
     [Serializable]
     public class EventData
     {
-        [SerializeField] public ACHNarrativeDriver.ScriptableObjects.NarrativeSequence narrativeSeq;
+        [SerializeField] public NarrativeSequence narrativeSeq;
         [SerializeField] public MinigameSequence minigameSeq;
+        [SerializeField] public NarrativeSequence next;
     }
-
-    public List<EventData> eventDataList;
-    public ACHNarrativeDriver.ScriptableObjects.NarrativeSequence finalNarrativeSeq;
-    public ACHNarrativeDriver.NarrativeUIController narrativeController;
+    
+    public List<EventData> narrativeMinigameLookupData;
+    public NarrativeUIController narrativeController;
     public MinigameController minigameController;
     public GameObject minigameSystem;
     public GameObject narrativeSystem;
 
     private bool pointToMini;
-    private int listPosition;
-    private bool pointinToEnd;
+    private bool pointingToEnd;
+
+    private AudioController _audioController;
+    private Dictionary<NarrativeSequence, MinigameSequence> _minigameDictionary;
+    private Dictionary<MinigameSequence, NarrativeSequence> _narrativeDictionary;
+    private NarrativeSequence _currentNarrativeSequence;
+    private MinigameSequence _currentMinigame;
 
     void Start()
     {
-        listPosition = 0;
+        _minigameDictionary = new();
+        _narrativeDictionary = new();
+        _currentNarrativeSequence = narrativeMinigameLookupData[0].narrativeSeq;
+        _currentMinigame = narrativeMinigameLookupData[0].minigameSeq;
+
+        foreach (var data in narrativeMinigameLookupData)
+        {
+            _minigameDictionary.Add(data.narrativeSeq, data.minigameSeq);
+
+            if (data.next is not null)
+            {
+                _narrativeDictionary.Add(data.minigameSeq, data.next);
+            }
+        }
+        
         pointToMini = false;
-        pointinToEnd = false;
+        pointingToEnd = false;
         minigameSystem.SetActive(false);
-        narrativeController.ExecuteSequence(eventDataList[0].narrativeSeq);
+        narrativeController.ExecuteSequence(_currentNarrativeSequence);
+        _audioController = FindObjectOfType<AudioController>();
     }
 
     public void listNext()
     {
         //if the function was previously loading the final narrative sequence, unload the sequence stuff and load the ending scene stuff
-        if (pointinToEnd)
+        if (pointingToEnd)
         {
             minigameSystem.SetActive(false);
             narrativeSystem.SetActive(false);
-            //Load ending scene stuff
+            _audioController.StopMusic();
+            SceneManager.LoadScene(2); // credits index
             return;
         }
 
-        //if the event was pointing to a minigame, listPosition points to the next duo on the list
         if (pointToMini)
         {
-            listPosition++;
+            if (!_narrativeDictionary.TryGetValue(_currentMinigame, out _currentNarrativeSequence))
+            {
+                
+            }
+
+            if (!_minigameDictionary.TryGetValue(_currentNarrativeSequence, out _currentMinigame))
+            {
+                pointingToEnd = true;
+                _currentMinigame = null;
+            }
         }
+        
         //Swap between minigame and narrative
         pointToMini = !pointToMini;
-
-        //if the eventDataList finished being iterated through, run the finalNarrativeSeq sequence and exit the function
-        if (listPosition == eventDataList.Capacity)
-        {
-            minigameSystem.SetActive(false);
-            narrativeSystem.SetActive(true);
-            pointinToEnd = true;
-            narrativeController.ExecuteSequence(finalNarrativeSeq);
-            return;
-        }
-
-        //if the eventDataList points to a minigame, run the run the minigameSeq sequence and exit the function
+        
         if (pointToMini)
         {
+            if (_currentMinigame is null)
+            {
+                return;
+            }
+            
             narrativeSystem.SetActive(false);
             minigameSystem.SetActive(true);
-            minigameController.executeSequence(eventDataList[listPosition].minigameSeq);
+            minigameController.executeSequence(_currentMinigame);
             return;
         }
-        //if the eventDataList points to a narration, run the run the narrativeSeq sequence and exit the function
         else
         {
             minigameSystem.SetActive(false);
             narrativeSystem.SetActive(true);
-            narrativeController.ExecuteSequence(eventDataList[listPosition].narrativeSeq);
+            narrativeController.ExecuteSequence(_currentNarrativeSequence);
             return;
         }
     }
