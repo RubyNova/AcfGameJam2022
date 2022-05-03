@@ -26,8 +26,8 @@ MonoBehaviour:
     _playSoundEffectIndex: 0
     _text: Oh!
   - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
-    _hasPoseIndex: 1
-    _poseIndex: 3
+    _hasPoseIndex: 0
+    _poseIndex: 0
     _hasPlayMusicIndex: 0
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
@@ -35,7 +35,7 @@ MonoBehaviour:
     _text: "\u2026"
   - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
     _hasPoseIndex: 1
-    _poseIndex: 4
+    _poseIndex: 3
     _hasPlayMusicIndex: 0
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
@@ -48,7 +48,8 @@ MonoBehaviour:
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
-    _text: They look at me.
+    _text: They look at me like the entire days events is flashing before their eyes,
+      and things are suddenly slotting into place.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
@@ -56,7 +57,7 @@ MonoBehaviour:
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
-    _text: And I look at them.
+    _text: And I look at them, experiencing just the same.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
@@ -90,7 +91,8 @@ MonoBehaviour:
     _playSoundEffectIndex: 0
     _text: '[Insert minigame B3]'
   _choices: []
-  <SourceScript>k__BackingField: "Flora: 6: Oh!\r\nFlora: 3: \u2026\r\nFlora: 4:
-    OH!\r\n\r\n$player: They look at me.\r\n\r\nAnd I look at them.\r\n\r\nAnd they
-    look at me.\r\n\r\nFlora: 8: \u2026 I like your face.\r\n\r\nAnd we start laughing.\r\n\r\n[Insert
-    minigame B3]\r\n"
+  <SourceScript>k__BackingField: "Flora: 6: Oh!\r\nFlora: \u2026\r\nFlora: 3: OH!\r\n\r\n$player:
+    They look at me like the entire days events is flashing before their eyes, and
+    things are suddenly slotting into place.\n\r\nAnd I look at them, experiencing
+    just the same.\n\r\nAnd they look at me.\r\n\r\nFlora: 8: \u2026 I like your
+    face.\r\n\r\nAnd we start laughing.\r\n\r\n[Insert minigame B3]\r\n"
