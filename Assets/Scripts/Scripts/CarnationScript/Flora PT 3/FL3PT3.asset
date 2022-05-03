@@ -14,41 +14,101 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _backgroundSprite: {fileID: 21300000, guid: 8fc0bb9632c4da94d9beccf82bc76098, type: 3}
   _nextSequence: {fileID: 11400000}
+  _musicFiles: []
+  _soundEffectFiles: []
   _characterDialoguePairs:
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
+    _text: I never know what to expect with you, moment to moment.
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
+    _text: Flora
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
+    _text: "And... you don\u2019t really, um\u2026 emote very strongly?"
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Oh.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Oh, yeah, right.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "I absolutely forgot I had a face up until this point, or\u2026 a physical
-      presence, at all. That this whole time, while I was watching them, trying to
-      figure out what they were feeling or thinking\u2013"
+      presence, at all. "
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
+    _text: "That this whole time, while I was watching them, trying to figure out
+      what they were feeling or thinking\u2013"
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: They were watching me, doing the same.
   - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 8
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "A-anyway, I\u2019m sorry if this just sounds weird, or\u2013"
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Before they can finish speaking, I interrupt them, blurting with sudden
       passionate abandon.
   _choices:
   - _choiceText: Sorry about my face I am also autistic!
     _narrativeResponse: {fileID: 11400000, guid: a0f5edeb900e682429144d4659f44b45, type: 2}
-  <SourceScript>k__BackingField: "\r$player: Oh.\r\n\r\nOh, yeah, right.\r\n\r\nI
-    absolutely forgot I had a face up until this point, or\u2026 a physical presence,
-    at all. That this whole time, while I was watching them, trying to figure out
-    what they were feeling or thinking\u2013\r\n\r\nThey were watching me, doing
-    the same.\r\n\r\nFlora: 8: A-anyway, I\u2019m sorry if this just sounds weird,
-    or\u2013\r\n\r\n$player: Before they can finish speaking, I interrupt them, blurting
-    with sudden passionate abandon.\r\n"
+  <SourceScript>k__BackingField: "\rFlora: 8: I never know what to expect with you,
+    moment to moment.\r\nFlora: \nFlora: And... you don\u2019t really, um\u2026 emote
+    very strongly?\r\n\n$player: Oh.\r\n\r\nOh, yeah, right.\r\n\r\nI absolutely
+    forgot I had a face up until this point, or\u2026 a physical presence, at all.
+    \n\nThat this whole time, while I was watching them, trying to figure out what
+    they were feeling or thinking\u2013\r\n\r\nThey were watching me, doing the same.\r\n\r\nFlora:
+    8: A-anyway, I\u2019m sorry if this just sounds weird, or\u2013\r\n\r\n$player:
+    Before they can finish speaking, I interrupt them, blurting with sudden passionate
+    abandon.\r\n"

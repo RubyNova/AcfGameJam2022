@@ -119,4 +119,4 @@ MonoBehaviour:
   _basePoseIndex: 6
   _wordSuccessPoseIndex: 0
   _wordFailPoseIndex: 5
-  _backgroundSprite: {fileID: 0}
+  _backgroundSprite: {fileID: 21300000, guid: 9c1d47be97efd5a4f84d5743b3fe18dd, type: 3}

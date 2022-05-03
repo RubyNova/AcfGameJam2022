@@ -14,39 +14,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _backgroundSprite: {fileID: 21300000, guid: 9405c55aa85fcb141aba82e3cfbbbed3, type: 3}
   _nextSequence: {fileID: 11400000, guid: 821daa3b8151cb043bccf803be955c2b, type: 2}
+  _musicFiles:
+  - {fileID: 8300000, guid: e5b3e999e8b7b2641be4faa1fea526eb, type: 3}
+  _soundEffectFiles: []
   _characterDialoguePairs:
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 1
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "Ah, Generic University\u2122!"
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: An academy of unspecified location and infamously ambiguous prestige.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "It\u2019s been my dream to attend for at least the last two sentences,
       and now that the time has finally come to make my debut as a young scholar,
       I feel a steady rise of both excitement and anxiety welling up in my chest."
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "That\u2019s normal, I tell myself. Perfectly understandable. After all\u2026"
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "It\u2019s a new place!"
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: It's a new experience!
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "It\u2019s\u2026"
   _choices: []
-  <SourceScript>k__BackingField: "$player: Ah, Generic University\u2122!\r\n\r\nAn
+  <SourceScript>k__BackingField: "$player: >>0: Ah, Generic University\u2122!\r\n\r\nAn
     academy of unspecified location and infamously ambiguous prestige.\r\n\r\nIt\u2019s
     been my dream to attend for at least the last two sentences, and now that the
     time has finally come to make my debut as a young scholar, I feel a steady rise

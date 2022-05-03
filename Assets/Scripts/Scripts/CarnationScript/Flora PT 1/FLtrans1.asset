@@ -14,25 +14,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _backgroundSprite: {fileID: 21300000, guid: 81e25619d877acb47891bc1d3a1fd26d, type: 3}
   _nextSequence: {fileID: 11400000, guid: 7c15cddf6722f6949a263e92d461a58e, type: 2}
+  _musicFiles:
+  - {fileID: 8300000, guid: e5b3e999e8b7b2641be4faa1fea526eb, type: 3}
+  _soundEffectFiles: []
   _characterDialoguePairs:
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 1
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: I'm not really sure how long we spend on our knees in the dirt, Flora
       patiently guiding me through the process of planting and listing the properties
       of each flower as we gently place the sprouts into the earth.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: It's nice, though, having something to keep my hands busy and mind off
       the way the morning had started.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: The anxieties of tomorrow.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: I probably could've kept going for hours if we didn't eventually run out
       of seeds to seed, and, focus broken, I'm suddenly hit with the realisation
       that I haven't been doing my duty as an alive person and keeping hydrated during
@@ -40,16 +59,28 @@ MonoBehaviour:
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Luckily, Flora comes to the rescue, directing me back to the greenhouse
       to look for a cooler where they apparently keep an emergency supply of Capri
       Sun for exactly this kind of situation.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: It's juice time, babey.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: As I sit on the floor, sipping away, I consider the day so far, and take
       a moment to decide what to do next.
   _choices:
@@ -57,29 +88,29 @@ MonoBehaviour:
     _narrativeResponse: {fileID: 11400000, guid: a9efbf7d0e4526a4ca0048baac28d4c3, type: 2}
   - _choiceText: ( Frog stole this choice, ribbit )
     _narrativeResponse: {fileID: 11400000, guid: a9efbf7d0e4526a4ca0048baac28d4c3, type: 2}
-  <SourceScript>k__BackingField: '$player: I''m not really sure how long we spend
-    on our knees in the dirt, Flora patiently guiding me through the process of planting
-    and listing the properties of each flower as we gently place the sprouts into
-    the earth.
+  <SourceScript>k__BackingField: '$player: >>0: I''m not really sure how long we
+    spend on our knees in the dirt, Flora patiently guiding me through the process
+    of planting and listing the properties of each flower as we gently place the
+    sprouts into the earth.
 
 
-    It''s nice, though, having something to keep my hands busy and
-    mind off the way the morning had started.
+    It''s nice, though, having something to keep my
+    hands busy and mind off the way the morning had started.
 
 
-    The anxieties of tomorrow.
+    The anxieties
+    of tomorrow.
 
 
-    I
-    probably could''ve kept going for hours if we didn''t eventually run out of seeds
-    to seed, and, focus broken, I''m suddenly hit with the realisation that I haven''t
-    been doing my duty as an alive person and keeping hydrated during the whole however
-    long we''ve been out here.
+    I probably could''ve kept going for hours if we didn''t eventually
+    run out of seeds to seed, and, focus broken, I''m suddenly hit with the realisation
+    that I haven''t been doing my duty as an alive person and keeping hydrated during
+    the whole however long we''ve been out here.
 
 
-    Luckily, Flora comes to the rescue, directing
-    me back to the greenhouse to look for a cooler where they apparently keep an
-    emergency supply of Capri Sun for exactly this kind of situation.
+    Luckily, Flora comes to the
+    rescue, directing me back to the greenhouse to look for a cooler where they apparently
+    keep an emergency supply of Capri Sun for exactly this kind of situation.
 
 
     It''s

@@ -254,4 +254,4 @@ MonoBehaviour:
   _basePoseIndex: 6
   _wordSuccessPoseIndex: 0
   _wordFailPoseIndex: 5
-  _backgroundSprite: {fileID: 0}
+  _backgroundSprite: {fileID: 21300000, guid: 8fc0bb9632c4da94d9beccf82bc76098, type: 3}
