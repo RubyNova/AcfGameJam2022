@@ -96,8 +96,8 @@ MonoBehaviour:
     _playSoundEffectIndex: 0
     _text: That green sure can grass.
   _choices: []
-  <SourceScript>k__BackingField: "$player: >>0: \rNo more work to do, no more apologies
-    to say, we work our way snorting and laughing off the path and onto the lawn,
+  <SourceScript>k__BackingField: "$player: \rNo more work to do, no more apologies
+    to say, we stumble our way snorting and laughing off the path and onto the lawn,
     tumbling down and stretching out with a satisfying pop before relaxing back into
     it.\n\nNext to me, Flora seems finally well at ease, talking about their future
     dreams  for the garden, about orchards, and little sad bug games.\n\nAnd me?\n\nI

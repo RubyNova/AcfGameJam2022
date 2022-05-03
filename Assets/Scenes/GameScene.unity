@@ -985,16 +985,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrativeMinigameLookupData:
-  - narrativeSeq: {fileID: 11400000, guid: b94d106db34043147a5cbe375cf375db, type: 2}
-    minigameSeq: {fileID: 11400000, guid: 3d55d8b0ef58c594bb0352fd2bad82ec, type: 2}
-    next: {fileID: 11400000, guid: 44686edf3c8cfcb4cbacd9507f59cb64, type: 2}
-  - narrativeSeq: {fileID: 11400000, guid: 44686edf3c8cfcb4cbacd9507f59cb64, type: 2}
-    minigameSeq: {fileID: 11400000, guid: 2145f3dd55941a34fb3f6409a6480a8d, type: 2}
-    next: {fileID: 11400000, guid: 0648894d802630a41ae54fd91349375c, type: 2}
+  - narrativeSeq: {fileID: 11400000, guid: 3f9c813c3d14c7c43bbeed9c1636b9b0, type: 2}
+    minigameSeq: {fileID: 11400000, guid: dec4fe6894e68b84c97a5f2f7b792ba2, type: 2}
+    next: {fileID: 11400000, guid: 1c2e5590318950943970bcb64de4f1ba, type: 2}
+  - narrativeSeq: {fileID: 11400000, guid: b46ea7ff3cab9434687a0896b8749c83, type: 2}
+    minigameSeq: {fileID: 11400000, guid: 6d1422f31f0cb7044a05ca6061fbbe29, type: 2}
+    next: {fileID: 11400000, guid: 5f5d82a8fb2490a4489e96c38f65effd, type: 2}
+  - narrativeSeq: {fileID: 11400000, guid: a0f5edeb900e682429144d4659f44b45, type: 2}
+    minigameSeq: {fileID: 11400000, guid: 39c92ef9ea0c73a41bfcb75b3920423a, type: 2}
+    next: {fileID: 11400000, guid: abdd1c5282a9d6c41aea4b6db27ade91, type: 2}
   narrativeController: {fileID: 1636475016}
   minigameController: {fileID: 972718127406536963}
   minigameSystem: {fileID: 7057397473398639939}
   narrativeSystem: {fileID: 1636475015}
+  startupSequence: {fileID: 11400000, guid: b94d106db34043147a5cbe375cf375db, type: 2}
 --- !u!4 &2029860260
 Transform:
   m_ObjectHideFlags: 0

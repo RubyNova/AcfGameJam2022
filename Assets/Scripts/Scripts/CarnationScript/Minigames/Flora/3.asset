@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wordListData:
     prompt: Solidify the friendship!
-    pointsNeeded: 35
+    pointsNeeded: 35000
     textList:
     - word: Friendship
       rarity: 1

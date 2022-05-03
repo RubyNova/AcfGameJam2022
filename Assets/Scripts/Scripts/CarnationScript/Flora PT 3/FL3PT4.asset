@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: FL3PT4
   m_EditorClassIdentifier: 
   _backgroundSprite: {fileID: 21300000, guid: 8fc0bb9632c4da94d9beccf82bc76098, type: 3}
-  _nextSequence: {fileID: 11400000, guid: abdd1c5282a9d6c41aea4b6db27ade91, type: 2}
-  _musicFiles: []
+  _nextSequence: {fileID: 0}
+  _musicFiles:
+  - {fileID: 8300000, guid: 771c29dfea935614fb00ad2653b2be2a, type: 3}
   _soundEffectFiles: []
   _characterDialoguePairs:
   - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 6
-    _hasPlayMusicIndex: 0
+    _hasPlayMusicIndex: 1
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
@@ -48,8 +49,8 @@ MonoBehaviour:
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
-    _text: They look at me like the entire days events is flashing before their eyes,
-      and things are suddenly slotting into place.
+    _text: At once, the day's events unravels before us both - the ups, the downs,
+      the smiles, the frowns - And it all just kinda... slots into place.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
@@ -57,7 +58,39 @@ MonoBehaviour:
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
-    _text: And I look at them, experiencing just the same.
+    _text: Definitely not like a missing puzzle piece.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
+    _text: But sort of like tetris.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
+    _text: It makes sense.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
+    _text: Flora look at me.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
+    _text: And I look at them.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
@@ -68,7 +101,7 @@ MonoBehaviour:
     _text: And they look at me.
   - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
     _hasPoseIndex: 1
-    _poseIndex: 8
+    _poseIndex: 4
     _hasPlayMusicIndex: 0
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
@@ -82,17 +115,10 @@ MonoBehaviour:
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
     _text: And we start laughing.
-  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
-    _hasPoseIndex: 0
-    _poseIndex: 0
-    _hasPlayMusicIndex: 0
-    _playMusicIndex: 0
-    _hasPlaySoundEffectIndex: 0
-    _playSoundEffectIndex: 0
-    _text: '[Insert minigame B3]'
   _choices: []
-  <SourceScript>k__BackingField: "Flora: 6: Oh!\r\nFlora: \u2026\r\nFlora: 3: OH!\r\n\r\n$player:
-    They look at me like the entire days events is flashing before their eyes, and
-    things are suddenly slotting into place.\n\r\nAnd I look at them, experiencing
-    just the same.\n\r\nAnd they look at me.\r\n\r\nFlora: 8: \u2026 I like your
-    face.\r\n\r\nAnd we start laughing.\r\n\r\n[Insert minigame B3]\r\n"
+  <SourceScript>k__BackingField: "Flora: 6: >>0: Oh!\r\nFlora: \u2026\r\nFlora: 3:
+    OH!\r\n\r\n$player: At once, the day's events unravels before us both - the ups,
+    the downs, the smiles, the frowns - And it all just kinda... slots into place.\n\nDefinitely
+    not like a missing puzzle piece.\n\nBut sort of like tetris.\n\nIt makes sense.\n\nFlora
+    look at me.\n\r\nAnd I look at them.\n\r\nAnd they look at me.\r\n\r\nFlora:
+    4: \u2026 I like your face.\r\n\r\nAnd we start laughing.\r\n\n"

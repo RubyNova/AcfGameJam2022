@@ -82,7 +82,7 @@ MonoBehaviour:
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
     _text: "\u2026!"
-  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
     _hasPlayMusicIndex: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
     _playSoundEffectIndex: 0
     _text: "\u2013they still jump a little when they notice me, as if snapped from
       thought."
-  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
     _hasPlayMusicIndex: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
-    _text: For this morning.
+    _text: For... today.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
@@ -206,7 +206,7 @@ MonoBehaviour:
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
-    _text: If anything here, I should be the one to apologise as the invasive species
+    _text: If anything, I should be the one to apologise as the invasive species
       in this particular ecosystem.
   - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
     _hasPoseIndex: 1
@@ -244,18 +244,17 @@ MonoBehaviour:
     enough, following the no-trail trail of yard-tidyness, I\u2019m able to track
     them down to the ivy walls, seated on the bench beneath just out of reach for
     where the sun falls.\r\n\r\nThey don\u2019t look in my direction as I make my
-    way over, and despite my best efforts\u2013\r\n\r\nFlora: 3: \u2026!\r\n\r\n\u2013they
-    still jump a little when they notice me, as if snapped from thought.\r\n\r\nAw,
+    way over, and despite my best efforts\u2013\r\n\r\nFlora: 3: \u2026!\r\n\r\n$player:
+    \u2013they still jump a little when they notice me, as if snapped from thought.\r\n\r\nAw,
     daffodil.\r\n\r\nFlora: 2: O-oh, it\u2019s just you!\r\nFlora: 8: Well, not\u2026
     \u201Cjust\u201D just, but.\r\nFlora: 0: It\u2019s you.\r\n\r\n$player: Yup,
     it\u2019s a-me!\r\n \nI tip the hat I do or maybe don\u2019t have at them, and
     they snicker, once again bringing their hand to their face as if half-heartedly
     trying to hide it. \r\n\r\nWhen it fades out, they\u2019re quiet for a beat.\r\n\r\nFlora:
-    8: Listen, I\u2026\r\nFlora: 9: I would like to apologise.\r\nFlora: For this
-    morning.\r\n\r\n$player: I blink, taking my due uno-reversed turn at being surprised
-    as comically complicated maths equations fly through my mind, trying to understand
-    what they mean.\r\n\nAre they talking about the pot incident?\n\r\nIf anything
-    here, I should be the one to apologise as the invasive species in this particular
-    ecosystem.\r\n\nFlora: 3: Oh, no, no, you\u2019re okay!\r\nFlora: 2: Really,
-    I should've expected you would peek in.\r\nFlora: We did invite you, after all,
-    I just\u2013"
+    8: Listen, I\u2026\r\nFlora: 9: I would like to apologise.\r\nFlora: For... today.\n\r\n$player:
+    I blink, taking my due uno-reversed turn at being surprised as comically complicated
+    maths equations fly through my mind, trying to understand what they mean.\r\n\nAre
+    they talking about the pot incident?\n\r\nIf anything, I should be the one to
+    apologise as the invasive species in this particular ecosystem.\r\n\nFlora: 3:
+    Oh, no, no, you\u2019re okay!\r\nFlora: 2: Really, I should've expected you would
+    peek in.\r\nFlora: We did invite you, after all, I just\u2013"
