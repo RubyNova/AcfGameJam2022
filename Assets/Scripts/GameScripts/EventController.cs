@@ -23,7 +23,6 @@ public class EventController : MonoBehaviour
     public GameObject narrativeSystem;
 
     private bool pointToMini;
-    private bool pointingToEnd;
 
     private AudioController _audioController;
     private Dictionary<NarrativeSequence, MinigameSequence> _minigameDictionary;
@@ -49,7 +48,6 @@ public class EventController : MonoBehaviour
         }
         
         pointToMini = false;
-        pointingToEnd = false;
         minigameSystem.SetActive(false);
         narrativeController.ExecuteSequence(_currentNarrativeSequence);
         _audioController = FindObjectOfType<AudioController>();
@@ -57,11 +55,6 @@ public class EventController : MonoBehaviour
 
     public void listNext()
     {
-        //if the function was previously loading the final narrative sequence, unload the sequence stuff and load the ending scene stuff
-        if (pointingToEnd)
-        {
-        }
-
         if (pointToMini)
         {
             if (!_narrativeDictionary.TryGetValue(_currentMinigame, out _currentNarrativeSequence))
