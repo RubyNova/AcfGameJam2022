@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using ACHNarrativeDriver.ScriptableObjects;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 namespace ACHNarrativeDriver.Api
 {
     public class Interpreter
     {
+        #if UNITY_EDITOR
         public List<NarrativeSequence.CharacterDialogueInfo> Interpret(string sourceScript,
             PredefinedVariables predefinedVariables, int musicFilesCount, int soundEffectsCount)
         {
@@ -116,6 +119,7 @@ namespace ACHNarrativeDriver.Api
 
             return returnList;
         }
+        #endif
 
         public string ResolvePredefinedVariables(string targetString, PredefinedVariables variables)
         {
