@@ -207,7 +207,7 @@ MonoBehaviour:
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
-    _text: I appreciate you trying to cheer me up.
+    _text: Thank you for trying to cheer me up, though.
   - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
@@ -250,14 +250,6 @@ MonoBehaviour:
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
     _text: Let's go!
-  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
-    _hasPoseIndex: 0
-    _poseIndex: 0
-    _hasPlayMusicIndex: 0
-    _playMusicIndex: 0
-    _hasPlaySoundEffectIndex: 0
-    _playSoundEffectIndex: 0
-    _text: '[Insert minigame 2 here]'
   _choices: []
   <SourceScript>k__BackingField: "Flora: 8: Well...\n\n$player: They glance away,
     and I notice a slight drop in their smile as they do.\n\nAfter spending the entire
