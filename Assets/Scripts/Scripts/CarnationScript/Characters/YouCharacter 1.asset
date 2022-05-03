@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b419b456b21f5774585dd98fc09600b7, type: 3}
-  m_Name: YouCharacter
+  m_Name: YouCharacter 1
   m_EditorClassIdentifier: 
-  _name: $player
+  _name: You
   _poses:
   - {fileID: 21300000, guid: cd4fa20ad14b45f418541799d658a1bf, type: 3}
   _nameplateSprite: {fileID: 621712694, guid: 68708018e5ada364980022c7f75c4b53, type: 3}

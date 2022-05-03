@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432ea7e311e77dd4e9f6fbe5b4f9e2e2, type: 3}
+  m_Name: FL3PT3
+  m_EditorClassIdentifier: 
+  _backgroundSprite: {fileID: 21300000, guid: 8fc0bb9632c4da94d9beccf82bc76098, type: 3}
+  _nextSequence: {fileID: 11400000}
+  _characterDialoguePairs:
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Oh.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Oh, yeah, right.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "I absolutely forgot I had a face up until this point, or\u2026 a physical
+      presence, at all. That this whole time, while I was watching them, trying to
+      figure out what they were feeling or thinking\u2013"
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: They were watching me, doing the same.
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: "A-anyway, I\u2019m sorry if this just sounds weird, or\u2013"
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Before they can finish speaking, I interrupt them, blurting with sudden
+      passionate abandon.
+  _choices:
+  - _choiceText: Sorry about my face I am also autistic!
+    _narrativeResponse: {fileID: 11400000, guid: a0f5edeb900e682429144d4659f44b45, type: 2}
+  <SourceScript>k__BackingField: "\r$player: Oh.\r\n\r\nOh, yeah, right.\r\n\r\nI
+    absolutely forgot I had a face up until this point, or\u2026 a physical presence,
+    at all. That this whole time, while I was watching them, trying to figure out
+    what they were feeling or thinking\u2013\r\n\r\nThey were watching me, doing
+    the same.\r\n\r\nFlora: 8: A-anyway, I\u2019m sorry if this just sounds weird,
+    or\u2013\r\n\r\n$player: Before they can finish speaking, I interrupt them, blurting
+    with sudden passionate abandon.\r\n"

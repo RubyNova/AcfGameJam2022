@@ -31,8 +31,8 @@ MonoBehaviour:
     _text: "I indicate as much to the two of them, and watch some of their tension
       wash off with relief\u2013"
   _choices: []
-  <SourceScript>k__BackingField: "You: I can still feel my pulse pushing a bit faster
-    than it should be, but the world has stopped spinning a la cirque de soleil,
+  <SourceScript>k__BackingField: "$player: I can still feel my pulse pushing a bit
+    faster than it should be, but the world has stopped spinning a la cirque de soleil,
     and - despite the tumble - I don\u2019t seem to be any physically worse for wear.\r
     \n\nI indicate as much to the two of them, and watch some of their tension wash
     off with relief\u2013\r"

@@ -36,8 +36,8 @@ MonoBehaviour:
       a small park into a university building, and instead just shove a few of the
       juice pouces into my backpack and head back over.
   _choices: []
-  <SourceScript>k__BackingField: "You: We already finished the planting, but, it
-    looked like Flora was starting on something else as I took off for hydration
+  <SourceScript>k__BackingField: "$player: We already finished the planting, but,
+    it looked like Flora was starting on something else as I took off for hydration
     station. Maybe there's more I can do to help? \r\n\r\nIt's a pretty big garden
     for one person to take care of.\r\n\r\nLike, REALLY big.\r\n\r\nFor narrative's
     sake I decide not to question how they managed to fit a small park into a university

@@ -69,18 +69,18 @@ MonoBehaviour:
     _narrativeResponse: {fileID: 11400000, guid: 7c15cddf6722f6949a263e92d461a58e, type: 2}
   - _choiceText: Investigate the flight of the bumblebee
     _narrativeResponse: {fileID: 11400000, guid: 54482ca68ce0ce84293001b9615869f1, type: 2}
-  <SourceScript>k__BackingField: "You: I nod, watching the two of them slip and bounce
-    away respectively before following suit, passing by the thick, clinging ivy trying
-    to work its way inside towards an academic career as I step through the glass
-    door out of the greenhouse.\r\n\r\nAfter that whole hallway ordeal, fresh air
-    hits my lungs like a punch - if that punch was more of a gentle and refreshing
-    sip of cool lemonade, served to me on a sunny day.\r\n\r\nI close my eyes, breathe
-    it in, and let the world fall away for a moment.\n\n[ ... ]\n\r\nBy the time
-    I open them again, there\u2019s no sight of anyone else, though somehow I doubt
-    the others have gone very far.\n\nMaking my way tenatively forwards, my eyes
-    trail over the seemingly endless greenery before they fall on the stonework path
-    winding up over the lawn ahead, eventually splitting off into two different directions.
-    \n\nA crossroads.\r\n\r\nI consider my choices.\r\n\r\nTo my left, my eyes follow
-    the trail of a particularly chunky bumblebee, making its way towards a waft of
-    sweet aroma and a gentle tune.\r\n\r\nTo my right, the faint sound of a stream,
-    accompanied by splashes of a bubbling giggle.\r\n"
+  <SourceScript>k__BackingField: "$player: I nod, watching the two of them slip and
+    bounce away respectively before following suit, passing by the thick, clinging
+    ivy trying to work its way inside towards an academic career as I step through
+    the glass door out of the greenhouse.\r\n\r\nAfter that whole hallway ordeal,
+    fresh air hits my lungs like a punch - if that punch was more of a gentle and
+    refreshing sip of cool lemonade, served to me on a sunny day.\r\n\r\nI close
+    my eyes, breathe it in, and let the world fall away for a moment.\n\n[ ... ]\n\r\nBy
+    the time I open them again, there\u2019s no sight of anyone else, though somehow
+    I doubt the others have gone very far.\n\nMaking my way tenatively forwards,
+    my eyes trail over the seemingly endless greenery before they fall on the stonework
+    path winding up over the lawn ahead, eventually splitting off into two different
+    directions. \n\nA crossroads.\r\n\r\nI consider my choices.\r\n\r\nTo my left,
+    my eyes follow the trail of a particularly chunky bumblebee, making its way towards
+    a waft of sweet aroma and a gentle tune.\r\n\r\nTo my right, the faint sound
+    of a stream, accompanied by splashes of a bubbling giggle.\r\n"

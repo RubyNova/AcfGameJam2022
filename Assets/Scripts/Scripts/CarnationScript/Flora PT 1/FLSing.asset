@@ -87,12 +87,12 @@ MonoBehaviour:
     _poseIndex: 8
     _text: Um, n-- nevermind.
   _choices: []
-  <SourceScript>k__BackingField: "???: 3: Oh!\n???: 8: You heard that?\n\nYou: Almost
-    immediately, their face flushes, and they begin to fidget slightly with their
-    gloves as though embarrassed.\n\nHard to imagine why, though. It's not like they
-    were the mysterious flowerbed siren.\n\nUNLESS.\n\n???: 8: Yeah, that was-- That
-    was me.\n???: I like to thistle while I work.\n???: It helps keep me focused,
-    and usually there isn't anyone else here to be bothered by it, so...\n\nYou:
+  <SourceScript>k__BackingField: "???: 3: Oh!\n???: 8: You heard that?\n\n$player:
+    Almost immediately, their face flushes, and they begin to fidget slightly with
+    their gloves as though embarrassed.\n\nHard to imagine why, though. It's not
+    like they were the mysterious flowerbed siren.\n\nUNLESS.\n\n???: 8: Yeah, that
+    was-- That was me.\n???: I like to thistle while I work.\n???: It helps keep
+    me focused, and usually there isn't anyone else here to be bothered by it, so...\n\n$player:
     Oh, I tell them I wasn't bothered by it at all! \n\nIt was actually pretty nice!
     \n\nDid they come up with that one themselves?\n\nTheir cheeks turn another shade
     darker. \n\n???: 2: Oh, no, no!\n???: It's just something from a game I watched

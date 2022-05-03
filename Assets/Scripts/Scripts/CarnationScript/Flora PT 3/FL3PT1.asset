@@ -12,16 +12,147 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432ea7e311e77dd4e9f6fbe5b4f9e2e2, type: 3}
   m_Name: FL3PT1
   m_EditorClassIdentifier: 
-  _backgroundSprite: {fileID: 21300000, guid: 0a3a3730e20225445a03872f1a6247f3, type: 3}
-  _nextSequence: {fileID: 11400000, guid: 80ee5ae505a7a0442942c6fe7b24d57c, type: 2}
+  _backgroundSprite: {fileID: 21300000, guid: 8fc0bb9632c4da94d9beccf82bc76098, type: 3}
+  _nextSequence: {fileID: 11400000}
   _characterDialoguePairs:
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: '[ Fwog path being edited ribbit ]'
-  _choices:
-  - _choiceText: '[ go to flower path]'
-    _narrativeResponse: {fileID: 11400000, guid: 54482ca68ce0ce84293001b9615869f1, type: 2}
-  <SourceScript>k__BackingField: 'You: [ Fwog path being edited ribbit ]
-
-'
+    _text: "As much as I have a suddenly ravenous craving for lukewarm sugary orange
+      pouches, I feel somewhat obligated to make sure Flora isn\u2019t overworking
+      themselves, or, at the very least, staying equally moderately well hydrated."
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Hey, maybe we could take our break together!
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "Following the stone paving back around to where we started our session,
+      I make sure to move with deciduous steps so as to not startle them for a third
+      time in case they\u2019re waist deep in bush somewhere, my eyes searching but
+      still seeing no trail of them."
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: It hits me then that that might be my clue.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "Sure enough, following the no-trail trail of yard-tidyness, I\u2019m
+      able to track them down to the ivy walls, seated on the bench beneath just
+      out of reach for where the sun falls."
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "They don\u2019t look in my direction as I make my way over, and despite
+      my best efforts\u2013"
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 3
+    _text: "\u2026!"
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "\u2013they still jump a little when they notice me, as if snapped from
+      thought."
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Aw, daffodil.
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 2
+    _text: "O-oh, it\u2019s just you!"
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: "Well, not\u2026 \u201Cjust\u201D just, but."
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 0
+    _text: "It\u2019s you."
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "Yup, it\u2019s a-me!"
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: ' '
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "I tip the hat I do or maybe don\u2019t have at them, and they snicker,
+      once again bringing their hand to their face as if half-heartedly trying to
+      hide it. "
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "When it fades out, they\u2019re quiet for a beat."
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 8
+    _text: "Listen, I\u2026"
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 9
+    _text: I would like to apologise.
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: For this morning.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: I blink, taking my due uno-reversed turn at being surprised as comically
+      complicated maths equations fly through my mind, trying to understand what
+      they mean.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Are they talking about the pot incident?
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: If anything here, I should be the one to apologise as the invasive species
+      in this particular ecosystem.
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 3
+    _text: "Oh, no, no, you\u2019re okay!"
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 1
+    _poseIndex: 2
+    _text: Really, I should've expected you would peek in.
+  - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: "We did invite you, after all, I just\u2013"
+  _choices: []
+  <SourceScript>k__BackingField: "$player: As much as I have a suddenly ravenous
+    craving for lukewarm sugary orange pouches, I feel somewhat obligated to make
+    sure Flora isn\u2019t overworking themselves, or, at the very least, staying
+    equally moderately well hydrated.\r\n\r\nHey, maybe we could take our break together!\r\n\r\nFollowing
+    the stone paving back around to where we started our session, I make sure to
+    move with deciduous steps so as to not startle them for a third time in case
+    they\u2019re waist deep in bush somewhere, my eyes searching but still seeing
+    no trail of them.\r\n\r\nIt hits me then that that might be my clue.\r\n\r\nSure
+    enough, following the no-trail trail of yard-tidyness, I\u2019m able to track
+    them down to the ivy walls, seated on the bench beneath just out of reach for
+    where the sun falls.\r\n\r\nThey don\u2019t look in my direction as I make my
+    way over, and despite my best efforts\u2013\r\n\r\nFlora: 3: \u2026!\r\n\r\n\u2013they
+    still jump a little when they notice me, as if snapped from thought.\r\n\r\nAw,
+    daffodil.\r\n\r\nFlora: 2: O-oh, it\u2019s just you!\r\nFlora: 8: Well, not\u2026
+    \u201Cjust\u201D just, but.\r\nFlora: 0: It\u2019s you.\r\n\r\n$player: Yup,
+    it\u2019s a-me!\r\n \nI tip the hat I do or maybe don\u2019t have at them, and
+    they snicker, once again bringing their hand to their face as if half-heartedly
+    trying to hide it. \r\n\r\nWhen it fades out, they\u2019re quiet for a beat.\r\n\r\nFlora:
+    8: Listen, I\u2026\r\nFlora: 9: I would like to apologise.\r\nFlora: For this
+    morning.\r\n\r\n$player: I blink, taking my due uno-reversed turn at being surprised
+    as comically complicated maths equations fly through my mind, trying to understand
+    what they mean.\r\n\nAre they talking about the pot incident?\n\r\nIf anything
+    here, I should be the one to apologise as the invasive species in this particular
+    ecosystem.\r\n\nFlora: 3: Oh, no, no, you\u2019re okay!\r\nFlora: 2: Really,
+    I should've expected you would peek in.\r\nFlora: We did invite you, after all,
+    I just\u2013"

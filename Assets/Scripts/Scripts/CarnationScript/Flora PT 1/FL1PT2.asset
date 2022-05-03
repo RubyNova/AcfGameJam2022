@@ -39,10 +39,10 @@ MonoBehaviour:
     _hasPoseIndex: 0
     _poseIndex: 0
     _text: I am so sorry, I completely forgot--
-  - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: They fumble for words for a moment while I remain helpfully silent,  watching
+    _text: They fumble for words for a moment while I remain helpfully silent, watching
       them eventually stop, take a breath, and collect themselves.
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
@@ -60,7 +60,7 @@ MonoBehaviour:
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: Oh hey, that's cool, I have pronouns too!
+    _text: Oh hey, that's cool. I have pronouns too!
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
@@ -117,23 +117,24 @@ MonoBehaviour:
     _poseIndex: 0
     _text: '[Initiate minigame here]'
   _choices: []
-  <SourceScript>k__BackingField: "You: Using my excellent deductive reasoning, I
-    connect the context clues and make the assumption that En is probably character
+  <SourceScript>k__BackingField: "$player: Using my excellent deductive reasoning,
+    I connect the context clues and make the assumption that En is probably character
     n\xFAmero dos from before. The one with the really cool and well designed frog
     hoodie? Pink hair?\n\nIt's not until this point that I realise we kind of skipped
     over introductions earlier.\n\nAs if suddenly having the same revelation, character
     number one's eyes widen significantly.\n\n???: 3: Oh, crokus!\n???: I am so sorry,
-    I completely forgot--\n\nThey fumble for words for a moment while I remain helpfully
-    silent,  watching them eventually stop, take a breath, and collect themselves.\n\n???:
-    8: Okay. Let's just... start from the top.\nFlora: 0: My name is Flora.\nFlora:
-    My pronouns are they/them, and I'm the caretaker of this garden as co-founder
-    of the Botany Club!\n\nYou: Oh hey, that's cool, I have pronouns too!\n\nAnd
-    a name!\n\nI present this information in an accurate and orderly fashion, thus
-    completing the requirements for this particular social interaction, and squarely
-    upgrading our present relationship status from \"Strangers\" to \"Kind of strangers\".\n\nMaybe
-    one day, we'll even be aquaintances!\n\nFlora: 2: I'm sorry for doing things
-    a little bit out of order.\nFlora: 0: It's very nice to meet you.\n\nYou: Absolutely
-    no worries, I tell them. It takes two to tangle and we both kind of remixed the
-    beat on this one.\nIt's really very nice to meet you too!\n\nFlora: 0: ...\n\nYou:
-    ...\n\nFlora: 8: ...\nFlora: 0: Would you... like to help plant some flowers?\n\nYou:
-    Oh, heba yeah.\n\n[Initiate minigame here]\n\n\n"
+    I completely forgot--\n\n$player: They fumble for words for a moment while I
+    remain helpfully silent, watching them eventually stop, take a breath, and collect
+    themselves.\n\n???: 8: Okay. Let's just... start from the top.\nFlora: 0: My
+    name is Flora.\nFlora: My pronouns are they/them, and I'm the caretaker of this
+    garden as co-founder of the Botany Club!\n\n$player: Oh hey, that's cool. I have
+    pronouns too!\n\nAnd a name!\n\nI present this information in an accurate and
+    orderly fashion, thus completing the requirements for this particular social
+    interaction, and squarely upgrading our present relationship status from \"Strangers\"
+    to \"Kind of strangers\".\n\nMaybe one day, we'll even be aquaintances!\n\nFlora:
+    2: I'm sorry for doing things a little bit out of order.\nFlora: 0: It's very
+    nice to meet you.\n\n$player: Absolutely no worries, I tell them. It takes two
+    to tangle and we both kind of remixed the beat on this one.\n\nIt's really very
+    nice to meet you too!\n\nFlora: 0: ...\n\n$player: ...\n\nFlora: 8: ...\nFlora:
+    0: Would you... like to help plant some flowers?\n\n$player: Oh, heba yeah.\n\n[Initiate
+    minigame here]\n\n\n"

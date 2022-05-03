@@ -46,10 +46,10 @@ MonoBehaviour:
     _poseIndex: 0
     _text: "It\u2019s\u2026"
   _choices: []
-  <SourceScript>k__BackingField: "You: Ah, Generic University\u2122!\r\n\r\nAn academy
-    of unspecified location and infamously ambiguous prestige.\r\n\r\nIt\u2019s been
-    my dream to attend for at least the last two sentences, and now that the time
-    has finally come to make my debut as a young scholar, I feel a steady rise of
-    both excitement and anxiety welling up in my chest.\r\n\r\nThat\u2019s normal,
+  <SourceScript>k__BackingField: "$player: Ah, Generic University\u2122!\r\n\r\nAn
+    academy of unspecified location and infamously ambiguous prestige.\r\n\r\nIt\u2019s
+    been my dream to attend for at least the last two sentences, and now that the
+    time has finally come to make my debut as a young scholar, I feel a steady rise
+    of both excitement and anxiety welling up in my chest.\r\n\r\nThat\u2019s normal,
     I tell myself. Perfectly understandable. After all\u2026\r\n\r\nIt\u2019s a new
     place!\n\r\nIt's a new experience!\n\r\nIt\u2019s\u2026\r\n"

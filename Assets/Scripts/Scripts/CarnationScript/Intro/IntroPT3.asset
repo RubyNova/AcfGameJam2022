@@ -99,7 +99,7 @@ MonoBehaviour:
     _narrativeResponse: {fileID: 11400000, guid: d55d5a2c5f130204fa470c1e2ab4c777, type: 2}
   - _choiceText: Ascend upwards in a rapid fashion
     _narrativeResponse: {fileID: 11400000, guid: 086a485bae633a341ac9db7b36d006ed, type: 2}
-  <SourceScript>k__BackingField: "You: \u2013out!\r\n\n...\r\n\r\nWithout looking
+  <SourceScript>k__BackingField: "$player: \u2013out!\r\n\n...\r\n\r\nWithout looking
     where I'm going, I stumble away from the bustling, overcrowded corridors into
     the first available room to the side, tripping ungracefully into open air while
     the door automatically clicks shut behind me.\r\n\r\nAt once, the noise is drowned
@@ -109,10 +109,10 @@ MonoBehaviour:
     walls, dirt floors, and glass windows overgrown with vines; Old leaves crunch
     under my knees as I shift, gazing dazedly around my new surroundings trying to
     process the abrupt and drastic change in scenery.\n\nIt takes me a moment to
-    realise someone is gazing back.\n\r\n???: 3: \u2026!\r\n\r\n????: 8: \u2026!\r\n\r\nYou:
-    \u2026!\r\n\r\nYou: Oh. Oh man. I must\u2019ve hit my head on the downfall because
+    realise someone is gazing back.\n\r\n???: 3: \u2026!\r\n\r\n????: 8: \u2026!\r\n\r\n$player:
+    \u2026!\r\n\r\nOh. Oh man. I must\u2019ve hit my head on the downfall because
     that is a very large frog.\r\n\r\n????: 8: Woah, buddy, are you\u2013\r\n\r\n???:
-    7: \u2026okay?\r\n\r\nYou: Oh, wait, it\u2019s a person. Two people, in fact.\r\n\r\nTwo
+    7: \u2026okay?\r\n\r\n$player: Oh, wait, it\u2019s a person. Two people, in fact.\r\n\r\nTwo
     people who just witnessed me perform history\u2019s least elegant getaway pirouette.\r\n\r\nI
     stare back in stunned silence for a moment, before the subtle, growing concern
     on their faces makes me realise that I'm still on the floor, and that they are

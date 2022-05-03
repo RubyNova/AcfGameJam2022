@@ -18,11 +18,18 @@ MonoBehaviour:
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: Sure enough, I find Flora back at the flowerbeds, partially vanished into
-      the shrubbery. Unlike my own spontaneous venture, however, this one seems more
-      intentional; Carefully shifting the leafage aside, they're making steady work
-      of weeding out some of the overgrowth, putting it aside in a neat pile on the
-      grass.
+    _text: 'Sure enough, I find Flora back at the flowerbeds, partially vanished
+      into the shrubbery. Unlike my own spontaneous venture, however, this one seems
+      more intentional; '
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Carefully shifting the leafage aside, they're making steady work of weeding
+      out some of the overgrowth, putting it aside in a neat pile on the grass.
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Oh.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
@@ -70,7 +77,7 @@ MonoBehaviour:
   - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: Of course!
+    _text: Oh, that's no trouble.
   - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 1
@@ -79,8 +86,12 @@ MonoBehaviour:
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: I'll say, I say! I'm surprised none of the other club members are pitching
-      in. Isn't the whole point of a botany club to do botany stuff?
+    _text: 'I''ll say, I say. I''m surprised none of the other club members are pitching
+      in. '
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Isn't the whole point of a botany club to do botany stuff?
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
@@ -90,21 +101,21 @@ MonoBehaviour:
     _poseIndex: 3
     _text: Oh!
   _choices: []
-  <SourceScript>k__BackingField: "You: Sure enough, I find Flora back at the flowerbeds,
-    partially vanished into the shrubbery. Unlike my own spontaneous venture, however,
-    this one seems more intentional; Carefully shifting the leafage aside, they're
-    making steady work of weeding out some of the overgrowth, putting it aside in
-    a neat pile on the grass.\n\nLooks like they cleaned up the pot I knocked over
-    earlier, too.\n\nYeah, that was--\n\nThat was my B.\n\nWhilst trying to think
-    of a good way to approach without startling them again and breaking something
-    else, Flora peeks their head up over the flowers and glances in my direction,
-    promptly disentangling themselves when they notice me standing around in a way
-    hopefully looked less awkward than it felt.\n\nSeems like they were expecting
-    me, this time.\n\nFlora: 0: You're back! \nFlora: 8: I mean... \nFlora: 0: Welcome
-    back!\nFlora: Did you find the cooler okay?\n\nYou: I respond affirmatively,
-    and thank them most gratefully for their generous share of decidedly average
-    orange juice.\n\nFlora: Of course!\nFlora: 1: Hydrangeation is very important,
-    especially when keepting active. Gardening can be pretty tough work!\n\nYou:
-    I'll say, I say! I'm surprised none of the other club members are pitching in.
-    Isn't the whole point of a botany club to do botany stuff?\n\nI guess watching
-    grass grow would technically count, but--\n\nFlora: 3: Oh!\n"
+  <SourceScript>k__BackingField: "$player: Sure enough, I find Flora back at the
+    flowerbeds, partially vanished into the shrubbery. Unlike my own spontaneous
+    venture, however, this one seems more intentional; \n\nCarefully shifting the
+    leafage aside, they're making steady work of weeding out some of the overgrowth,
+    putting it aside in a neat pile on the grass.\n\nOh.\n\nLooks like they cleaned
+    up the pot I knocked over earlier, too.\n\nYeah, that was--\n\nThat was my B.\n\nWhilst
+    trying to think of a good way to approach without startling them again and breaking
+    something else, Flora peeks their head up over the flowers and glances in my
+    direction, promptly disentangling themselves when they notice me standing around
+    in a way hopefully looked less awkward than it felt.\n\nSeems like they were
+    expecting me, this time.\n\nFlora: 0: You're back! \nFlora: 8: I mean... \nFlora:
+    0: Welcome back!\nFlora: Did you find the cooler okay?\n\n$player: I respond
+    affirmatively, and thank them most gratefully for their generous share of decidedly
+    average orange juice.\n\nFlora: Oh, that's no trouble.\nFlora: 1: Hydrangeation
+    is very important, especially when keepting active. Gardening can be pretty tough
+    work!\n\n$player: I'll say, I say. I'm surprised none of the other club members
+    are pitching in. \n\nIsn't the whole point of a botany club to do botany stuff?\n\nI
+    guess watching grass grow would technically count, but--\n\nFlora: 3: Oh!\n"

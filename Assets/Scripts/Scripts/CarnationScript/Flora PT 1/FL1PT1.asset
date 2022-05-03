@@ -92,24 +92,24 @@ MonoBehaviour:
     _narrativeResponse: {fileID: 11400000, guid: 37c963c0e970f3f41b1512ef9f925908, type: 2}
   - _choiceText: Ask about the mysterious singing voice
     _narrativeResponse: {fileID: 11400000, guid: 83879614421d74e41b2b461ce9cfd09d, type: 2}
-  <SourceScript>k__BackingField: "You: Enthralled by the little insect\u2019s full
-    disregard for all laws of aviation, I follow it towards a wide array of colourful
-    flower beds, watching it descend very not gracefully upon a petal of its own
-    choosing.\r\n\r\nIts bumpy movement strikes me as ill suited to the crucial ecological
-    task it\u2019s trying to accomplish, \rbut I admire its valiant efforts nonetheless.\r\n\r\nIt\u2019s
-    doing its best, and that\u2019s what counts.\r\n\r\nI'm still idly watching it
-    do its humble bumble dance when one of the (presumably fellow students?) from
-    a little bit ago suddenly pops up from a crouch behind the hydrangeas, startling
-    us both.\r\n\n???: 3: EEP!\r\n\r\nYou: I make a noise - one I would later convince
-    myself sounded totally dignified in the moment - and stumble backwards, scrambling
-    instinctively for an escape but succeeding only in tripping over myself and knocking
-    over a pot on my way down into the flowerbed.\r\n\r\nAw Shi Shi Gashira Camellia,
-    here we go again.\r\n\r\n???: 3: Oh my god, are you okay?\r\n\r\nYou: Though
-    a face full of leaves definitely isn't an ideal situation, I can tell by the
-    lack of instant, agonising pain that nothing's been broken by my second fall
-    in half an hour, other than possibly my pride. \n\nThe shrubbery is, thankfully,
-    a lot softer to land on than the floor.\r\n\nI give a thumbs up through the twigs
-    to indicate my relative okayness, and after breathing an audible sigh of relief,
-    they hurry over to offer me a hand.  \n\nThrough the power of teamwork, I am
-    restored to an upwards position.\n\n???: 3: I am so sorry!\n???: 8: I... didn't
-    realise you were there.\n"
+  <SourceScript>k__BackingField: "$player: Enthralled by the little insect\u2019s
+    full disregard for all laws of aviation, I follow it towards a wide array of
+    colourful flower beds, watching it descend very not gracefully upon a petal of
+    its own choosing.\r\n\r\nIts bumpy movement strikes me as ill suited to the crucial
+    ecological task it\u2019s trying to accomplish, \rbut I admire its valiant efforts
+    nonetheless.\r\n\r\nIt\u2019s doing its best, and that\u2019s what counts.\r\n\r\nI'm
+    still idly watching it do its humble bumble dance when one of the (presumably
+    fellow students?) from a little bit ago suddenly pops up from a crouch behind
+    the hydrangeas, startling us both.\r\n\n???: 3: EEP!\r\n\r\n$player: I make a
+    noise - one I would later convince myself sounded totally dignified in the moment
+    - and stumble backwards, scrambling instinctively for an escape but succeeding
+    only in tripping over myself and knocking over a pot on my way down into the
+    flowerbed.\r\n\r\nAw Shi Shi Gashira Camellia, here we go again.\r\n\r\n???:
+    3: Oh my god, are you okay?\r\n\r\n$player: Though a face full of leaves definitely
+    isn't an ideal situation, I can tell by the lack of instant, agonising pain that
+    nothing's been broken by my second fall in half an hour, other than possibly
+    my pride. \n\nThe shrubbery is, thankfully, a lot softer to land on than the
+    floor.\r\n\nI give a thumbs up through the twigs to indicate my relative okayness,
+    and after breathing an audible sigh of relief, they hurry over to offer me a
+    hand.  \n\nThrough the power of teamwork, I am restored to an upwards position.\n\n???:
+    3: I am so sorry!\n???: 8: I... didn't realise you were there.\n"

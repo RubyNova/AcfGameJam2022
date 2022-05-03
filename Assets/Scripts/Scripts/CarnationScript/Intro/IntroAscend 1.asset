@@ -27,10 +27,10 @@ MonoBehaviour:
       some manner of bodily functionality does seem to ease their tension a little
       bit.
   _choices: []
-  <SourceScript>k__BackingField: 'You: Oh, yeah, no, yeah, I''m, like, totally fine
-    I say as I try and fail to stand up smoothly.
+  <SourceScript>k__BackingField: '$player: Oh, yeah, no, yeah, I''m, like, totally
+    fine I say as I try and fail to stand up smoothly.
 
 
-    Neither of the two look entierly
-    convinced by this, but seeing me retain some manner of bodily functionality does
-    seem to ease their tension a little bit.'
+    Neither of the two look
+    entierly convinced by this, but seeing me retain some manner of bodily functionality
+    does seem to ease their tension a little bit.'

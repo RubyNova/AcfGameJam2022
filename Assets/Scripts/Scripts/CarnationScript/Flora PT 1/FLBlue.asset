@@ -13,34 +13,34 @@ MonoBehaviour:
   m_Name: FLBlue
   m_EditorClassIdentifier: 
   _backgroundSprite: {fileID: 21300000, guid: 8fc0bb9632c4da94d9beccf82bc76098, type: 3}
-  _nextSequence: {fileID: 11400000, guid: 6f2e07717dd184c429ae89ea029305a7, type: 2}
+  _nextSequence: {fileID: 11400000, guid: 3f9c813c3d14c7c43bbeed9c1636b9b0, type: 2}
   _characterDialoguePairs:
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: I saw the bees and thought there might be apples around so I just couldn't
+    _text: I saw the bees and thought there might be apples around, so I just couldn't
       stay away, I couldn't fight it.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
     _text: Fruit has an inexplicable pull on me.
-  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
-    _hasPoseIndex: 0
-    _poseIndex: 0
-    _text: At that, their eyes suddenly light up.
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 6
-    _text: Oh, I know what you mean!
+    _text: O-Oh, I know what you mean!
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: Their eyes light up.
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
     _text: I actually drew up a proposal last term for the construction of a public
-      orchard on some of the extra space we have here in the garden--
+      orchard on some of the extra space we have here in the garden!
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
-    _hasPoseIndex: 0
-    _poseIndex: 0
-    _text: --with plans for how to handle visitors and maintain it long term with
+    _hasPoseIndex: 1
+    _poseIndex: 2
+    _text: Including plans for how to handle visitors and maintain it long term with
       minimal disruption to the flora and fauna already present!
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 0
@@ -49,19 +49,24 @@ MonoBehaviour:
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 3
-    _text: Oh, um--
+    _text: ...!
+  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
+    _hasPoseIndex: 0
+    _poseIndex: 0
+    _text: They interrupt themselves abruptly, looking at me like they only just
+      remembered I was there and shifting as if suddenly embarrassed.
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
-    _poseIndex: 2
-    _text: N- Nevermind!
+    _poseIndex: 8
+    _text: I-it was just a side-project of mine.
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _text: '[WIP]'
+    _text: Nothing too special.
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 9
-    _text: A- anyway, the school kind of... shot it down.
+    _text: And a- anyway, the school kind of... shot it down.
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
@@ -69,53 +74,58 @@ MonoBehaviour:
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 8
-    _text: Which... makes sense, I guess.
+    _text: Which... makes sense, I suppose.
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
     _text: En and I are pretty much the only ones taking care of this place right
       now.
   _choices: []
-  <SourceScript>k__BackingField: 'You: I saw the bees and thought there might be
-    apples around so I just couldn''t stay away, I couldn''t fight it.
+  <SourceScript>k__BackingField: '$player: I saw the bees and thought there might
+    be apples around, so I just couldn''t stay away, I couldn''t fight it.
 
 
     Fruit
     has an inexplicable pull on me.
 
 
-    At that, their eyes suddenly light up.
+    ???: 6: O-Oh, I know what you mean!
 
 
-    ???:
-    6: Oh, I know what you mean!
+    $player:
+    Their eyes light up.
 
-    ???: I actually drew up a proposal last term
-    for the construction of a public orchard on some of the extra space we have here
-    in the garden--
 
-    ???: --with plans for how to handle visitors and maintain
+    ???: I actually drew up a proposal last term for the
+    construction of a public orchard on some of the extra space we have here in the
+    garden!
+
+    ???: 2: Including plans for how to handle visitors and maintain
     it long term with minimal disruption to the flora and fauna already present!
 
     ???:
     You see, by planting a variety of different fruits, we can--
 
-    ???: 3: Oh,
-    um--
-
-    ???: 2: N- Nevermind!
+    ???: 3: ...!
 
 
-    [WIP]
+    $player:
+    They interrupt themselves abruptly, looking at me like they only just remembered
+    I was there and shifting as if suddenly embarrassed.
 
 
-    ???: 9: A- anyway, the school
-    kind of... shot it down.
+    ???: 8: I-it was just
+    a side-project of mine.
+
+    ???: Nothing too special.
+
+    ???: 9: And a- anyway,
+    the school kind of... shot it down.
 
     ???: They said it was too involved.
 
-    ???: 8:
-    Which... makes sense, I guess.
+    ???:
+    8: Which... makes sense, I suppose.
 
-    ???: En and I are pretty much the only ones
-    taking care of this place right now.'
+    ???: En and I are pretty much the only
+    ones taking care of this place right now.'

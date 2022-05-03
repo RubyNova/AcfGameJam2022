@@ -63,7 +63,7 @@ MonoBehaviour:
     _poseIndex: 0
     _text: "\u2013to get\u2013"
   _choices: []
-  <SourceScript>k__BackingField: "You: \u2026 a little bit overwhelming.\r\n\r\nI\u2019ve
+  <SourceScript>k__BackingField: "$player: \u2026 a little bit overwhelming.\r\n\r\nI\u2019ve
     barely gone past the entrance to the building before - as if on cue - the doors
     to the adjacent lecture halls suddenly fly open, flooding the corridor around
     me almost instantly with an amorphous mass of fellow students, laughing, chattering,

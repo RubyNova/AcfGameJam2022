@@ -55,10 +55,10 @@ MonoBehaviour:
   _choices:
   - _choiceText: Go see if Flora needs any more help
     _narrativeResponse: {fileID: 11400000, guid: a9efbf7d0e4526a4ca0048baac28d4c3, type: 2}
-  - _choiceText: Go on a frog hunting expedition
-    _narrativeResponse: {fileID: 11400000, guid: 7c15cddf6722f6949a263e92d461a58e, type: 2}
-  <SourceScript>k__BackingField: 'You: I''m not really sure how long we spend on
-    our knees in the dirt, Flora patiently guiding me through the process of planting
+  - _choiceText: ( Frog stole this choice, ribbit )
+    _narrativeResponse: {fileID: 11400000, guid: a9efbf7d0e4526a4ca0048baac28d4c3, type: 2}
+  <SourceScript>k__BackingField: '$player: I''m not really sure how long we spend
+    on our knees in the dirt, Flora patiently guiding me through the process of planting
     and listing the properties of each flower as we gently place the sprouts into
     the earth.
 
