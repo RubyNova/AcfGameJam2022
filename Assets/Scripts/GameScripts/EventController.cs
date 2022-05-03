@@ -21,6 +21,7 @@ public class EventController : MonoBehaviour
     public MinigameController minigameController;
     public GameObject minigameSystem;
     public GameObject narrativeSystem;
+    public NarrativeSequence startupSequence;
 
     private bool pointToMini;
 
@@ -34,8 +35,8 @@ public class EventController : MonoBehaviour
     {
         _minigameDictionary = new();
         _narrativeDictionary = new();
-        _currentNarrativeSequence = narrativeMinigameLookupData[0].narrativeSeq;
-        _currentMinigame = narrativeMinigameLookupData[0].minigameSeq;
+        _currentNarrativeSequence = startupSequence;
+        _currentMinigame = null;
 
         foreach (var data in narrativeMinigameLookupData)
         {
