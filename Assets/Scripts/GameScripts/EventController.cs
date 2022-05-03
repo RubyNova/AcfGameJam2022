@@ -78,11 +78,6 @@ public class EventController : MonoBehaviour
         
         if (pointToMini)
         {
-            if (_currentMinigame is null)
-            {
-                return;
-            }
-            
             narrativeSystem.SetActive(false);
             minigameSystem.SetActive(true);
             minigameController.executeSequence(_currentMinigame);
