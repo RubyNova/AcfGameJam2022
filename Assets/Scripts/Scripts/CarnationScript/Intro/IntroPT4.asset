@@ -14,171 +14,329 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _backgroundSprite: {fileID: 21300000, guid: 81e25619d877acb47891bc1d3a1fd26d, type: 3}
   _nextSequence: {fileID: 11400000, guid: 1890357abb9b2114d83aaebaf0ac5803, type: 2}
+  _musicFiles: []
+  _soundEffectFiles: []
   _characterDialoguePairs:
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "Then - spell of confusion and concern broken - all three of us immediately
       catch ourselves staring and trail our eyes elsewhere. Wow, that\u2019s a really
       nice and extremely interesting floor."
   - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 4
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Oh, thank frog.
   - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 3
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: We don't really have any first aid stuff in here yet, soooo...
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 6
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: ... Are you lost?
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: I look at a bag marked as "fertilizer" in the corner and conclude yeah,
       almost definitely.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: I ask if either of them knows the way to orientation.
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 6
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Freshers?
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 7
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "Isn\u2019t that tomorrow?"
   - _character: {fileID: 11400000, guid: 9b3910791305e8e4f973ccb62386dc64, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Oh.
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 8
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: I mean--! I could be wrong, though. I'm not really sure.
   - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 4
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: No, you're right. I remember 'cause they said there'd be a sandwich wagon.
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 6
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Oh!
   - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 6
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Yeah!
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 8
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Oh...
   - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 5
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Yeeeaaaaahhh.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: They turn back to me, a bit apologetically.
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 7
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "I\u2019m sorry. "
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "I hope you didn\u2019t travel too far."
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: 'There''s an awkward pause where none of us are quite sure what to do
       with ourselves, and I quietly weigh my chances of being able to sneak back
       out the way I came and leave without anyone noticing. '
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Unfortunately, the odds are not in my favour, and the thought of throwing
       myself back into the mash pit is...
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: ...
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Perhaps sensing the hesitation, the two of them share a glance.
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 8
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: We should probably get back to it, but--
   - _character: {fileID: 11400000, guid: b57fab864938db249bc3d9b9787b2738, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 8
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: You're, um... free to stay here for a bit, if you'd like.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Here?
   - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 6
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: At the Botany Club!
   - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 1
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Coolest cribbit this side of campus.
   - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 2
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: You already came all this way, you might as well take the tour! Or you
       could just, you know, hang out!
   - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: ' Chill!'
   - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Vibe!
   - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: ' ...'
   - _character: {fileID: 11400000, guid: a83dc18b7a6ce0c43896926407674905, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: The grass in the garden is really soft.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "I  look between the two of them as they regard me with\u2026 curiosity?
       Expectation? It\u2019s hard to tell, but\u2026"
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "It\u2019s been a pretty long week for a Monday morning."
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "And all things considered, I don\u2019t really feel like making the arduous
       track back home yet."
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: So.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: Yeah.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: You know what.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
+    _hasPlayMusicIndex: 0
+    _playMusicIndex: 0
+    _hasPlaySoundEffectIndex: 0
+    _playSoundEffectIndex: 0
     _text: "That\u2019s a good idea."
   _choices:
   - _choiceText: Go touch grass
@@ -190,10 +348,10 @@ MonoBehaviour:
     yet, soooo...\n???: 6: ... Are you lost?\n\n$player: I look at a bag marked as
     \"fertilizer\" in the corner and conclude yeah, almost definitely.\r\n\rI ask
     if either of them knows the way to orientation.\r\n\r\n???: 6: Freshers?\r\n???:
-    7: Isn\u2019t that tomorrow?\r\n\rYou: Oh.\r\n???: 8: I mean--! I could be wrong,
-    though. I'm not really sure.\n????: 4: No, you're right. I remember 'cause they
-    said there'd be a sandwich wagon.\n???: 6: Oh!\n????: 6: Yeah!\n???: 8: Oh...\n????:
-    5: Yeeeaaaaahhh.\n\n$player: They turn back to me, a bit apologetically.\n\n\r???:
+    7: Isn\u2019t that tomorrow?\r\n$player:: Oh.\r\n???: 8: I mean--! I could be
+    wrong, though. I'm not really sure.\n????: 4: No, you're right. I remember 'cause
+    they said there'd be a sandwich wagon.\n???: 6: Oh!\n????: 6: Yeah!\n???: 8:
+    Oh...\n????: 5: Yeeeaaaaahhh.\n\n$player: They turn back to me, a bit apologetically.\n\n\r???:
     7: I\u2019m sorry. \r\n???: I hope you didn\u2019t travel too far.\r\n\r\n$player:
     There's an awkward pause where none of us are quite sure what to do with ourselves,
     and I quietly weigh my chances of being able to sneak back out the way I came

@@ -32,7 +32,7 @@ MonoBehaviour:
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
-    _text: And while that's actually kind of nice--
+    _text: Which is kind of nice!
   - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
@@ -40,8 +40,7 @@ MonoBehaviour:
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
-    _text: --I'm also not really sure where we stand, right now, or if you've even
-      had fun, working in the garden, or if you--
+    _text: But, um... I also can't really tell wether you've been having... fun?
   - _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
     _hasPoseIndex: 1
     _poseIndex: 9
@@ -122,14 +121,13 @@ MonoBehaviour:
       COOL
     _narrativeResponse: {fileID: 11400000, guid: a0f5edeb900e682429144d4659f44b45, type: 2}
   <SourceScript>k__BackingField: "\rFlora: 8: I never know what to expect with you,
-    moment to moment.\r\nFlora: And while that's actually kind of nice--\nFlora:
-    --I'm also not really sure where we stand, right now, or if you've even had fun,
-    working in the garden, or if you--\nFlora: 9: ...\nFlora: 8: You don\u2019t really,
-    um\u2026 emote very strongly.\n\n$player: Oh.\r\n\r\nOh, yeah, right.\r\n\r\nI
-    absolutely forgot I had a face up until this point, or\u2026 a physical presence,
-    at all. \n\nThat this whole time, while I was watching them, trying to figure
-    out what they were feeling or thinking, worrying whether I was making a good
-    impression\u2013\r\n\r\nThey were watching me, doing the same.\r\n\r\nFlora:
+    moment to moment.\r\nFlora: Which is kind of nice!\nFlora: But, um... I also
+    can't really tell wether you've been having... fun?\nFlora: 9: ...\nFlora: 8:
+    You don\u2019t really, um\u2026 emote very strongly.\n\n$player: Oh.\r\n\r\nOh,
+    yeah, right.\r\n\r\nI absolutely forgot I had a face up until this point, or\u2026
+    a physical presence, at all. \n\nThat this whole time, while I was watching them,
+    trying to figure out what they were feeling or thinking, worrying whether I was
+    making a good impression\u2013\r\n\r\nThey were watching me, doing the same.\r\n\r\nFlora:
     8: A-anyway, I\u2019m sorry if this just sounds weird, or\u2013\r\n\r\n$player:
     Before they can finish speaking, I interrupt them, blurting with sudden passionate
     abandon.\r\n"
