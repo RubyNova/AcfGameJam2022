@@ -21,19 +21,11 @@ MonoBehaviour:
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
     _hasPoseIndex: 0
     _poseIndex: 0
-    _hasPlayMusicIndex: 1
-    _playMusicIndex: 0
-    _hasPlaySoundEffectIndex: 0
-    _playSoundEffectIndex: 0
-    _text: '>>0'
-  - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
-    _hasPoseIndex: 0
-    _poseIndex: 0
     _hasPlayMusicIndex: 0
     _playMusicIndex: 0
     _hasPlaySoundEffectIndex: 0
     _playSoundEffectIndex: 0
-    _text: No more work to do, no more apologies to say, we work our way snorting
+    _text: No more work to do, no more apologies to say, we stumble our way snorting
       and laughing off the path and onto the lawn, tumbling down and stretching out
       with a satisfying pop before relaxing back into it.
   - _character: {fileID: 11400000, guid: 07920ea84a8bd1848bd2001ab14ba408, type: 2}
@@ -96,12 +88,35 @@ MonoBehaviour:
     _playSoundEffectIndex: 0
     _text: That green sure can grass.
   _choices: []
-  <SourceScript>k__BackingField: "$player: \rNo more work to do, no more apologies
+  <SourceScript>k__BackingField: '$player: No more work to do, no more apologies
     to say, we stumble our way snorting and laughing off the path and onto the lawn,
     tumbling down and stretching out with a satisfying pop before relaxing back into
-    it.\n\nNext to me, Flora seems finally well at ease, talking about their future
-    dreams  for the garden, about orchards, and little sad bug games.\n\nAnd me?\n\nI
+    it.
+
+
+    Next to me, Flora seems finally well at ease, talking about their future
+    dreams  for the garden, about orchards, and little sad bug games.
+
+
+    And me?
+
+
+    I
     think about how the day started. About the stress and anxiety this morning turned
-    into a chance encounter.\n\nInto a friend.\n\nWith a sigh I settle in, listening
-    to them speak, feeling nothing but content, and the strands of softness upon
-    my back.\n\nBoy they weren't kidding.\n\nThat green sure can grass.\n"
+    into a chance encounter.
+
+
+    Into a friend.
+
+
+    With a sigh I settle in,
+    listening to them speak, feeling nothing but content, and the strands of softness
+    upon my back.
+
+
+    Boy they weren''t kidding.
+
+
+    That green sure can grass.
+
+'
