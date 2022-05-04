@@ -12,6 +12,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject mainMenuObject;
     [SerializeField] private GameObject optionsMenuObject;
     [SerializeField] private GameObject namingMenuObject;
+    [SerializeField] private GameObject quitButtonDisplay;
     [SerializeField] private ACHNarrativeDriver.Api.RuntimeVariables narrativeRuntimeVariableObject;
     [SerializeField] private TextMeshProUGUI volumeDisplay;
     [SerializeField] private Image currentBG;
@@ -21,8 +22,16 @@ public class MenuController : MonoBehaviour
     [SerializeField] private AudioController audioController; // I'd normally use underscore prefix but this is not my file
     [SerializeField] private TMP_InputField inputField;
     
+    private bool isWebGL;
+
     void Start()
     {
+        isWebGL = false;
+        if (Application.platform == RuntimePlatform.WebGLPlayer)
+        {
+            quitButtonDisplay.SetActive(false);
+            isWebGL = true;
+        }
         inputField.text = "";
         currentBG.color = new Color(0.9150943f, 0.6681915f, 0.6707927f, 1.0f);
         currentBG.sprite = mainMenuBG;
@@ -68,6 +77,10 @@ public class MenuController : MonoBehaviour
 
     public void ExitGame()
     {
+        if (isWebGL)
+        {
+            return;
+        }
         Application.Quit();
     }
 
