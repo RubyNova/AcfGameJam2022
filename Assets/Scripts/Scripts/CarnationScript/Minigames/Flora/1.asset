@@ -178,6 +178,60 @@ MonoBehaviour:
     - word: Crokus
       rarity: 4
       wasMentioned: 1
+    - word: Plant
+      rarity: 1
+      wasMentioned: 1
+    - word: Plants
+      rarity: 1
+      wasMentioned: 0
+    - word: Planting
+      rarity: 1
+      wasMentioned: 0
+    - word: Planted
+      rarity: 1
+      wasMentioned: 0
+    - word: Bloom
+      rarity: 1
+      wasMentioned: 0
+    - word: Blooming
+      rarity: 1
+      wasMentioned: 0
+    - word: Growth
+      rarity: 2
+      wasMentioned: 0
+    - word: Grow
+      rarity: 1
+      wasMentioned: 0
+    - word: Growing
+      rarity: 2
+      wasMentioned: 0
+    - word: Grown
+      rarity: 2
+      wasMentioned: 0
+    - word: Petal
+      rarity: 2
+      wasMentioned: 0
+    - word: Petals
+      rarity: 2
+      wasMentioned: 0
+    - word: Heat
+      rarity: 2
+      wasMentioned: 0
+    - word: Greenhouse
+      rarity: 3
+      wasMentioned: 0
+    - word: Plant Pot
+      rarity: 3
+      wasMentioned: 0
+    - word: Pot
+      rarity: 3
+      wasMentioned: 1
+    - word: Planter
+      rarity: 3
+      wasMentioned: 0
+    - word: Trowel
+      rarity: 3
+      wasMentioned: 0
   _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
   _basePoseIndex: 6
   _wordSuccessPoseIndex: 0

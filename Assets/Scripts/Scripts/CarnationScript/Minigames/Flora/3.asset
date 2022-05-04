@@ -250,6 +250,87 @@ MonoBehaviour:
     - word: green
       rarity: 2
       wasMentioned: 1
+    - word: autistic
+      rarity: 3
+      wasMentioned: 1
+    - word: face
+      rarity: 2
+      wasMentioned: 1
+    - word: emote
+      rarity: 2
+      wasMentioned: 1
+    - word: read
+      rarity: 2
+      wasMentioned: 1
+    - word: tetris
+      rarity: 4
+      wasMentioned: 1
+    - word: friend
+      rarity: 1
+      wasMentioned: 0
+    - word: amigo
+      rarity: 2
+      wasMentioned: 0
+    - word: hug
+      rarity: 2
+      wasMentioned: 0
+    - word: high five
+      rarity: 3
+      wasMentioned: 0
+    - word: happy
+      rarity: 2
+      wasMentioned: 1
+    - word: happiness
+      rarity: 2
+      wasMentioned: 0
+    - word: outside
+      rarity: 2
+      wasMentioned: 1
+    - word: outdoors
+      rarity: 2
+      wasMentioned: 0
+    - word: team
+      rarity: 3
+      wasMentioned: 0
+    - word: teamwork
+      rarity: 3
+      wasMentioned: 0
+    - word: laughter
+      rarity: 3
+      wasMentioned: 0
+    - word: fun
+      rarity: 2
+      wasMentioned: 0
+    - word: sharing
+      rarity: 3
+      wasMentioned: 0
+    - word: share
+      rarity: 3
+      wasMentioned: 0
+    - word: shared
+      rarity: 3
+      wasMentioned: 0
+    - word: shares
+      rarity: 3
+      wasMentioned: 0
+    - word: bants
+      rarity: 4
+      wasMentioned: 0
+    - word: sorry
+      rarity: 3
+      wasMentioned: 1
+    - word: Apologies
+      rarity: 3
+      wasMentioned: 0
+    - word: Apologize
+      rarity: 3
+      wasMentioned: 0
+    - word: Apologise
+      rarity: 3
+      wasMentioned: 0
+    - word: Amends
+      rarity: 4
+      wasMentioned: 0
   _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
   _basePoseIndex: 6
   _wordSuccessPoseIndex: 0

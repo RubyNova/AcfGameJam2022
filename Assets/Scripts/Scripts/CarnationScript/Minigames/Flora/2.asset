@@ -115,6 +115,198 @@ MonoBehaviour:
     - word: Together
       rarity: 2
       wasMentioned: 0
+    - word: Sunscreen
+      rarity: 4
+      wasMentioned: 0
+    - word: Sunhat
+      rarity: 4
+      wasMentioned: 0
+    - word: Vegetables
+      rarity: 3
+      wasMentioned: 0
+    - word: Fruit
+      rarity: 3
+      wasMentioned: 1
+    - word: Gravel
+      rarity: 3
+      wasMentioned: 0
+    - word: Overall
+      rarity: 3
+      wasMentioned: 0
+    - word: Lawnmower
+      rarity: 3
+      wasMentioned: 0
+    - word: Overalls
+      rarity: 3
+      wasMentioned: 0
+    - word: Dungarees
+      rarity: 3
+      wasMentioned: 0
+    - word: Boilersuit
+      rarity: 4
+      wasMentioned: 0
+    - word: Wellies
+      rarity: 4
+      wasMentioned: 0
+    - word: Greenhouse
+      rarity: 3
+      wasMentioned: 0
+    - word: Plant pot
+      rarity: 3
+      wasMentioned: 0
+    - word: Pot
+      rarity: 3
+      wasMentioned: 1
+    - word: Compost
+      rarity: 3
+      wasMentioned: 0
+    - word: Compost
+      rarity: 3
+      wasMentioned: 0
+    - word: Planter
+      rarity: 3
+      wasMentioned: 0
+    - word: Plant
+      rarity: 2
+      wasMentioned: 1
+    - word: Planting
+      rarity: 2
+      wasMentioned: 1
+    - word: Planted
+      rarity: 2
+      wasMentioned: 0
+    - word: Plants
+      rarity: 2
+      wasMentioned: 1
+    - word: Trowel
+      rarity: 3
+      wasMentioned: 0
+    - word: Weed
+      rarity: 1
+      wasMentioned: 0
+    - word: Weeding
+      rarity: 2
+      wasMentioned: 1
+    - word: Overgrowth
+      rarity: 3
+      wasMentioned: 1
+    - word: Leafage
+      rarity: 3
+      wasMentioned: 1
+    - word: Hose
+      rarity: 1
+      wasMentioned: 0
+    - word: Hoses
+      rarity: 1
+      wasMentioned: 0
+    - word: Hosed
+      rarity: 1
+      wasMentioned: 0
+    - word: Compost
+      rarity: 1
+      wasMentioned: 0
+    - word: Help
+      rarity: 1
+      wasMentioned: 0
+    - word: Helping
+      rarity: 1
+      wasMentioned: 0
+    - word: Helped
+      rarity: 2
+      wasMentioned: 0
+    - word: Helps
+      rarity: 2
+      wasMentioned: 0
+    - word: Gardening
+      rarity: 2
+      wasMentioned: 1
+    - word: Garden
+      rarity: 2
+      wasMentioned: 1
+    - word: Fertilized
+      rarity: 3
+      wasMentioned: 1
+    - word: Fertilize
+      rarity: 3
+      wasMentioned: 1
+    - word: Grow
+      rarity: 2
+      wasMentioned: 1
+    - word: Growing
+      rarity: 2
+      wasMentioned: 0
+    - word: Growth
+      rarity: 2
+      wasMentioned: 0
+    - word: Grown
+      rarity: 2
+      wasMentioned: 0
+    - word: Tidy
+      rarity: 1
+      wasMentioned: 0
+    - word: Clean
+      rarity: 1
+      wasMentioned: 0
+    - word: Clean up
+      rarity: 2
+      wasMentioned: 0
+    - word: Tidy up
+      rarity: 2
+      wasMentioned: 0
+    - word: Sweep
+      rarity: 2
+      wasMentioned: 0
+    - word: Sweeping
+      rarity: 2
+      wasMentioned: 0
+    - word: Swept
+      rarity: 2
+      wasMentioned: 0
+    - word: Trash
+      rarity: 2
+      wasMentioned: 0
+    - word: Dirt
+      rarity: 1
+      wasMentioned: 1
+    - word: Botany
+      rarity: 2
+      wasMentioned: 1
+    - word: Club
+      rarity: 2
+      wasMentioned: 1
+    - word: Trim
+      rarity: 2
+      wasMentioned: 0
+    - word: Bush
+      rarity: 2
+      wasMentioned: 0
+    - word: Glove
+      rarity: 1
+      wasMentioned: 1
+    - word: Tools
+      rarity: 1
+      wasMentioned: 0
+    - word: Tool
+      rarity: 1
+      wasMentioned: 0
+    - word: Equipment
+      rarity: 3
+      wasMentioned: 0
+    - word: Hedge
+      rarity: 3
+      wasMentioned: 0
+    - word: Flowerbed
+      rarity: 3
+      wasMentioned: 0
+    - word: Outside
+      rarity: 2
+      wasMentioned: 1
+    - word: Outdoors
+      rarity: 2
+      wasMentioned: 0
+    - word: Orchard
+      rarity: 4
+      wasMentioned: 0
   _character: {fileID: 11400000, guid: 7d15d572fb4ee16478577178be291c42, type: 2}
   _basePoseIndex: 6
   _wordSuccessPoseIndex: 0
